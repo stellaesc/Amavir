@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TasaOcupacionCentroDia__c</fullName>
+    <description>Porcentaje de ocupación de las plazas totales de centro de día</description>
+    <externalId>false</externalId>
+    <formula>(PlazasPublicasCentroDiaOcupadas__c + PlazasPrivadasCentroDiaOcupadas__c) / 7 /   TotalPlazasCD__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Ocupación CD</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

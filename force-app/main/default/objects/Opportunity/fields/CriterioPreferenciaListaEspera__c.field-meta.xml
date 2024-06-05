@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CriterioPreferenciaListaEspera__c</fullName>
+    <description>Indica el criterio que se establece para la lista de espera</description>
+    <externalId>false</externalId>
+    <label>Criterio preferencia lista espera</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resto Fecha inscripción</fullName>
+                <default>false</default>
+                <label>Fecha inscripción</label>
+            </value>
+            <value>
+                <fullName>Traslado</fullName>
+                <default>false</default>
+                <label>Traslado</label>
+            </value>
+            <value>
+                <fullName>Prescriptor</fullName>
+                <default>false</default>
+                <label>Prescriptor</label>
+            </value>
+            <value>
+                <fullName>Familiar Amavir</fullName>
+                <default>false</default>
+                <label>Familiar Amavir</label>
+            </value>
+            <value>
+                <fullName>Emergencia Social</fullName>
+                <default>false</default>
+                <label>Emergencia Social</label>
+            </value>
+            <value>
+                <fullName>Usuario de Centro de día</fullName>
+                <default>false</default>
+                <label>Usuario de Centro de día</label>
+            </value>
+            <value>
+                <fullName>Derivación</fullName>
+                <default>false</default>
+                <label>Derivación</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

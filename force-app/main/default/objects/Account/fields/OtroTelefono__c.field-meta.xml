@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OtroTelefono__c</fullName>
+    <description>Otro teléfono de la Cuenta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Para teléfono nacional, introduce 9 dígitos sin espacios o el &quot;+34&quot; y 9 dígitos sin espacios.
+Para teléfono internacional, introduce el &quot;+&quot; seguido del prefijo del país, máximo 15 dígitos sin espacios.</inlineHelpText>
+    <label>Otro teléfono</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

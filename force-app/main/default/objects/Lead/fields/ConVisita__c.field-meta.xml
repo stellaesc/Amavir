@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConVisita__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo utilizado en el flujo de evento de tipo visita para registrar que el candidato ha hecho visita</description>
+    <externalId>false</externalId>
+    <label>Con Visita</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Apartamento</masterLabel>
+        <translation>Apartment</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Centro de día de media jornada</masterLabel>
+        <translation><!-- Centro de día de media jornada --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Centro de día de respiro</masterLabel>
+        <translation>Respite day center</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Centro día/ SED</masterLabel>
+        <translation>Day center</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Estancia de respiro</masterLabel>
+        <translation>Respite stay</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Estancia nocturna</masterLabel>
+        <translation>Overnight stay</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Estancia temporal</masterLabel>
+        <translation>Temporary stay</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Residencia permanente</masterLabel>
+        <translation>Permanent residence</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DetalleOtraProcedencia__c</fullName>
+    <description>Si marcamos Otros en Entorno de procedencia se debe de completar este campo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rellenar si el valor del Entorno de procedencia es &quot;Otros&quot;</inlineHelpText>
+    <label>Detalle de otra procedencia</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

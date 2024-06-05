@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Madrid Centro</fullName>
+        <default>false</default>
+        <label>Madrid Centro</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid Corredor del Henares</fullName>
+        <default>false</default>
+        <label>Madrid Corredor del Henares</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid Noroeste</fullName>
+        <default>false</default>
+        <label>Madrid Noroeste</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid Norte</fullName>
+        <default>false</default>
+        <label>Madrid Norte</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid Sur</fullName>
+        <default>false</default>
+        <label>Madrid Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Canarias</fullName>
+        <default>false</default>
+        <label>Todas Canarias</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Castilla La Mancha</fullName>
+        <default>false</default>
+        <label>Todas Castilla La Mancha</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Castilla y León</fullName>
+        <default>false</default>
+        <label>Todas Castilla y León</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Cataluña</fullName>
+        <default>false</default>
+        <label>Todas Cataluña</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Murcia</fullName>
+        <default>false</default>
+        <label>Todas Murcia</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Navarra</fullName>
+        <default>false</default>
+        <label>Todas Navarra</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas</fullName>
+        <default>false</default>
+        <label>Todas</label>
+    </customValue>
+    <customValue>
+        <fullName>Todas Andalucía</fullName>
+        <default>false</default>
+        <label>Todas Andalucía</label>
+    </customValue>
+    <description>Zona comercial a la que corresponde el candidato</description>
+    <masterLabel>Zona</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

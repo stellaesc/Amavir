@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoEnviar__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Casilla para copiar oportunidades de SAP a Salesforce sin enviar las oportunidades de Salesforce a SAP.</description>
+    <externalId>false</externalId>
+    <label>No enviar</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

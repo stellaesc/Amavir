@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BloqueoEtapasEnvioCorrecto</fullName>
+    <active>true</active>
+    <description>Bloqueo de etapas cuando se envía una oportunidad correctamente, solo se puede cambiar a Cerrada-Éxito</description>
+    <errorConditionFormula>AND(  $User.Alias != &apos;uinte&apos; , ISCHANGED( StageName ),  NOT(ISPICKVAL(StageName , &apos;Cerrada - Éxito&apos;)), NOT(ISNULL(IdExternoSAP__c)),  CodeSAPResponse__c = &apos;(S, S)&apos;, ISPICKVAL(PRIORVALUE(StageName), &apos;Envío SAP&apos;) )</errorConditionFormula>
+    <errorMessage>El envío SAP se ha realizado correctamente. Por favor, cierra la oportunidad como éxito.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FamiliarApellidoObligatorio</fullName>
+    <active>true</active>
+    <description>Si se rellena el nombre del familiar, el email o el teléfono del familiar es obligatorio rellenar el apellido antes de la conversión para que se cree el contacto familiar allegado ya que el apellido es campo obligatorio</description>
+    <errorConditionFormula>AND(
+				OR (
+        NOT (ISBLANK (  ContactoFamiliarAllegado__c )),
+        NOT (ISBLANK ( TelefonoFamiliarAllegado__c )),
+								NOT (ISBLANK (  CorreoElectronicoFamiliarAllegado__c ))
+				),
+				ISBLANK( ApellidosFamiliarAllegado__c )
+				)</errorConditionFormula>
+    <errorDisplayField>ApellidosFamiliarAllegado__c</errorDisplayField>
+    <errorMessage>Es obligatorio rellenar el nombre y los apellidos del Familiar/ Allegado</errorMessage>
+</ValidationRule>

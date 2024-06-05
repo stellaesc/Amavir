@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CentroResidenciaActual__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo de tipo búsqueda para conocer el centro/residencia actual del contacto residente</description>
+    <externalId>false</externalId>
+    <label>Centro/ Residencia Actual Residente</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Centros/Residencias Actuales</relationshipLabel>
+    <relationshipName>CentrosResidenciasActuales</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

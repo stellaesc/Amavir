@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OportTrasladoObligatorioCriterioTralado</fullName>
+    <active>false</active>
+    <description>Si la oportunidad tiene tipo de resgistro traslado, es obligatorio que el criterio de lista de espera sea Traslado</description>
+    <errorConditionFormula>AND(
+ ISNEW(),
+ RecordType.DeveloperName =&apos;Traslado&apos;,
+ NOT(ISPICKVAL( CriterioPreferenciaListaEspera__c , &apos;Traslado&apos;))
+)</errorConditionFormula>
+    <errorMessage>Completa el campo de Criterio de lista de espera con el valor &quot;Traslado&quot;</errorMessage>
+</ValidationRule>

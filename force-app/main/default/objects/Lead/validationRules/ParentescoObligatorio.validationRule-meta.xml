@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ParentescoObligatorio</fullName>
+    <active>true</active>
+    <description>Regla de validación para hacer obligatorio el campo Parentesco en caso de ser relleno alguno de los campos del Familiar/Allegado</description>
+    <errorConditionFormula>AND(
+				OR(
+								NOT(ISBLANK(ContactoFamiliarAllegado__c)),
+			     NOT(ISBLANK(ApellidosFamiliarAllegado__c)),
+			     NOT(ISBLANK(CorreoElectronicoFamiliarAllegado__c))
+				),
+				ISPICKVAL(Parentesco__c, &quot;&quot;),
+  		ISCHANGED(Status),
+				ISPICKVAL(Status, &apos;Contactado&apos;)
+				)</errorConditionFormula>
+    <errorDisplayField>Parentesco__c</errorDisplayField>
+    <errorMessage>Si se rellena algún campo del Familiar/Allegado es obligatorio rellenar el campo &quot;Parentesco/ Relación&quot;.</errorMessage>
+</ValidationRule>

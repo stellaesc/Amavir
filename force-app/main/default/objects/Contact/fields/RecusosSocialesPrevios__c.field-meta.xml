@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecusosSocialesPrevios__c</fullName>
+    <description>Indica si hay recursos sociales previos</description>
+    <externalId>false</externalId>
+    <label>Recursos sociales previos</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>CD</fullName>
+                <default>false</default>
+                <label>CD/ Centro de día</label>
+            </value>
+            <value>
+                <fullName>Cuidadora/ Interna</fullName>
+                <default>false</default>
+                <label>Cuidadora/ Interna</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>PCEF</fullName>
+                <default>false</default>
+                <label>PCEF/ Prestación de cuidados entorno familiar</label>
+            </value>
+            <value>
+                <fullName>PEVS</fullName>
+                <default>false</default>
+                <label>PEVS/ Cheque servicio prestación económica vincula a servicio</label>
+            </value>
+            <value>
+                <fullName>Pisos tutelados</fullName>
+                <default>false</default>
+                <label>Pisos tutelados</label>
+            </value>
+            <value>
+                <fullName>RESIDENCIA</fullName>
+                <default>false</default>
+                <label>RESIDENCIA</label>
+            </value>
+            <value>
+                <fullName>SAD</fullName>
+                <default>false</default>
+                <label>SAD/ Servicio ayuda a domicilio</label>
+            </value>
+            <value>
+                <fullName>TAD</fullName>
+                <default>false</default>
+                <label>TAD/ Teleasistencia atención domiciliaria</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

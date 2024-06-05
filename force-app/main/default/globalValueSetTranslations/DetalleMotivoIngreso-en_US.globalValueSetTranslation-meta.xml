@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>ACV / Ictus</masterLabel>
+        <translation>CVA/ Ictus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Aislamiento</masterLabel>
+        <translation>Isolation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alteraciones de conducta</masterLabel>
+        <translation>Behavioral alterations</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alzheimer</masterLabel>
+        <translation>Alzheimer&apos;s disease</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Amputación</masterLabel>
+        <translation>Amputation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Autolisis</masterLabel>
+        <translation>Autolysis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bipolar</masterLabel>
+        <translation>Bipolar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Caídas</masterLabel>
+        <translation>Falls</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cuerpo Lewy</masterLabel>
+        <translation>Lewy Body</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cáncer</masterLabel>
+        <translation>Cancer</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>De Amavir</masterLabel>
+        <translation>From Amavir</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>De la competencia por cercanía familiar</masterLabel>
+        <translation>From competition due to family proximity</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>De la competencia por descontento</masterLabel>
+        <translation>Of competition due to discontent</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>De la competencia por precios y servicios</masterLabel>
+        <translation>Of competition for prices and services</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Demencia fronto-temporal</masterLabel>
+        <translation>Frontotemporal dementia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Demencia senil</masterLabel>
+        <translation>Senile dementia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Demencia vascular</masterLabel>
+        <translation><!-- Demencia vascular --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Depresión / Ansiedad</masterLabel>
+        <translation>Depression/ Anxiety</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Desorientación / Riesgo fuga</masterLabel>
+        <translation>Disorientation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ELA</masterLabel>
+        <translation>Amyotrophic Lateral Sclerosis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Enfermedad Neurodegenerativa</masterLabel>
+        <translation><!-- Enfermedad Neurodegenerativa --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Enfermedad neurológica</masterLabel>
+        <translation><!-- Enfermedad neurológica --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Esclerosis</masterLabel>
+        <translation>Sclerosis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Esquizofrenia</masterLabel>
+        <translation>Schizophrenia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fractura</masterLabel>
+        <translation>Fracture</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Movilidad reducida</masterLabel>
+        <translation>Reduced mobility</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Operación / Convalecencia</masterLabel>
+        <translation>Operation / Convalescence</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otras</masterLabel>
+        <translation>Others</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otros</masterLabel>
+        <translation>Others</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Paliativos</masterLabel>
+        <translation>Palliative</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Parkinson</masterLabel>
+        <translation>Parkinson&apos;s</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Perdidas memoria</masterLabel>
+        <translation>Memory leaks</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Plaza Pública</masterLabel>
+        <translation>Public place</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Por decisión propia</masterLabel>
+        <translation>By own decision</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Problemas cardiovasculares (Infarto, ICC, HTA, Arritmias, Fibrilación, Diabetes…)</masterLabel>
+        <translation>Cardiovascular problems (Heart attack, ICC, HBP, Arrhythmias, Fibrillation, Diabetes...)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Problemas cuidadores domicilio</masterLabel>
+        <translation>Home caregiver problems</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Problemas de autocuidado</masterLabel>
+        <translation>Self-care issues</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Problemas respiratorios (O2, Neutomonía, EPOC...)</masterLabel>
+        <translation>Resiparotic problems (O2, pneumonia, COPD)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Respiro familiar</masterLabel>
+        <translation>Family respite</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Situación insostenible</masterLabel>
+        <translation>Unsustainable situation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Soledad no deseada</masterLabel>
+        <translation>Unwanted loneliness</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TOC</masterLabel>
+        <translation>OCD</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tranquilidad familiar</masterLabel>
+        <translation>Family tranquility</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vivienda no adaptada</masterLabel>
+        <translation>Non-adapted housing</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

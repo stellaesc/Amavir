@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DocumentoEntregadoRecomendacionesIngreso__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo de tipo de casilla para conocer si se ha entregado el documento &quot;Recomendaciones para el Ingreso&quot;</description>
+    <externalId>false</externalId>
+    <label>Documento &quot;Recomendaciones Ingreso&quot;</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

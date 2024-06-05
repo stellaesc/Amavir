@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Centro__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Department, &apos;2819&apos;, &apos;Alcalá&apos;,
+						&apos;2810&apos;, &apos;Alcorcón&apos;,
+					&apos;1302&apos;, &apos;Ciudad Real&apos;,
+					&apos;4703&apos;, &apos;Apto. Encinar&apos;,
+					&apos;2801&apos;, &apos;Arganzuela&apos;,
+					&apos;3102&apos;,&apos;Argaray&apos;,
+					&apos;3105&apos;,&apos;Betelu&apos;,
+					&apos;3001&apos;,&apos;Cartagena&apos;,
+					&apos;2816&apos;,&apos;Cenicientos&apos;,
+					&apos;2818&apos;,&apos;Ciudad Lineal&apos;,
+					&apos;2802&apos;,&apos;Colmenar&apos;,
+					&apos;2804&apos;,&apos;Coslada&apos;,
+					&apos;0806&apos;,&apos;Diagonal&apos;,
+					&apos;4702&apos;,&apos;El Encinar&apos;,
+					&apos;1601&apos;,&apos;El Pinar&apos;,
+					&apos;2821&apos;,&apos;Getafe&apos;,
+					&apos;1901&apos;,&apos;Guadalajara&apos;,
+					&apos;3501&apos;,&apos;Haría&apos;,
+					&apos;201&apos;,&apos;Hellín&apos;,
+					&apos;803&apos;,&apos;Horta&apos;,
+					&apos;2805&apos;,&apos;Humanes&apos;,
+					&apos;3103&apos;,&apos;Ibañeta&apos;,
+					&apos;2301&apos;,&apos;Jaén&apos;,
+					&apos;1902&apos;,&apos;La Alameda (Azuqueca)&apos;,
+					&apos;2826&apos;,&apos;La Gavia&apos;,
+					&apos;2822&apos;,&apos;La Marina&apos;,
+					&apos;3902&apos;,&apos;Las Anjanas&apos;,
+					&apos;2825&apos;,&apos;Leganés&apos;,
+					&apos;3101&apos;,&apos;Mutilva&apos;,
+					&apos;3104&apos;,&apos;Oblatas&apos;,
+					&apos;2817&apos;,&apos;Patones&apos;,
+					&apos;2812&apos;,&apos;Pozuelo&apos;,
+					&apos;2823&apos;,&apos;San Agustín&apos;,
+					&apos;0804&apos;,&apos;Sant Cugat&apos;,
+					&apos;3803&apos;,&apos;Santa Cruz&apos;,
+					&apos;9001&apos;,&apos;Sede/Centralita&apos;,
+					&apos;801&apos;,&apos;Teià&apos;,
+					&apos;3802&apos;,&apos;Tejina&apos;,
+					&apos;3502&apos;,&apos;Tías&apos;,
+					&apos;1301&apos;,&apos;Tomelloso&apos;,
+					&apos;2824&apos;,&apos;Torrejón&apos;,
+					&apos;2813&apos;,&apos;Usera&apos;,
+					&apos;2806&apos;,&apos;Valdebernardo&apos;,
+					&apos;3107&apos;,&apos;Valle de Egües&apos;,
+					&apos;2803&apos;,&apos;Vallecas&apos;,
+					&apos;0802&apos;,&apos;Vilanova&apos;,
+					&apos;2815&apos;,&apos;Villalba&apos;,
+					&apos;2811&apos;,&apos;Villanueva&apos;,
+					&apos;2820&apos;,&apos;Villaverde&apos;,
+					&apos;-&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Centro</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

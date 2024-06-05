@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DetalleOrigen__c</fullName>
+    <description>Detalle del origen de candidatos</description>
+    <externalId>false</externalId>
+    <label>Detalle del medio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>DetalleOrigen</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Presencial</controllingFieldValue>
+            <valueName>Directa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presencial</controllingFieldValue>
+            <valueName>Derivada desde un Centro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Teléfono</controllingFieldValue>
+            <valueName>Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Teléfono</controllingFieldValue>
+            <valueName>Transferencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Haria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Tías</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Tejina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Hellín</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Don Quijote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web El Pinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Guadalajara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web La Alameda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Apto. Encinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Encinar del Rey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Diagonal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Horta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Sant Cugat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Teià</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Vilanova</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Alcalá</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Alcorcón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Arganzuela</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Cenicientos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Ciudad Lineal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Colmenar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Coslada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Encinar-Leganes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Getafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Humanes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web La Marina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web NuestraCasa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Patones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Pozuelo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web S. Agustín de G</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Torrejon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Usera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Valdebernardo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Vallecas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Villanueva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Villlaverde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Cartagena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Argaray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Betelu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Ibañeta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Mutilva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Oblatas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web La Gavia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Ciudad Real</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Valle de Egüés</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Dossier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Ayudas Dependencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Financiación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Ayudas Temporales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Comparadora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Landing Te llamamos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Promo Ciudad Real</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Jaen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Santa Cruz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>ABG (Asociación Benefica Geriatrica)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>Inforesidencias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>Infoelder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>Abuelos Plus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>Mutuam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entidad colaboradora</controllingFieldValue>
+            <valueName>Senniors</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

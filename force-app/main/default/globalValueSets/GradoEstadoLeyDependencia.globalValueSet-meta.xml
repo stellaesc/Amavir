@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Grado I</fullName>
+        <default>false</default>
+        <label>Grado I</label>
+    </customValue>
+    <customValue>
+        <fullName>Grado II</fullName>
+        <default>false</default>
+        <label>Grado II</label>
+    </customValue>
+    <customValue>
+        <fullName>Grado III</fullName>
+        <default>false</default>
+        <label>Grado III</label>
+    </customValue>
+    <customValue>
+        <fullName>No solicitado</fullName>
+        <default>false</default>
+        <label>No solicitado</label>
+    </customValue>
+    <customValue>
+        <fullName>En trámites</fullName>
+        <default>false</default>
+        <label>En trámites</label>
+    </customValue>
+    <customValue>
+        <fullName>No concedida</fullName>
+        <default>false</default>
+        <label>No concedida</label>
+    </customValue>
+    <customValue>
+        <fullName>Desconocido</fullName>
+        <default>false</default>
+        <label>Desconocido</label>
+    </customValue>
+    <description>Grado de dependencia del residente</description>
+    <masterLabel>Grado/ Estado Ley dependencia</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

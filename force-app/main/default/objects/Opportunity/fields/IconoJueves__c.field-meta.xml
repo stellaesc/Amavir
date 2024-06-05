@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IconoJueves__c</fullName>
+    <description>Si el campo plaza del mismo día esta relleno muestra un icono, si no muestra otro</description>
+    <externalId>false</externalId>
+    <formula>IF( PlazaJueves__r.PlazaOcupada__c ,IMAGE(&apos;/resource/IconosPlaza/Ocupada.png&apos;, &apos;Ocupado&apos;, 40, 70) , IMAGE(&apos;/resource/IconosPlaza/Libre.png&apos;,&quot;Libre&quot;, 40, 70) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Jueves</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

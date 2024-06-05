@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PagoReserva__c</fullName>
+    <description>Campo en el que se indica si se ha pagado la reserva</description>
+    <externalId>false</externalId>
+    <label>Pago reserva</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Con pago</fullName>
+                <default>false</default>
+                <label>Con pago</label>
+            </value>
+            <value>
+                <fullName>Sin pago</fullName>
+                <default>false</default>
+                <label>Sin pago</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

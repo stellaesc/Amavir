@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>AlertaCorreoEquipoOportunidades</fullName>
+        <description>Alerta de correo Equipo de oportunidades</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Asesor Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Director Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/AsignacionOportunidad</template>
+    </alerts>
+    <alerts>
+        <fullName>AlertaCorreoEquipoOportunidadesDerivacion</fullName>
+        <description>Alerta de correo Equipo de oportunidades derivación</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Asesor Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Director Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/AsignacionOportunidadDerivacion</template>
+    </alerts>
+    <alerts>
+        <fullName>AlertaEstadoEnProceso</fullName>
+        <description>Se envía un correo cuando el estado de la oportunidad es En proceso</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Asesor Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Director Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/EtapaProceso</template>
+    </alerts>
+    <alerts>
+        <fullName>AlertaOportunidadTraslado</fullName>
+        <ccEmails>vtorrejon@leadclic.com</ccEmails>
+        <description>Se envía un correo para las oportunidades de traslado</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Asesor Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Director Centro</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/OportunidadTraslado</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ActualizarNombreOportunidad</fullName>
+        <description>Cuando se converite un candidato el nombre de la opp que se crea tiene que ser el producto de interés + nombre del residente</description>
+        <field>Name</field>
+        <formula>TEXT(ProductoInteres__c) &amp; &quot; - &quot; &amp; MID(Account.Name, FIND(&apos;-&apos;, Account.Name) + 1, LEN(Account.Name))</formula>
+        <name>ActualizarNombreOportunidad</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>NombreOportunidad</fullName>
+        <actions>
+            <name>ActualizarNombreOportunidad</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>El nombre de la oportunidad se formará de la unión del prodcuto de interés + nombre del residente</description>
+        <formula>OR (      NOT (         ISNULL( Account.Name)          ),             ISCHANGED( ProductoInteres__c )      )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

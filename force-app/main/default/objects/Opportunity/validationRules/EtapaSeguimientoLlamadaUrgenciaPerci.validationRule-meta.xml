@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EtapaSeguimientoLlamadaUrgenciaPerci</fullName>
+    <active>true</active>
+    <description>Para la etapa Seguimiento Llamada es obligatorio cumplimentar el campo Urgencia Percibida</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( StageName , &apos;Seguimiento llamada&apos;),
+ISPICKVAL( UrgenciaPercibida__c, &quot;&quot;),
+RecordType.DeveloperName  &lt;&gt; &apos;PlazaPublica&apos;)</errorConditionFormula>
+    <errorMessage>En la etapa Seguimiento Llamada, es obligatorio cumplimentar el campo &quot;Urgencia Percibida&quot;</errorMessage>
+</ValidationRule>

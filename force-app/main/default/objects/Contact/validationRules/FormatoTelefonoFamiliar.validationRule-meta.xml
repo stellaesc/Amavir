@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FormatoTelefonoFamiliar</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+LEFT(TelefonoFamiliarAllegado__c, 1) = &apos;+&apos;,
+AND(
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+34&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+49&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+32&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 2) &lt;&gt; &apos;+1&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+44&apos;)
+),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+34&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+32&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+49&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 2) = &apos;+1&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 12
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+44&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 1) &lt;&gt; &apos;+&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 9,
+LEN(TelefonoFamiliarAllegado__c) &gt; 9
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+CONTAINS(TelefonoFamiliarAllegado__c, &apos; &apos;)
+)</errorConditionFormula>
+    <errorDisplayField>TelefonoFamiliarAllegado__c</errorDisplayField>
+    <errorMessage>El número de teléfono del Familiar/Allegado no cumple el formato establecido</errorMessage>
+</ValidationRule>

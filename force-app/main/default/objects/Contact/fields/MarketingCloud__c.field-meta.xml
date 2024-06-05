@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MarketingCloud__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check para saber si el contacto es apto para ser sincronizado con Marketing Cloud</description>
+    <externalId>false</externalId>
+    <label>Marketing Cloud</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

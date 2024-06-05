@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AsignacionCandidatoContactadoConverti</fullName>
+    <active>false</active>
+    <description>Cuando el candidato tiene un estado diferente de Nuevo/No contactado y el propietario no es el mismo usuario que lo está gestionando, salta la regla de validación</description>
+    <errorConditionFormula>OR( 
+    (ISPICKVAL( Status , &quot;Contactado&quot;))  &amp;&amp;  
+     (Owner:User.Id  &lt;&gt;  $User.Id), 
+    (ISPICKVAL( Status , &quot;Convertido&quot;))  &amp;&amp;  
+     (Owner:User.Id  &lt;&gt;  $User.Id),
+    (ISPICKVAL( Status , &quot;Descartado&quot;))  &amp;&amp;  
+     (Owner:User.Id  &lt;&gt;  $User.Id)
+)</errorConditionFormula>
+    <errorMessage>Es necesario asignarse el Candidato para poder seguir con su gestión</errorMessage>
+</ValidationRule>

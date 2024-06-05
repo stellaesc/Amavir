@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EsFantasma__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marca con un check si se trata de una plaza fantasma</description>
+    <externalId>false</externalId>
+    <label>Es Fantasma</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PromociosActivasAmavir</fullName>
+    <columns>NAME</columns>
+    <columns>Centro__c</columns>
+    <columns>Descripcion__c</columns>
+    <columns>FechaInicio__c</columns>
+    <columns>FechaFin__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Activa__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>PromocionCompetidor__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Promocios Activas Amavir</label>
+</ListView>

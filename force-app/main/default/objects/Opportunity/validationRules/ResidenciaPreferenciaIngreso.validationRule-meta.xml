@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResidenciaPreferenciaIngreso</fullName>
+    <active>true</active>
+    <description>Cuando la oportunidad sea Cerrada Éxito la residencia de ingreso tiene que ser la misma que la residencia de preferencia</description>
+    <errorConditionFormula>AND(
+ Derivacion__c = False,
+ ISPICKVAL( StageName , &apos;Envío SAP&apos;), 
+ResidenciaIngreso__r.Name  &lt;&gt;  ResidenciaPreferencia__r.Name )</errorConditionFormula>
+    <errorMessage>Modifica el valor de la residencia ingreso para que coincida con la residencia de preferencia</errorMessage>
+</ValidationRule>

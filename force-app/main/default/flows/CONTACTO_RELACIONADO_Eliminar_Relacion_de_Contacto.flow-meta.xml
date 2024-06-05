@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <description>Cuando la cuenta es de tipo familiar y se añade un contacto existente</description>
+        <name>Es_Cuenta_tipo_Familiar</name>
+        <label>Es Cuenta tipo Familiar</label>
+        <locationX>380</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Es_Cuenta_Familiar</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>FamiliaAllegado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Obtener_Oportunidades_Abiertas</targetReference>
+            </connector>
+            <label>Es Cuenta Familiar</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Existen oportunidades abiertas</description>
+        <name>Existen_Oportunidades_Abiertas</name>
+        <label>Existen Oportunidades Abiertas</label>
+        <locationX>182</locationX>
+        <locationY>551</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Si_Oportunidades_Abiertas</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obtener_Oportunidades_Abiertas</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Eliminar_funciones_de_contacto</targetReference>
+            </connector>
+            <label>Si Oportunidades Abiertas</label>
+        </rules>
+    </decisions>
+    <description>Flujo para eliminar de una relación de contacto en una cuenta Familia las funciones de contacto generadas en las respectivas oportunidades abiertas de la misma</description>
+    <interviewLabel>CONTACTO_RELACIONADO_Eliminar Relación de Contacto {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CONTACTO_RELACIONADO_Eliminar Relación de Contacto</label>
+    <loops>
+        <description>Eliminamos funciones de contacto para todos las oportunidades abiertas</description>
+        <name>Eliminar_funciones_de_contacto</name>
+        <label>Eliminar funciones de contacto</label>
+        <locationX>50</locationX>
+        <locationY>671</locationY>
+        <collectionReference>Obtener_Oportunidades_Abiertas</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Eliminar_funcion_de_contacto</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <description>Eliminamos la función de contacto de la oportunidad perteneciente a la relación de contacto de la cuenta</description>
+        <name>Eliminar_funcion_de_contacto</name>
+        <label>Eliminar funcion de contacto</label>
+        <locationX>138</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Eliminar_funciones_de_contacto</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Eliminar_funciones_de_contacto.Id</elementReference>
+            </value>
+        </filters>
+        <object>OpportunityContactRole</object>
+    </recordDeletes>
+    <recordLookups>
+        <description>Obtener oportunidades abiertas de la Cuenta Familiar</description>
+        <name>Obtener_Oportunidades_Abiertas</name>
+        <label>Obtener Oportunidades Abiertas</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Existen_Oportunidades_Abiertas</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Es_Cuenta_tipo_Familiar</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsDirect</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>AccountContactRelation</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ObligatorioTipoDocumento</fullName>
+    <active>true</active>
+    <description>Cuando se rellene el número de documento de identidad, deberá estar marcado el tipo del mismo.</description>
+    <errorConditionFormula>AND( NOT( ISNULL( NumeroDocumento__c ) ), NOT( ISBLANK( NumeroDocumento__c ) ) ,
+ISPICKVAL(TipoDocumento__c, &apos;&apos;) )</errorConditionFormula>
+    <errorDisplayField>TipoDocumento__c</errorDisplayField>
+    <errorMessage>Se debe indicar el tipo de documento</errorMessage>
+</ValidationRule>

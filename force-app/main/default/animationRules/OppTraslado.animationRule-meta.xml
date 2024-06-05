@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>rarely</animationFrequency>
+    <developerName>OppTraslado</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Opp_Traslado</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>Traslado</recordTypeName>
+    <sobjectType>Opportunity</sobjectType>
+    <targetField>StageName</targetField>
+    <targetFieldChangeToValues>Cerrada - Éxito</targetFieldChangeToValues>
+</AnimationRule>

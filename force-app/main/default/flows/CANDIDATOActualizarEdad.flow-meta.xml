@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>Flujo para calcular y actualizar la edad del candidato</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Fórmula para calcular la edad del candidato</description>
+        <name>EdadCandidato</name>
+        <dataType>Number</dataType>
+        <expression>IF(NOT(ISBLANK( {!CandidatoAux.AnoNacimiento__c})), YEAR(TODAY()) - {!CandidatoAux.AnoNacimiento__c}, null)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>CANDIDATO - Actualizar Edad {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CANDIDATO - Actualizar Edad</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Actualizamos las fechas de nacimiento del candidato</description>
+        <name>UpdateCandidato</name>
+        <label>UpdateCandidato</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CandidatoAux.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Edad__c</field>
+            <value>
+                <elementReference>EdadCandidato</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateCandidato</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo registro de contacto para almacenar la información del candidato introducido por parámetro</description>
+        <name>CandidatoAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+</Flow>

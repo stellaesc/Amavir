@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RetencionRellenarCampos</fullName>
+    <active>false</active>
+    <description>Regla de validación que verifica si es una oportunidad de tipo retención y no es de tipo residencia es necesario rellenar los campos &quot;Hora inicio&quot; y &quot;Hora fin&quot; así como avisar de que no es necesario rellenar el resto de campos que no sean obligatorios.</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &quot;Retencion&quot;,
+				NOT(ISPICKVAL(ProductoInteres__c, &quot;Residencia permanente&quot;)), 
+				OR(ISBLANK(HoraInicio__c),
+							ISBLANK(HoraFin__c)
+						)
+			)</errorConditionFormula>
+    <errorMessage>Es necesario rellenar los campos &quot;Hora inicio&quot; y &quot;Hora fin&quot;, además se recuerda que no es necesario rellenar los campos que no sean obligatorios.</errorMessage>
+</ValidationRule>

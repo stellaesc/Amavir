@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Añadimos la variable oportunidad actualizada a la colección de oportunidades</description>
+        <name>A_adir_variable_oportunidad_a_coleccion</name>
+        <label>Añadir variable oportunidad a colección</label>
+        <locationX>138</locationX>
+        <locationY>1550</locationY>
+        <assignmentItems>
+            <assignToReference>ColeccionOportunidades</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>OportunidadAux</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualizar_nombre_oportunidades</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Asignacion para actualizar el booleano del Residente de la cuenta Principal</description>
+        <name>Actualizar_Residente_Principal</name>
+        <label>Actualizar Residente Principal</label>
+        <locationX>270</locationX>
+        <locationY>638</locationY>
+        <assignmentItems>
+            <assignToReference>ResidentePrincipal</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Bucle_contactos_relacionados_cuenta</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Variable auxiliar para almacenar el residente principal de la cuenta</description>
+        <name>Almacenar_residente_principal_aux</name>
+        <label>Almacenar residente principal aux</label>
+        <locationX>270</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>ResidentePrincipalAux.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Bucle_contactos_relacionados_cuenta.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResidentePrincipalAux.FirstName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Bucle_contactos_relacionados_cuenta.Contact.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResidentePrincipalAux.LastName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Bucle_contactos_relacionados_cuenta.Contact.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResidentePrincipalAux.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Bucle_contactos_relacionados_cuenta.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualizar_Residente_Principal</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Asignamos el nombre actualizado a la oportunidad de la cuenta familia</description>
+        <name>Asignar_nombre_actualizado_oportunidad</name>
+        <label>Asignar nombre actualizado oportunidad</label>
+        <locationX>138</locationX>
+        <locationY>1430</locationY>
+        <assignmentItems>
+            <assignToReference>OportunidadAux.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NombreOportunidadResidente</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OportunidadAux.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Actualizar_nombre_oportunidades.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>A_adir_variable_oportunidad_a_coleccion</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Nodo de decisión para comprobar cual de los contactos es el residente propietario de la cuenta</description>
+        <name>Comprobar_contacto_propietario_cuenta</name>
+        <label>Comprobar contacto propietario cuenta</label>
+        <locationX>402</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Bucle_contactos_relacionados_cuenta</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>ResidenteCuentaPrincipal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Bucle_contactos_relacionados_cuenta.IsDirect</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Bucle_contactos_relacionados_cuenta.Contact.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ResidentePrincipal</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Almacenar_residente_principal_aux</targetReference>
+            </connector>
+            <label>ResidenteCuentaPrincipal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Nodo de decisión para comprobar si existen oportunidades en la cuenta</description>
+        <name>Existen_oportunidades</name>
+        <label>Existen oportunidades</label>
+        <locationX>182</locationX>
+        <locationY>1190</locationY>
+        <defaultConnectorLabel>Si no existen oportunidades</defaultConnectorLabel>
+        <rules>
+            <name>Si_existen_oportunidades</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ObtenerOportunidadesCerradaExito</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Actualizar_nombre_oportunidades</targetReference>
+            </connector>
+            <label>Si existen oportunidades</label>
+        </rules>
+    </decisions>
+    <description>Subflujo para actualizar la cuenta familia y las oportunidades del dueño de la cuenta
+--
+V3: Corrección nombre de las oportunidades de la cuenta
+V4: Corrección nombre de la cuenta y las oportunidades del residente
+V5,V6: Optimización funcionalidad</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Variable de tipo fórmula texto que almacena el nombre de la cuenta del residente</description>
+        <name>NombreCuentaResidente</name>
+        <dataType>String</dataType>
+        <expression>&quot;Familia y allegados - &quot; &amp; {!ResidentePrincipalAux.FirstName} &amp; &quot; &quot; &amp; {!ResidentePrincipalAux.LastName}</expression>
+    </formulas>
+    <formulas>
+        <description>Formula para almacenar el nombre de la oportunidad actual de la cuenta del residente</description>
+        <name>NombreOportunidadResidente</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!Actualizar_nombre_oportunidades.ProductoInteres__c}) &amp; &quot; - &quot; &amp; {!ResidentePrincipalAux.FirstName} &amp; &quot; &quot; &amp; {!ResidentePrincipalAux.LastName}</expression>
+    </formulas>
+    <interviewLabel>CONTACTO - Actualizar nombre Cuenta Familia y Oportunidades {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CONTACTO - Actualizar nombre Cuenta Familia y Oportunidades</label>
+    <loops>
+        <description>Bucle para actualizar el nombre de las oportunidades</description>
+        <name>Actualizar_nombre_oportunidades</name>
+        <label>Actualizar nombre oportunidades</label>
+        <locationX>50</locationX>
+        <locationY>1310</locationY>
+        <collectionReference>ObtenerOportunidadesCerradaExito</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Asignar_nombre_actualizado_oportunidad</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Actualizar_oportunidades</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Iteramos por los contactos relacionados de la cuenta familia</description>
+        <name>Bucle_contactos_relacionados_cuenta</name>
+        <label>Bucle contactos relacionados cuenta</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <collectionReference>Obtener_contactos_relacionados_cuenta_familia</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Comprobar_contacto_propietario_cuenta</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Actualizar_nombre_cuenta</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtenemos los contactos relacionados de la cuenta familia</description>
+        <name>Obtener_contactos_relacionados_cuenta_familia</name>
+        <label>Obtener contactos relacionados cuenta familia</label>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Bucle_contactos_relacionados_cuenta</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ContactoPropietarioCuentaFamilia.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>AccountContactRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Obtenemos las oportunidades con estado &quot;Cerrada - Éxito&quot; de la cuenta familia</description>
+        <name>ObtenerOportunidadesCerradaExito</name>
+        <label>Obtener oportunidades Cerrada - Éxito</label>
+        <locationX>182</locationX>
+        <locationY>1070</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Existen_oportunidades</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ResidentePrincipalAux.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Cerrada - Éxito</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Actualizamos el nombre de la cuenta familia con el nombre del residente principal</description>
+        <name>Actualizar_nombre_cuenta</name>
+        <label>Actualizar nombre cuenta familia</label>
+        <locationX>182</locationX>
+        <locationY>950</locationY>
+        <connector>
+            <targetReference>ObtenerOportunidadesCerradaExito</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ResidentePrincipalAux.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>NombreCuentaResidente</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualizamos las oportunidades de la cuenta familia</description>
+        <name>Actualizar_oportunidades</name>
+        <label>Actualizar oportunidades</label>
+        <locationX>50</locationX>
+        <locationY>1766</locationY>
+        <inputReference>ColeccionOportunidades</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Obtener_contactos_relacionados_cuenta_familia</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Colección con las oportunidades obtenidas de la cuenta</description>
+        <name>ColeccionOportunidades</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>Variable que almacena el contacto dueño de la cuenta familia</description>
+        <name>ContactoPropietarioCuentaFamilia</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <description>Variable auxiliar para almacenar información de las oportunidades</description>
+        <name>OportunidadAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>Variable booleana que se activa cuando encontramos al residente principal de la cuenta</description>
+        <name>ResidentePrincipal</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Variable auxiliar para almacenar el residente principal de una cuenta</description>
+        <name>ResidentePrincipalAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sexo__c</fullName>
+    <description>Genero del residente: hombre o mujer</description>
+    <externalId>false</externalId>
+    <label>Género</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Genero</valueSetName>
+    </valueSet>
+</CustomField>

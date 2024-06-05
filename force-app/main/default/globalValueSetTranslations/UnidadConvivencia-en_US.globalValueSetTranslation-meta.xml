@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Con cuidador/es</masterLabel>
+        <translation>With caregiver/s</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Con hermano/s</masterLabel>
+        <translation>With brother/s or With sister/s</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Con hijo/s o sobrino/s</masterLabel>
+        <translation>With son/s or nephew/s</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Con su cónyuge</masterLabel>
+        <translation>With him/her spouse</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Institución (residencia /CD,…)</masterLabel>
+        <translation>Institution (residence, DC)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otros</masterLabel>
+        <translation>Others</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Solo</masterLabel>
+        <translation>Alone</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

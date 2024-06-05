@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ErroresGeneradosSemanaPasada</fullName>
+    <columns>NAME</columns>
+    <columns>CodigoError__c</columns>
+    <columns>ClaseGeneradora__c</columns>
+    <columns>DescripcionError__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>LAST_WEEK</value>
+    </filters>
+    <label>Errores generados la semana pasada</label>
+</ListView>

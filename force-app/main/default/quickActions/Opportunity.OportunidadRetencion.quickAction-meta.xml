@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción para crear una oportunidad de retención en base a una oportunidad cerrada a éxito</description>
+    <flowDefinition>OPORTUNIDADDuplicarARetencion</flowDefinition>
+    <label>Oportunidad de Retención</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

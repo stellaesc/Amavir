@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllOpportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>ProductoInteres__c</columns>
+    <columns>ResidenciaPreferencia__c</columns>
+    <columns>ResidenciaDerivacion__c</columns>
+    <columns>ResidenciaIngreso__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>GLORIA NIETO</value>
+    </filters>
+    <label>Todas las oportunidades</label>
+</ListView>

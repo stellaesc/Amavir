@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DetalleMotivoIngreso__c</fullName>
+    <description>Campo de tipo lista de selección para conocer el detalle motivo de ingreso</description>
+    <externalId>false</externalId>
+    <label>Detalle Motivo de Ingreso</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>MotivoIngreso__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>DetalleMotivoIngreso</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>Autolisis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>Bipolar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>Depresión / Ansiedad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>Enfermedad neurológica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>Esquizofrenia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <valueName>TOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Psicogeriatría</controllingFieldValue>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>ACV / Ictus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Otras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Alteraciones de conducta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Alzheimer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <valueName>Cuerpo Lewy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Demencia fronto-temporal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Demencia senil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Demencia vascular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Desorientación / Riesgo fuga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <valueName>Perdidas memoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia cognitiva</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Enfermedad Neurodegenerativa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <valueName>Amputación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Caídas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <valueName>Cáncer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Esclerosis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Fractura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <valueName>Problemas cardiovasculares (Infarto, ICC, HTA, Arritmias, Fibrilación, Diabetes…)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Movilidad reducida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Paliativos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Parkinson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>Operación / Convalecencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física</controllingFieldValue>
+            <valueName>Problemas respiratorios (O2, Neutomonía, EPOC...)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dependencia física y cognitiva</controllingFieldValue>
+            <valueName>ELA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Problemas cuidadores domicilio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Tranquilidad familiar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Respiro familiar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Soledad no deseada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Vivienda no adaptada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Problemas de autocuidado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Por decisión propia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Situación insostenible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Aislamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traslado residencia</controllingFieldValue>
+            <valueName>De la competencia por descontento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traslado residencia</controllingFieldValue>
+            <valueName>De la competencia por cercanía familiar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traslado residencia</controllingFieldValue>
+            <valueName>De la competencia por precios y servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traslado residencia</controllingFieldValue>
+            <valueName>De Amavir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plaza Pública</controllingFieldValue>
+            <valueName>Plaza Pública</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

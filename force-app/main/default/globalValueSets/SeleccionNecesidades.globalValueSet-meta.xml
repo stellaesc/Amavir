@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>NS/NC</fullName>
+        <default>true</default>
+        <label>NS/NC</label>
+    </customValue>
+    <customValue>
+        <fullName>Sí</fullName>
+        <default>false</default>
+        <label>Sí</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <label>No</label>
+    </customValue>
+    <description>Para los campos que tengan si, no y no seleccionado</description>
+    <masterLabel>Seleccion Necesidades</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

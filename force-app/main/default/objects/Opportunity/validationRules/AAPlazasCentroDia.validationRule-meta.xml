@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AAPlazasCentroDia</fullName>
+    <active>true</active>
+    <description>Si el producto de interes seleccionado es Centro de día al menos una plaza de Lunes a Viernes tiene que estar rellenas y Sábdo y Domigo Vacías</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL(StageName, &apos;Envío SAP&apos;),
+   ISPICKVAL(ProductoInteres__c, &apos;Centro día/ SED&apos;),
+   ISBLANK( FechaSalida__c ),
+   ISBLANK(PlazaLunes__c),
+   ISBLANK(PlazaMartes__c),
+   ISBLANK(PlazaMiercoles__c),
+   ISBLANK(PlazaJueves__c),
+   ISBLANK(PlazaViernes__c),
+   NOT(ISBLANK(PlazaSabado__c)),
+   NOT(ISBLANK(PlazaDomingo__c))
+)</errorConditionFormula>
+    <errorMessage>Al seleccionar &quot;Centro día/ SED&quot; tiene que estar rellena al menos una plaza de Lunes a Viernes y vacías las plazas de Sábado y Domingo.</errorMessage>
+</ValidationRule>

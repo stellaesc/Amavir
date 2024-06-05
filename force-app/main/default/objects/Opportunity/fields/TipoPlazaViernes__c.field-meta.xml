@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoPlazaViernes__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(PlazaViernes__r.TipoPlaza__c), &apos;P&apos;, &apos;Privada&apos; , &apos;C&apos;, &apos;Pública&apos;, &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tipo Plaza Viernes</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

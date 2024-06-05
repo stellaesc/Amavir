@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResidenciaIngresoPlazaResidencia</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+       NOT(ISBLANK(Plaza__c)),
+       NOT(ISBLANK( PlazaLunes__c )),
+       NOT(ISBLANK( PlazaMartes__c )),
+       NOT(ISBLANK( PlazaMiercoles__c )),
+       NOT(ISBLANK( PlazaJueves__c )),
+       NOT(ISBLANK( PlazaViernes__c )),
+       NOT(ISBLANK( PlazaSabado__c )),
+       NOT(ISBLANK( PlazaDomingo__c ))
+    ),
+    OR(
+								ISBLANK(ResidenciaIngreso__c),
+								ISNULL(FechaIngresoPlanificado__c),
+								ISBLANK( TEXT(TipoPlaza__c) )
+	 			)
+)</errorConditionFormula>
+    <errorDisplayField>ResidenciaIngreso__c</errorDisplayField>
+    <errorMessage>Si la plaza de residencia o alguna plaza de centro de día está rellena, la residencia de ingreso, la fecha de ingreso planificada y el tipo de plaza no pueden estar vacíos</errorMessage>
+</ValidationRule>

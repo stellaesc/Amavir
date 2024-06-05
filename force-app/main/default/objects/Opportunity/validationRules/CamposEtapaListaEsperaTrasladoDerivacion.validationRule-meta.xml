@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CamposEtapaListaEsperaTrasladoDerivacion</fullName>
+    <active>true</active>
+    <description>Imposibilitar el cambio de etapa de la oportunidad a Lista de Espera-Traslado-Derivación si no se marca alguno de los campos &quot;Traslado&quot;, &quot;Derivación&quot; o no se rellena el criterio de lista de espera</description>
+    <errorConditionFormula>AND (
+				OR(
+								AND(
+								     ISCHANGED(StageName), 
+					        ISPICKVAL(StageName, &apos;Lista de espera - Derivación - Traslado&apos;)
+												),
+								ISPICKVAL(StageName, &apos;Lista de espera - Derivación - Traslado&apos;)
+								),
+     Derivacion__c = false ,
+					Traslado__c = false ,
+  			ISPICKVAL(CriterioPreferenciaListaEspera__c,&apos;&apos;)
+					)</errorConditionFormula>
+    <errorMessage>No puede estar en la etapa &quot;Lista de espera - Derivación - Traslado&quot; sin rellenar el campo &quot;Traslado&quot;, &quot;Derivación&quot; o &quot;Criterio preferencia lista de espera&quot;</errorMessage>
+</ValidationRule>

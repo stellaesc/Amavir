@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Derivacion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Se usa para marcar una oportunidad que acaba en derivación y también para marcar una oportunidad de traslado que viene de una derivación. Se tienen en cuenta para la prioridad en la lista de espera.</description>
+    <externalId>false</externalId>
+    <label>Derivación</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

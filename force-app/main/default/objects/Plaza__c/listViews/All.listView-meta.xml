@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>TipoPlaza__c</columns>
+    <columns>PlazaOcupada__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Cuenta__c</field>
+        <operation>contains</operation>
+        <value>Torrejón</value>
+    </filters>
+    <filters>
+        <field>Cuenta__c</field>
+        <operation>startsWith</operation>
+        <value>2824</value>
+    </filters>
+    <label>Todos</label>
+</ListView>

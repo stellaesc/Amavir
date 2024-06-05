@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos__c</fullName>
+    <description>Productos o servicios que tiene el competidor</description>
+    <externalId>false</externalId>
+    <label>Productos</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Residencia</fullName>
+                <default>false</default>
+                <label>Residencia</label>
+            </value>
+            <value>
+                <fullName>Centro de día</fullName>
+                <default>false</default>
+                <label>Centro de día</label>
+            </value>
+            <value>
+                <fullName>Apartamentos</fullName>
+                <default>false</default>
+                <label>Apartamentos</label>
+            </value>
+            <value>
+                <fullName>Respiro</fullName>
+                <default>false</default>
+                <label>Respiro</label>
+            </value>
+            <value>
+                <fullName>Pisos tutelados</fullName>
+                <default>false</default>
+                <label>Pisos tutelados</label>
+            </value>
+            <value>
+                <fullName>SAD</fullName>
+                <default>false</default>
+                <label>SAD</label>
+            </value>
+            <value>
+                <fullName>TAD</fullName>
+                <default>false</default>
+                <label>TAD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

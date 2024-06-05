@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permiso personalizado que abarca el perfil administrador del sistema y el conjunto de permisos de Administradoras</description>
+    <isLicensed>false</isLicensed>
+    <label>Modificar Campos SAP</label>
+</CustomPermission>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckYMotivoTraslado</fullName>
+    <active>true</active>
+    <description>Obliga a rellenar el campo &quot;Motivo de traslado&quot; si se marca el check de &quot;Traslado&quot; o es una oportunidad de tipo &quot;Traslado&quot;</description>
+    <errorConditionFormula>AND( 
+  $User.Alias != &apos;uinte&apos;,
+		NOT(ISPICKVAL(StageName, &apos;Cerrada - Perdida&apos;)),
+  OR(
+    AND(
+      RecordType.DeveloperName = &apos;Traslado&apos;,
+      NOT(Traslado__c)
+    ),
+    AND(
+      Traslado__c,
+      ISPICKVAL(MotivoTraslado__c, &apos;&apos;)
+    ),
+    AND(
+      NOT(ISBLANK(TEXT(MotivoTraslado__c))),
+      NOT(Traslado__c)
+    ),
+    AND(
+      ISBLANK(DetalleTraslado__c),
+      ISPICKVAL(MotivoTraslado__c, &apos;Otro&apos;)
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>MotivoTraslado__c</errorDisplayField>
+    <errorMessage>Es necesario marcar el check de traslado y rellenar el motivo de traslado</errorMessage>
+</ValidationRule>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Asociaciones/Fundaciones</fullName>
+        <default>false</default>
+        <label>Asociaciones/Fundaciones</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ayuntamiento/Diputación/Comunidad</fullName>
+        <default>false</default>
+        <label>Ayuntamiento/Diputación/Comunidad</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Centro de día/Residencia</fullName>
+        <default>false</default>
+        <label>Centro de día/Residencia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Centros de mayores</fullName>
+        <default>false</default>
+        <label>Centros de mayores</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Centros de salud</fullName>
+        <default>false</default>
+        <label>Centros de salud</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hospitales</fullName>
+        <default>false</default>
+        <label>Hospitales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Universidad/Colegios Oficiales</fullName>
+        <default>false</default>
+        <label>Universidad/Colegios Oficiales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Institutos/Colegios</fullName>
+        <default>false</default>
+        <label>Institutos/Colegios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Empresas</fullName>
+        <default>false</default>
+        <label>Empresas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Parroquias/Voluntarios</fullName>
+        <default>false</default>
+        <label>Parroquias/Voluntarios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Residencia</fullName>
+        <default>false</default>
+        <label>Residencia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Centro de día</fullName>
+        <default>false</default>
+        <label>Centro de día</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Residencia/Centro de día</fullName>
+        <default>false</default>
+        <label>Residencia/Centro de día</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Servicios sociales</fullName>
+        <default>false</default>
+        <label>Servicios sociales</label>
+    </standardValue>
+</StandardValueSet>

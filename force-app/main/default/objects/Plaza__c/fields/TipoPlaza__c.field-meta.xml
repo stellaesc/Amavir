@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoPlaza__c</fullName>
+    <description>Indica si la plaza está ocupada por una plaza pública o privada. Solo se rellena en las plazas ocupadas, las libres no tienen esta caracteristica.</description>
+    <externalId>false</externalId>
+    <label>Tipo de plaza</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>TipoPlaza</valueSetName>
+    </valueSet>
+</CustomField>

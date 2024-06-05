@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Aspectos sociales</masterLabel>
+        <translation>Social aspects</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dependencia cognitiva</masterLabel>
+        <translation>Cognitive dependence</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dependencia física</masterLabel>
+        <translation>Physical dependency</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dependencia física y cognitiva</masterLabel>
+        <translation>Physical and cognitive dependence</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Plaza Pública</masterLabel>
+        <translation>Public place</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Psicogeriatría</masterLabel>
+        <translation>Psychogeriatrics</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Traslado residencia</masterLabel>
+        <translation>Residence transfer</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

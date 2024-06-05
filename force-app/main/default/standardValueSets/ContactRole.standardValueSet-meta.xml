@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Prescriptor</fullName>
+        <default>false</default>
+        <label>Prescriptor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Influyente</fullName>
+        <default>false</default>
+        <label>Influyente</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decisor</fullName>
+        <default>false</default>
+        <label>Decisor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Residente</fullName>
+        <default>false</default>
+        <label>Residente</label>
+    </standardValue>
+</StandardValueSet>

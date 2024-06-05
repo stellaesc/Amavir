@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ModificarCamposSAP</fullName>
+    <active>false</active>
+    <description>No se pueden modificar los campos de SAP si no tienes perfil administrador o eres un usuario en específico</description>
+    <errorConditionFormula>AND( 
+OR( ISCHANGED( CodeSAPResponse__c ),
+    ISCHANGED(  IdExternoSAP__c )), 
+  NOT($Permission.ModificarCamposSAP) )</errorConditionFormula>
+    <errorMessage>Los campos de SAP solo pueden ser modificados por ciertos usuarios.</errorMessage>
+</ValidationRule>

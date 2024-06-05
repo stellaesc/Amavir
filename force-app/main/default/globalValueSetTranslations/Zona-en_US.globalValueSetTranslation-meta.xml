@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Madrid Centro</masterLabel>
+        <translation>Madrid center</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Madrid Corredor del Henares</masterLabel>
+        <translation>Madrid  Henares Corridor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Madrid Noroeste</masterLabel>
+        <translation>Madrid Northwest</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Madrid Norte</masterLabel>
+        <translation>Madrid Nord</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Madrid Sur</masterLabel>
+        <translation>Madrid South</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas</masterLabel>
+        <translation>All</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Andalucía</masterLabel>
+        <translation>All Andalusia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Canarias</masterLabel>
+        <translation>All Canary Islands</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Castilla La Mancha</masterLabel>
+        <translation>All Castile-La Mancha</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Castilla y León</masterLabel>
+        <translation>All Castilla y León</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Cataluña</masterLabel>
+        <translation>All Catalonia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Murcia</masterLabel>
+        <translation>All Murcia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Todas Navarra</masterLabel>
+        <translation>All Navarre</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

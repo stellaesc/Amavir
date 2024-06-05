@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TiempoAbierto__c</fullName>
+    <description>Campo de tipo fórmula texto que convierte la fecha de creación de la tarea a formato hora EST</description>
+    <externalId>false</externalId>
+    <formula>TEXT(
+				VALUE(
+								    RIGHT(LEFT(TEXT(CreatedDate),FIND(&quot;:&quot;,Text(CreatedDate))-1),2)
+				      )
+				)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tiempo abierto</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

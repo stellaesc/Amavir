@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InternamientoInvoluntario__c</fullName>
+    <description>Estado del internamiento involuntario</description>
+    <externalId>false</externalId>
+    <label>Internamiento involuntario con auto</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>InternamientoInvoluntario</valueSetName>
+    </valueSet>
+</CustomField>

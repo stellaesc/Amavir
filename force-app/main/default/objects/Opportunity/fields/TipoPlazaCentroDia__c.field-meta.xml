@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoPlazaCentroDia__c</fullName>
+    <description>1º Comprobamos si todos los tipos de plaza están rellenos. Si no lo están valor nulo
+2º Comprobamos Si hay alguna plaza privada. Si no la hay es pública
+3º Comprobamos Si hay alguna plaza pública. Si no la hay es privada.
+4º Si hay alguna pública o privada es mixta</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+AND( TipoPlazaLunes__c = &apos;&apos;, TipoPlazaMartes__c = &apos;&apos;, TipoPlazaMiercoles__c = &apos;&apos;, TipoPlazaJueves__c = &apos;&apos;, TipoPlazaViernes__c = &apos;&apos;, TipoPlazaSabado__c = &apos;&apos;, TipoPlazaDomingo__c = &apos;&apos;),
+&apos;&apos;, 
+IF(
+OR( TipoPlazaLunes__c = &apos;Privada&apos;, TipoPlazaMartes__c = &apos;Privada&apos;, TipoPlazaMiercoles__c = &apos;Privada&apos;, TipoPlazaJueves__c = &apos;Privada&apos;, TipoPlazaViernes__c = &apos;Privada&apos;, TipoPlazaSabado__c = &apos;Privada&apos;, TipoPlazaDomingo__c = &apos;Privada&apos;),   
+IF(
+OR( TipoPlazaLunes__c = &apos;Pública&apos;, TipoPlazaMartes__c = &apos;Pública&apos;, TipoPlazaMiercoles__c = &apos;Pública&apos;, TipoPlazaJueves__c = &apos;Pública&apos;, TipoPlazaViernes__c = &apos;Pública&apos;, TipoPlazaSabado__c = &apos;Pública&apos;, TipoPlazaDomingo__c = &apos;Pública&apos;) , 
+&apos;Mixta&apos;, 
+&apos;Privada&apos;)  , 
+&apos;Pública&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tipo Plaza Centro Día</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

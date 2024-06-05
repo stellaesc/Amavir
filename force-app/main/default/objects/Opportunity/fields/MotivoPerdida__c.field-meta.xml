@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MotivoPerdida__c</fullName>
+    <description>Motivo por el que se pierde la oportunidad</description>
+    <externalId>false</externalId>
+    <label>Motivo de pérdida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>TipoPerdida__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Cierre automático/ Sin noticias</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cierre automático/ Sin noticias</label>
+            </value>
+            <value>
+                <fullName>Conc. púb Amavir</fullName>
+                <default>false</default>
+                <label>Conc. púb Amavir</label>
+            </value>
+            <value>
+                <fullName>Conc. púb Otros</fullName>
+                <default>false</default>
+                <label>Conc. púb Otros</label>
+            </value>
+            <value>
+                <fullName>Descontento</fullName>
+                <default>false</default>
+                <label>Descontento</label>
+            </value>
+            <value>
+                <fullName>Descontento / Atención tardía</fullName>
+                <default>false</default>
+                <label>Descontento / Atención tardía</label>
+            </value>
+            <value>
+                <fullName>Distancia</fullName>
+                <default>false</default>
+                <label>Distancia</label>
+            </value>
+            <value>
+                <fullName>El residente se niega</fullName>
+                <default>false</default>
+                <label>El residente se niega</label>
+            </value>
+            <value>
+                <fullName>Episodio anulado en SAP</fullName>
+                <default>false</default>
+                <label>Episodio anulado en SAP</label>
+            </value>
+            <value>
+                <fullName>Exitus en Resid</fullName>
+                <default>false</default>
+                <label>Exitus en Resid</label>
+            </value>
+            <value>
+                <fullName>Exitus Hospital</fullName>
+                <default>false</default>
+                <label>Exitus Hospital</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento</fullName>
+                <default>false</default>
+                <label>Fallecimiento</label>
+            </value>
+            <value>
+                <fullName>Falta de acuerdo familiar</fullName>
+                <default>false</default>
+                <label>Falta de acuerdo familiar</label>
+            </value>
+            <value>
+                <fullName>Fin Es TempReha</fullName>
+                <default>false</default>
+                <label>Fin Es TempReha</label>
+            </value>
+            <value>
+                <fullName>Fin Es TempResp</fullName>
+                <default>false</default>
+                <label>Fin Es TempResp</label>
+            </value>
+            <value>
+                <fullName>Hospitalización larga duración</fullName>
+                <default>false</default>
+                <label>Hospitalización larga duración</label>
+            </value>
+            <value>
+                <fullName>Hospital LargaE</fullName>
+                <default>false</default>
+                <label>Hospital LargaE</label>
+            </value>
+            <value>
+                <fullName>Inadaptación</fullName>
+                <default>false</default>
+                <label>Inadaptación</label>
+            </value>
+            <value>
+                <fullName>Información a largo plazo / Curiosidad</fullName>
+                <default>false</default>
+                <label>Información a largo plazo / Curiosidad</label>
+            </value>
+            <value>
+                <fullName>Ingreso, derivación u otro producto Amavir</fullName>
+                <default>false</default>
+                <label>Ingreso, derivación u otro producto Amavir</label>
+            </value>
+            <value>
+                <fullName>Mot. Económicos</fullName>
+                <default>false</default>
+                <label>Mot. Económicos</label>
+            </value>
+            <value>
+                <fullName>No brinda datos o son erróneos / Imposibilidad de contactar</fullName>
+                <default>false</default>
+                <label>No brinda datos o son erróneos / Imposibilidad de contactar</label>
+            </value>
+            <value>
+                <fullName>No cumple requisitos de edad</fullName>
+                <default>false</default>
+                <label>No cumple requisitos de edad</label>
+            </value>
+            <value>
+                <fullName>No disponen de transporte (CD)</fullName>
+                <default>false</default>
+                <label>No disponen de transporte (CD)</label>
+            </value>
+            <value>
+                <fullName>No interesa precio</fullName>
+                <default>false</default>
+                <label>No interesa precio</label>
+            </value>
+            <value>
+                <fullName>No se adapta a sus preferencias</fullName>
+                <default>false</default>
+                <label>No se adapta a sus preferencias</label>
+            </value>
+            <value>
+                <fullName>Otra residencia competencia / residencia pequeña / otra CC.AA.</fullName>
+                <default>false</default>
+                <label>Otra residencia competencia / residencia pequeña / otra CC.AA.</label>
+            </value>
+            <value>
+                <fullName>Otro recurso / Domicilio / Solucionado</fullName>
+                <default>false</default>
+                <label>Otro recurso / Domicilio / Solucionado</label>
+            </value>
+            <value>
+                <fullName>Plaza o producto no disponible</fullName>
+                <default>false</default>
+                <label>Plaza o producto no disponible</label>
+            </value>
+            <value>
+                <fullName>Plaza pública (concedida, en espera, traslado)</fullName>
+                <default>false</default>
+                <label>Plaza pública (concedida, en espera, traslado)</label>
+            </value>
+            <value>
+                <fullName>Recuperación</fullName>
+                <default>false</default>
+                <label>Recuperación</label>
+            </value>
+            <value>
+                <fullName>Renuncia Volunt</fullName>
+                <default>false</default>
+                <label>Renuncia Volunt</label>
+            </value>
+            <value>
+                <fullName>Resid competenc</fullName>
+                <default>false</default>
+                <label>Resid competenc</label>
+            </value>
+            <value>
+                <fullName>Residencia pendiente de apertura</fullName>
+                <default>false</default>
+                <label>Residencia pendiente de apertura</label>
+            </value>
+            <value>
+                <fullName>Trasl Domicilio</fullName>
+                <default>false</default>
+                <label>Trasl Domicilio</label>
+            </value>
+            <value>
+                <fullName>Trasl otro Amav</fullName>
+                <default>false</default>
+                <label>Trasl otro Amav</label>
+            </value>
+            <value>
+                <fullName>Trasp CD a Resi</fullName>
+                <default>false</default>
+                <label>Trasp CD a Resi</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Conc. púb Amavir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Conc. púb Otros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Descontento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Exitus en Resid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Exitus Hospital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Fin Es TempReha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Fin Es TempResp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Hospital LargaE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Inadaptación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Mot. Económicos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Renuncia Volunt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Resid competenc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Trasl Domicilio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Trasl otro Amav</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alta</controllingFieldValue>
+            <valueName>Trasp CD a Resi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Descontento / Atención tardía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Distancia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>El residente se niega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Episodio anulado en SAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Fallecimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Falta de acuerdo familiar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Hospitalización larga duración</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Información a largo plazo / Curiosidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Ingreso, derivación u otro producto Amavir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>No brinda datos o son erróneos / Imposibilidad de contactar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>No cumple requisitos de edad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>No disponen de transporte (CD)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>No interesa precio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>No se adapta a sus preferencias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Otra residencia competencia / residencia pequeña / otra CC.AA.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Otro recurso / Domicilio / Solucionado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Plaza o producto no disponible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Plaza pública (concedida, en espera, traslado)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Recuperación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Residencia pendiente de apertura</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

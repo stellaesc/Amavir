@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MotivoYDetalleIngresoObligatorio</fullName>
+    <active>false</active>
+    <description>Los campos Motivo y Detalle Motivo de Ingreso son obligatorios antes de convertir al candidato con plaza de tipo privada</description>
+    <errorConditionFormula>AND (
+				OR(ISPICKVAL(Status,&apos;Contactado&apos;),
+					ISPICKVAL(Status,&apos;Convertido&apos;)),
+					ISPICKVAL(DetalleMotivoIngreso__c,&apos;&apos;),
+				 ISPICKVAL(TipoPlaza__c,&apos;P&apos;) 
+)</errorConditionFormula>
+    <errorDisplayField>MotivoIngreso__c</errorDisplayField>
+    <errorMessage>Rellene los campos &quot;Motivo de Ingreso&quot; y &quot;Detalle Motivo de Ingreso&quot; antes de convertir el candidato de plaza privada</errorMessage>
+</ValidationRule>

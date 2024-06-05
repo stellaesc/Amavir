@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RealSAP</fullName>
+    <active>true</active>
+    <description>No se puede cerrar a éxito la oportunidad en el estado de envío SAP si la oportunidad no ha cambiado el status a real en SAP.</description>
+    <errorConditionFormula>AND(
+     RecordType.Name&lt;&gt;&apos;Retención&apos;, 				
+				 ISPICKVAL(StageName, &apos;Cerrada - Éxito&apos;),
+				 RealSAP__c == false,
+IsChanged(StageName)
+)</errorConditionFormula>
+    <errorMessage>No puedes cerrar a éxito la oportunidad si el status en SAP no es real. Si es real modifica el campo RealSAP abajo en la página de oportunidad.</errorMessage>
+</ValidationRule>

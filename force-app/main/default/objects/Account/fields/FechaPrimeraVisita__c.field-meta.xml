@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FechaPrimeraVisita__c</fullName>
+    <description>Campo de tipo fecha para mostrar la primera visita vinculada con la cuenta</description>
+    <externalId>false</externalId>
+    <label>Fecha primera visita</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

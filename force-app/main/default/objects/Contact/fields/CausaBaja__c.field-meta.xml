@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CausaBaja__c</fullName>
+    <description>Motivo de la baja del residente</description>
+    <externalId>false</externalId>
+    <label>Motivo de alta</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>EstadoContacto__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conc. púb Amavir</fullName>
+                <default>false</default>
+                <label>Conc. púb Amavir</label>
+            </value>
+            <value>
+                <fullName>Concesión Plaza Pública No Amavir</fullName>
+                <default>false</default>
+                <label>Conc. púb Otros</label>
+            </value>
+            <value>
+                <fullName>Descontento</fullName>
+                <default>false</default>
+                <label>Descontento</label>
+            </value>
+            <value>
+                <fullName>Fin E. Temporal Rehabilitación</fullName>
+                <default>false</default>
+                <label>Fin Es TempReha</label>
+            </value>
+            <value>
+                <fullName>Fin E. Temporal Respiro</fullName>
+                <default>false</default>
+                <label>Fin Es TempResp</label>
+            </value>
+            <value>
+                <fullName>Hospitalización Larga Duración</fullName>
+                <default>false</default>
+                <label>Hospital LargaE</label>
+            </value>
+            <value>
+                <fullName>Inadaptación</fullName>
+                <default>false</default>
+                <label>Inadaptación</label>
+            </value>
+            <value>
+                <fullName>Motivos Económicos</fullName>
+                <default>false</default>
+                <label>Mot. Económicos</label>
+            </value>
+            <value>
+                <fullName>Renuncia Volunt</fullName>
+                <default>false</default>
+                <label>Renuncia Volunt</label>
+            </value>
+            <value>
+                <fullName>Resid competenc</fullName>
+                <default>false</default>
+                <label>Resid competenc</label>
+            </value>
+            <value>
+                <fullName>Trasl otro Amav</fullName>
+                <default>false</default>
+                <label>Trasl otro Amav</label>
+            </value>
+            <value>
+                <fullName>Trasp CD a Resi</fullName>
+                <default>false</default>
+                <label>Trasp CD a Resi</label>
+            </value>
+            <value>
+                <fullName>Exitus Hospital</fullName>
+                <default>false</default>
+                <label>Exitus Hospital</label>
+            </value>
+            <value>
+                <fullName>Exitus en Resid</fullName>
+                <default>false</default>
+                <label>Exitus en Resid</label>
+            </value>
+            <value>
+                <fullName>Trasl Domicilio</fullName>
+                <default>false</default>
+                <label>Trasl Domicilio</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento en Hospital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fallecimiento en Hospital</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento en Residencia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fallecimiento en Residencia</label>
+            </value>
+            <value>
+                <fullName>Otro Recurso Domicilio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Otro Recurso Domicilio</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Conc. púb Amavir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Concesión Plaza Pública No Amavir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Descontento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Fin E. Temporal Rehabilitación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Fin E. Temporal Respiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Hospitalización Larga Duración</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Inadaptación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Motivos Económicos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Renuncia Volunt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Resid competenc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Trasl otro Amav</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Trasp CD a Resi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baja</controllingFieldValue>
+            <valueName>Trasl Domicilio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fallecido</controllingFieldValue>
+            <valueName>Exitus Hospital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fallecido</controllingFieldValue>
+            <valueName>Exitus en Resid</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

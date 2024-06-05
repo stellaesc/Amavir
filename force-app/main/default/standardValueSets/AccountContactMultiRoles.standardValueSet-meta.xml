@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Cónyuge</fullName>
+        <default>false</default>
+        <label>Cónyuge</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hermano/a</fullName>
+        <default>false</default>
+        <label>Hermano/a</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hijo/a</fullName>
+        <default>false</default>
+        <label>Hijo/a</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nieto</fullName>
+        <default>false</default>
+        <label>Nieto</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No aporta</fullName>
+        <default>false</default>
+        <label>No aporta</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nuera/ Yerno</fullName>
+        <default>false</default>
+        <label>Nuera/ Yerno</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Otro familiar</fullName>
+        <default>false</default>
+        <label>Otro familiar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Profesional</fullName>
+        <default>false</default>
+        <label>Profesional</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sobrino</fullName>
+        <default>false</default>
+        <label>Sobrino</label>
+    </standardValue>
+</StandardValueSet>

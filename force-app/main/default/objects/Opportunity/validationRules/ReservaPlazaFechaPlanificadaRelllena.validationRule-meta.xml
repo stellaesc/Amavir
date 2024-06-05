@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReservaPlazaFechaPlanificadaRelllena</fullName>
+    <active>false</active>
+    <description>Cuando se complete la información de reserva de plaza es obligatorio tener rellena la fecha planificada de ingreso</description>
+    <errorConditionFormula>AND(
+   OR(
+      ISPICKVAL( StageName , &apos;Reserva de plaza&apos;),
+      NOT( ISPICKVAL( PagoReserva__c , &apos;&apos;))
+     ),
+   ISBLANK( FechaIngresoPlanificado__c )  
+)</errorConditionFormula>
+    <errorMessage>Es necesario rellenar la Fecha de Ingreso Planificada.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PromocionIgualResidenciaIngreso</fullName>
+    <active>true</active>
+    <description>La promoción tiene que ser la misma que la de la residencia elegida</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(ResidenciaIngreso__c)),
+    ISCHANGED(Promocion__c),
+    Promocion__r.Centro__r.Id &lt;&gt; ResidenciaIngreso__r.Id 
+
+)</errorConditionFormula>
+    <errorMessage>La promoción elegida debe ser de la residencia en la que ingresa</errorMessage>
+</ValidationRule>

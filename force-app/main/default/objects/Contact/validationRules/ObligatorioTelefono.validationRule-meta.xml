@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ObligatorioTelefono</fullName>
+    <active>true</active>
+    <description>Es obligatorio para el contacto familia/ allegado y prescriptor tener relleno el número de teléfono</description>
+    <errorConditionFormula>AND (
+RecordType.DeveloperName=&apos;Prescriptor&apos;,
+ISBLANK(Phone ),
+ISBLANK(MobilePhone)
+)</errorConditionFormula>
+    <errorMessage>Es obligatorio completar el teléfono o el móvil</errorMessage>
+</ValidationRule>

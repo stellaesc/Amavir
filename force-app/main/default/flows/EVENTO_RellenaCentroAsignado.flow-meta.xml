@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>TransformarIDsContactos</name>
+        <label>Transformar IDs a Contactos</label>
+        <locationX>556</locationX>
+        <locationY>1031</locationY>
+        <actionName>IdCollection</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>RecorrerContactos</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>listIDs</name>
+            <value>
+                <elementReference>ListaIDs</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>IdCollection</nameSegment>
+        <outputParameters>
+            <assignToReference>ListaContactos</assignToReference>
+            <name>output</name>
+        </outputParameters>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <description>Actualizamos el campo &quot;ConVisita&quot; de los contactos relacionados con la cuenta de la visita</description>
+        <name>ActualizarCampoConVisita</name>
+        <label>Actualizar Campo ConVisita</label>
+        <locationX>644</locationX>
+        <locationY>1271</locationY>
+        <assignmentItems>
+            <assignToReference>ContactoAux.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RecorrerContactos.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ContactoAux.ConVisita__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AsignarContactoAuxALista</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AnadirIDLista</name>
+        <label>Añadir ID a Lista</label>
+        <locationX>644</locationX>
+        <locationY>815</locationY>
+        <assignmentItems>
+            <assignToReference>ListaIDs</assignToReference>
+            <operator>AddAtStart</operator>
+            <value>
+                <elementReference>RecorrerIDsContactos.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>RecorrerIDsContactos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Asignar_Con_Visita</name>
+        <label>Asignar Con Visita</label>
+        <locationX>556</locationX>
+        <locationY>1847</locationY>
+        <assignmentItems>
+            <assignToReference>ObtenerOportunidad.ConVisita__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ActualizaConVisitaOppt</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Añadimos el contacto aux a la lista de contactos que van a ser actualizados</description>
+        <name>AsignarContactoAuxALista</name>
+        <label>Asignar ContactoAux a Lista</label>
+        <locationX>644</locationX>
+        <locationY>1391</locationY>
+        <assignmentItems>
+            <assignToReference>ColeccionContactosAux</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ContactoAux</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>RecorrerContactos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Asigna el valor Visita a la etapa de la oportunidad</description>
+        <name>AsignarEtapaOportunidad_0</name>
+        <label>Asignar Etapa Oportunidad</label>
+        <locationX>50</locationX>
+        <locationY>3215</locationY>
+        <assignmentItems>
+            <assignToReference>ObtenerOportunidadRelacionada.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Visita - Seguimiento</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ActualizarOportunidad_0</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>CandidatoContacto_0</name>
+        <label>Candidato o Contacto</label>
+        <locationX>380</locationX>
+        <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>ObtenerContactosRelacionadosCuenta</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Es Contacto</defaultConnectorLabel>
+        <rules>
+            <name>EsCandidato</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarCandidato</targetReference>
+            </connector>
+            <label>Es Candidato</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Si se crea un evento de tipo de registro Visita y relacionado con una oportunidad, esta oportunidad pasa automáticamente a la etapa de Visita.</description>
+        <name>EventoTipoVisita</name>
+        <label>Evento de tipo Visita</label>
+        <locationX>380</locationX>
+        <locationY>2855</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>EventoVisita</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.IdTipoRegistroEventoVisita</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ObtenerOportunidadRelacionada</targetReference>
+            </connector>
+            <label>Evento Visita</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Revisa si se ha obtenido oportunidad</description>
+        <name>ObtieneOportunidad</name>
+        <label>Obtiene Oportunidad??</label>
+        <locationX>182</locationX>
+        <locationY>3095</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>SITenemosOportunidad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ObtenerOportunidadRelacionada.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AsignarEtapaOportunidad_0</targetReference>
+            </connector>
+            <label>SI tenemos oportunidad</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Si se actualiza la urgencia percibida del evento visita se tiene que actualizar en la oportunidad</description>
+        <name>SeActualizaUrgenciaPercibida</name>
+        <label>Se actualiza la urgencia percibida</label>
+        <locationX>380</locationX>
+        <locationY>2279</locationY>
+        <defaultConnector>
+            <targetReference>ObtenerNombreCentro</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Si_se_actualiza</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UrgenciaPercibidaVisita__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>ObtenerOportunidad.UrgenciaPercibida__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ObtenerOportunidad.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarUrgenciaPercibidaOportunidad</targetReference>
+            </connector>
+            <label>Si se actualiza</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>TipoRegistroVisita</name>
+        <label>Tipo Registro Visita?</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>SeActualizaUrgenciaPercibida</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>NoTieneOportunidadAsociada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.WhatId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.IdTipoRegistroEventoVisita</elementReference>
+                </rightValue>
+            </conditions>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>No tiene oportunidad asociada</label>
+        </rules>
+        <rules>
+            <name>Si</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.IdTipoRegistroEventoVisita</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CandidatoContacto_0</targetReference>
+            </connector>
+            <label>Si</label>
+        </rules>
+    </decisions>
+    <description>Rellena el campo Centro/ Residencia de actividad cogiendo el departamento en valor numérico de usuario y buscando en el metadato de correspondencia con el nombre
+--
+V16: Actualiza el campo &quot;ConVisita&quot; de todos los contactos que están relacionados con la oportunidad a la que está relacionada el evento de tipo visita
+
+V19: Nuevo nodo para cuando no haya WhatId (introducir eventos en el calendario de los empleados)</description>
+    <environments>Default</environments>
+    <interviewLabel>EVENTO_Rellena Centro del Asignado {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EVENTO_Automatismos evento</label>
+    <loops>
+        <name>RecorrerContactos</name>
+        <label>Recorrer Contactos</label>
+        <locationX>556</locationX>
+        <locationY>1151</locationY>
+        <collectionReference>ListaContactos</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>ActualizarCampoConVisita</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ContactoConVisita</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>RecorrerIDsContactos</name>
+        <label>Recorrer IDs Contactos</label>
+        <locationX>556</locationX>
+        <locationY>695</locationY>
+        <collectionReference>ObtenerContactosRelacionadosCuenta</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AnadirIDLista</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>TransformarIDsContactos</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtenemos los contactos relacionados con la cuenta de la visita</description>
+        <name>ObtenerContactosRelacionadosCuenta</name>
+        <label>Obtener Contactos Relacionados Cuenta</label>
+        <locationX>556</locationX>
+        <locationY>575</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>RecorrerIDsContactos</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>AccountContactRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>ObtenerNombreCentro</name>
+        <label>Obtener Nombre Centro</label>
+        <locationX>380</locationX>
+        <locationY>2615</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CompletarNombreCentro</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CodigoCentro__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Owner:User.Department</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CorrespondenciaCodigoNombreCentro__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>ObtenerOportunidad</name>
+        <label>Obtener Oportunidad</label>
+        <locationX>556</locationX>
+        <locationY>1727</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Asignar_Con_Visita</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Obtenemos la oportunidad relacionada con el evento</description>
+        <name>ObtenerOportunidadRelacionada</name>
+        <label>Obtener Oportunidad Relacionada</label>
+        <locationX>182</locationX>
+        <locationY>2975</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ObtieneOportunidad</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Nueva Contactado</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Seguimiento llamada</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>StageName</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>ActualizaConVisitaOppt</name>
+        <label>Actualiza Con visita Oppt</label>
+        <locationX>556</locationX>
+        <locationY>1967</locationY>
+        <connector>
+            <targetReference>SeActualizaUrgenciaPercibida</targetReference>
+        </connector>
+        <inputReference>ObtenerOportunidad</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>ActualizarCandidato</name>
+        <label>Actualizar Candidato</label>
+        <locationX>204</locationX>
+        <locationY>575</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ConVisita__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualiza el registro con el valor de la oportunidad Etapa= Visita</description>
+        <name>ActualizarOportunidad_0</name>
+        <label>Actualizar Oportunidad</label>
+        <locationX>50</locationX>
+        <locationY>3335</locationY>
+        <inputReference>ObtenerOportunidadRelacionada</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualizamos la urgencia percibida en la oportunidad</description>
+        <name>ActualizarUrgenciaPercibidaOportunidad</name>
+        <label>Actualizar urgencia percibida oportunidad</label>
+        <locationX>248</locationX>
+        <locationY>2399</locationY>
+        <connector>
+            <targetReference>ObtenerNombreCentro</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>UrgenciaPercibida__c</field>
+            <value>
+                <elementReference>$Record.UrgenciaPercibidaVisita__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Completa el campo de Centro/ Residencia al que pertenece el asignado de la Tarea</description>
+        <name>CompletarNombreCentro</name>
+        <label>Completar Nombre del Centro</label>
+        <locationX>380</locationX>
+        <locationY>2735</locationY>
+        <connector>
+            <targetReference>EventoTipoVisita</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CentroResidencia__c</field>
+            <value>
+                <elementReference>ObtenerNombreCentro.Label</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Marcamos ene le contacto obtenido que ha realizado visita en cualquiere centro Amavir</description>
+        <name>ContactoConVisita</name>
+        <label>Contacto Con Visita</label>
+        <locationX>556</locationX>
+        <locationY>1607</locationY>
+        <connector>
+            <targetReference>ObtenerOportunidad</targetReference>
+        </connector>
+        <inputReference>ColeccionContactosAux</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>TipoRegistroVisita</targetReference>
+        </connector>
+        <object>Event</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo colección de contactos que serán actualizados</description>
+        <name>ColeccionContactosAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <description>Variable de tipo contacto para almacenar el contacto actualizado</description>
+        <name>ContactoAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>ListaContactos</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <description>Lista de IDs de contacto</description>
+        <name>ListaIDs</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

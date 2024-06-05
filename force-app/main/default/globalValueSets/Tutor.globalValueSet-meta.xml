@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Entidad</fullName>
+        <default>false</default>
+        <label>Entidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Familiar</fullName>
+        <default>false</default>
+        <label>Familiar</label>
+    </customValue>
+    <description>Campo de candidato y contacto donde se indica si el tutor es familiar o entidad</description>
+    <masterLabel>Tutor</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

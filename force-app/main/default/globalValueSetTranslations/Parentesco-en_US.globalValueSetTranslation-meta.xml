@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Cuñado/a</masterLabel>
+        <translation>Brother/ Sister-in-law</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cónyuge</masterLabel>
+        <translation>Spouse/  Wife</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hermano/a</masterLabel>
+        <translation>Brother/ Sister</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hijo/a</masterLabel>
+        <translation>Son/ Daughter</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nieto</masterLabel>
+        <translation>Grandson/ Granddaughter</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>No aporta</masterLabel>
+        <translation>Does not contribute</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nuera/ Yerno</masterLabel>
+        <translation>Son/ Daughter-in-law</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otro familiar</masterLabel>
+        <translation>Other family member</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otros</masterLabel>
+        <translation>Others</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Padre/Madre</masterLabel>
+        <translation>Father/ Mother</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pareja de hecho</masterLabel>
+        <translation>Unmarried partner</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Profesional</masterLabel>
+        <translation>Professional</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sobrino</masterLabel>
+        <translation>Nephew/ Niece</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tutor/a</masterLabel>
+        <translation>Tutor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tío/a</masterLabel>
+        <translation>Uncle/ Aunt</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Yerno</masterLabel>
+        <translation>Son-in-law</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

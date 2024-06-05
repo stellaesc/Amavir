@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GradoDiscapacidad__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Grado de la discapacidad del residente</description>
+    <externalId>false</externalId>
+    <label>Grado de discapacidad</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

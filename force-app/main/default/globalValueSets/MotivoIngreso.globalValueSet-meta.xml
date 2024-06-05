@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Psicogeriatría</fullName>
+        <default>false</default>
+        <label>Psicogeriatría</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependencia cognitiva</fullName>
+        <default>false</default>
+        <label>Dependencia cognitiva</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependencia física</fullName>
+        <default>false</default>
+        <label>Dependencia física</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependencia física y cognitiva</fullName>
+        <default>false</default>
+        <label>Dependencia física y cognitiva</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspectos sociales</fullName>
+        <default>false</default>
+        <label>Aspectos sociales</label>
+    </customValue>
+    <customValue>
+        <fullName>Traslado residencia</fullName>
+        <default>false</default>
+        <label>Traslado residencia</label>
+    </customValue>
+    <customValue>
+        <fullName>Plaza Pública</fullName>
+        <default>false</default>
+        <label>Plaza Pública</label>
+    </customValue>
+    <description>Valores de motivo de ingreso en Leads y Opps</description>
+    <masterLabel>Motivo de Ingreso</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

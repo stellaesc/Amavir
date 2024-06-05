@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HaPasadoCovid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si ha superado el Covid 19</description>
+    <externalId>false</externalId>
+    <label>Ha Pasado Covid</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

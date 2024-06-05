@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>Flujo para actualizar el nombre de la cuenta familiar del candidato que ha sido modificado</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula de tipo texto que almacena el nombre de la cuenta familiar del candidato</description>
+        <name>NombreCuentaFamiliar</name>
+        <dataType>String</dataType>
+        <expression>&quot;Familia y allegados&quot;+&quot; - &quot;+{!CandidatoAux.FirstName}+&quot; &quot;+{!CandidatoAux.LastName}</expression>
+    </formulas>
+    <interviewLabel>CANDIDATO - Actualizar Nombre Cuenta Familiar {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CANDIDATO - Actualizar Nombre Cuenta Familiar</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Actualizamos la cuenta familiar del candidato</description>
+        <name>UpdateCuentaFamiliar</name>
+        <label>UpdateCuentaFamiliar</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CandidatoAux.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Company</field>
+            <value>
+                <elementReference>NombreCuentaFamiliar</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateCuentaFamiliar</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo registro candidato que almacena los datos del candidato actualizado</description>
+        <name>CandidatoAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+</Flow>

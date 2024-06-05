@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TotalPlazasPrivadaCD__c</fullName>
+    <externalId>false</externalId>
+    <label>Total plazas privada CD</label>
+    <summaryFilterItems>
+        <field>Plaza__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Centro de día</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Plaza__c.TipoPlaza__c</field>
+        <operation>equals</operation>
+        <value>Privada</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Plaza__c.DiaSemana__c</field>
+        <operation>equals</operation>
+        <value>Lunes</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Plaza__c.PlazaInhabilitada__c</field>
+        <operation>equals</operation>
+        <value>False</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Plaza__c.Cuenta__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

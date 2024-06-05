@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acuerdo Marco/ Entidad pública</fullName>
+        <default>false</default>
+        <label>Acuerdo Marco/ Entidad pública</label>
+    </customValue>
+    <customValue>
+        <fullName>Boca a boca</fullName>
+        <default>false</default>
+        <label>Boca a boca</label>
+    </customValue>
+    <customValue>
+        <fullName>Buzoneo</fullName>
+        <default>false</default>
+        <label>Buzoneo</label>
+    </customValue>
+    <customValue>
+        <fullName>Acuerdos/ Colaboraciones</fullName>
+        <default>false</default>
+        <label>Entidades colaboradoras</label>
+    </customValue>
+    <customValue>
+        <fullName>Familiar/ Conocido Amavir</fullName>
+        <default>false</default>
+        <label>Familiar/ Conocido Amavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Guías</fullName>
+        <default>false</default>
+        <label>Guías</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet</fullName>
+        <default>false</default>
+        <label>Internet</label>
+    </customValue>
+    <customValue>
+        <fullName>Otras residencias Amavir</fullName>
+        <default>false</default>
+        <label>Otras residencias Amavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Prensa</fullName>
+        <default>false</default>
+        <label>Prensa</label>
+    </customValue>
+    <customValue>
+        <fullName>Radio</fullName>
+        <default>false</default>
+        <label>Radio</label>
+    </customValue>
+    <customValue>
+        <fullName>Reingreso</fullName>
+        <default>false</default>
+        <label>Reingreso</label>
+    </customValue>
+    <customValue>
+        <fullName>Soportes indicativos</fullName>
+        <default>false</default>
+        <label>Soportes indicativos</label>
+    </customValue>
+    <customValue>
+        <fullName>TS/ prescriptor</fullName>
+        <default>false</default>
+        <label>TS/ prescriptor</label>
+    </customValue>
+    <customValue>
+        <fullName>TV</fullName>
+        <default>false</default>
+        <label>TV</label>
+    </customValue>
+    <customValue>
+        <fullName>Usuario CD, CN, CR</fullName>
+        <default>false</default>
+        <label>Usuario CD, CN, CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Amavir</fullName>
+        <default>false</default>
+        <label>Web Amavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Zona</fullName>
+        <default>false</default>
+        <label>Zona</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Adavir</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Web Adavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Otras Residencias Adavir</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Otras Residencias Adavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Campañas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Campañas</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Valle de Egüés</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Web Valle de Egüés</label>
+    </customValue>
+    <description>Indica cómo el candidato ha conocido Amavir</description>
+    <masterLabel>Origen de conocimiento</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlazasCentroDiaPrivadas</fullName>
+    <columns>NAME</columns>
+    <columns>Cuenta__c</columns>
+    <columns>TipoPlaza__c</columns>
+    <columns>PlazaOcupada__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Plaza__c.CentroDia</value>
+    </filters>
+    <filters>
+        <field>TipoPlaza__c</field>
+        <operation>equals</operation>
+        <value>P</value>
+    </filters>
+    <label>Plazas Centro de día Privadas</label>
+</ListView>

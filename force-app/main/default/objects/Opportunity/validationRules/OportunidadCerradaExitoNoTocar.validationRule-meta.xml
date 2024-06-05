@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OportunidadCerradaExitoNoTocar</fullName>
+    <active>true</active>
+    <description>Una oportunidas cerrada- éxito no se puede modificar</description>
+    <errorConditionFormula>AND(
+   $Profile.Id  &lt;&gt;  $Label.IdPerfilAdministradorSistema, 
+   $UserRole.DeveloperName  &lt;&gt; &apos;DireccionComercial&apos;,
+   $UserRole.DeveloperName  &lt;&gt; &apos;CentralitaCentrosPublicos&apos;,
+   $UserRole.DeveloperName  &lt;&gt; &apos;CentrosFueraMadrid&apos;,
+   $UserRole.DeveloperName  &lt;&gt; &apos;CentrosMadrid&apos;,
+   OR( 
+      AND(
+         ISCHANGED(StageName),
+         ISPICKVAL(PRIORVALUE(StageName),&apos;Cerrada - Éxito&apos;)
+      ),
+      AND(
+         NOT(ISCHANGED( StageName )),
+         ISPICKVAL(StageName, &apos;Cerrada - Éxito&apos;),
+         NOT(ISCHANGED(MessageSAPResponse__c)),
+         NOT(ISCHANGED(IdExternoSAP__c)),
+         NOT(ISCHANGED(CodeSAPResponse__c))
+      )
+   )
+)</errorConditionFormula>
+    <errorMessage>Esta oportunidad está ya cerrada en la etapa cerrada- éxito y no se puede modificar</errorMessage>
+</ValidationRule>

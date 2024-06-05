@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>Flujo para cerrar las oportunidades abiertas de una cuenta a &quot;Cerrada - Perdida&quot; cuando se cierra una oportunidad como &quot;Cerrada - Perdida&quot;
+--
+V2: Corrección erratas</description>
+    <masterLabel>OPORTUNIDAD - Cerrar Oportunidades Abiertas a Perdidas (Opt Perdida)</masterLabel>
+</FlowDefinition>

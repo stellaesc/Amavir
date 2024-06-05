@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AltaSoloAutomatismos</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL( TipoPerdida__c , &quot;Alta&quot;), ISCHANGED(TipoPerdida__c),  $User.Alias != &apos;uinte&apos;)</errorConditionFormula>
+    <errorDisplayField>TipoPerdida__c</errorDisplayField>
+    <errorMessage>Solo puedes seleccionar Otros</errorMessage>
+</ValidationRule>

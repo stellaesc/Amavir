@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactPrescriptorCustomCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Cargo__c</fields>
+    <fields>Phone</fields>
+    <fields>MobilePhone</fields>
+    <fields>ExtensionTelefono__c</fields>
+    <label>Contact Prescriptor Custom Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo__c</fullName>
+    <description>Cargo que ocupa el contacto dentro de su entidad Prescriptora</description>
+    <externalId>false</externalId>
+    <label>Cargo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Educador social / Trabajador social</fullName>
+                <default>false</default>
+                <label>Trabajador social</label>
+            </value>
+            <value>
+                <fullName>Psicologo/a</fullName>
+                <default>false</default>
+                <label>Psicologo/a</label>
+            </value>
+            <value>
+                <fullName>Director/ Gerente</fullName>
+                <default>false</default>
+                <label>Director/ Gerente</label>
+            </value>
+            <value>
+                <fullName>Educador social</fullName>
+                <default>false</default>
+                <label>Educador social</label>
+            </value>
+            <value>
+                <fullName>Médico</fullName>
+                <default>false</default>
+                <label>Médico</label>
+            </value>
+            <value>
+                <fullName>Enfermero/a</fullName>
+                <default>false</default>
+                <label>Enfermero/a</label>
+            </value>
+            <value>
+                <fullName>Abogado/a</fullName>
+                <default>false</default>
+                <label>Abogado/a</label>
+            </value>
+            <value>
+                <fullName>Auxiliar de enfermería</fullName>
+                <default>false</default>
+                <label>Auxiliar de enfermería</label>
+            </value>
+            <value>
+                <fullName>Docente</fullName>
+                <default>false</default>
+                <label>Docente</label>
+            </value>
+            <value>
+                <fullName>Animador sociocultural</fullName>
+                <default>false</default>
+                <label>Animador sociocultural</label>
+            </value>
+            <value>
+                <fullName>Fisioterapeuta</fullName>
+                <default>false</default>
+                <label>Fisioterapeuta</label>
+            </value>
+            <value>
+                <fullName>Terapeuta ocupacional</fullName>
+                <default>false</default>
+                <label>Terapeuta ocupacional</label>
+            </value>
+            <value>
+                <fullName>Administración o técnico</fullName>
+                <default>false</default>
+                <label>Administración o técnico</label>
+            </value>
+            <value>
+                <fullName>Voluntario</fullName>
+                <default>false</default>
+                <label>Voluntario</label>
+            </value>
+            <value>
+                <fullName>Consultor/a</fullName>
+                <default>false</default>
+                <label>Consultor/a</label>
+            </value>
+            <value>
+                <fullName>Coordinación y jefatura</fullName>
+                <default>false</default>
+                <label>Coordinación y jefatura</label>
+            </value>
+            <value>
+                <fullName>Dirección operaciones</fullName>
+                <default>false</default>
+                <label>Dirección operaciones</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Trabajador/a religioso/a</fullName>
+                <default>false</default>
+                <label>Religioso/a</label>
+            </value>
+            <value>
+                <fullName>Presidencia</fullName>
+                <default>false</default>
+                <label>Presidencia</label>
+            </value>
+            <value>
+                <fullName>Asesor Social</fullName>
+                <default>false</default>
+                <label>Asesor Social</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

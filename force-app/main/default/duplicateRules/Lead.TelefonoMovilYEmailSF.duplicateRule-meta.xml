@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>¿Utilizar uno de estos registros?</alertText>
+    <description>Regla de duplicados de telefono, movil y email por un candidato creado desde Salesforce</description>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>OrigenConocimiento__c</field>
+            <operation>notEqual</operation>
+            <value>Web Amavir</value>
+            <sortOrder>1</sortOrder>
+            <table>Lead</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>TelefonoMovilYEmailSF</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Contact</matchRuleSObjectType>
+        <matchingRule>TelefonoMovilYEmailSF</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>Email</inputField>
+                <outputField>Email</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>CorreoElectronicoFamiliarAllegado__c</inputField>
+                <outputField>EmailFamiliarAllegado__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>MobilePhone</inputField>
+                <outputField>MobilePhone</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Phone</inputField>
+                <outputField>Phone</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>TelefonoFamiliarAllegado__c</inputField>
+                <outputField>TelefonoFamiliarAllegado__c</outputField>
+            </mappingFields>
+            <outputObject>Contact</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>TelefonoMovilYEmailSF</masterLabel>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>10</sortOrder>
+</DuplicateRule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OportPlazaPublicaResidenciaMiCentro</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>ProductoInteres__c</columns>
+    <columns>ResidenciaPreferencia__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>SalesTeam</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.PlazaPublica</value>
+    </filters>
+    <filters>
+        <field>ProductoInteres__c</field>
+        <operation>equals</operation>
+        <value>Residencia permanente,Estancia temporal,Estancia de respiro,Estancia nocturna,Apartamento</value>
+    </filters>
+    <label>Oport plaza pública residencia mi Centro</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EtapaContactadoResidenciadepreferencia</fullName>
+    <active>true</active>
+    <description>Estado del candidato= Contactado —&gt; Residencia de preferencia debe estar relleno</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status),
+ISPICKVAL(Status , &apos;Contactado&apos;),
+ISBLANK(ResidenciaPreferencia__c))</errorConditionFormula>
+    <errorMessage>Para pasar a la etapa Contactado es necesario completar el campo &quot;Residencia de Preferencia&quot;</errorMessage>
+</ValidationRule>

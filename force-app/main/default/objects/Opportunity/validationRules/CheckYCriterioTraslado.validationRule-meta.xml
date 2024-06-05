@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckYCriterioTraslado</fullName>
+    <active>true</active>
+    <description>Regla de validación para obligar a rellenar el criterio de preferencia de lista de espera con Traslado en el caso de que se marque el check de Traslado o viceversa si el usuario es distinto al usuario de integración y no se ha rellenado la fecha de ingreo</description>
+    <errorConditionFormula>AND(
+				ISBLANK(FechaIngreso__c), 
+				$User.Alias!=&apos;uinte&apos;,
+				OR(
+								AND(
+								ISPICKVAL(CriterioPreferenciaListaEspera__c,&apos;Traslado&apos;),
+								 NOT(Traslado__c)
+								),
+				AND(
+								Traslado__c,
+								NOT(ISPICKVAL(CriterioPreferenciaListaEspera__c,&apos;Traslado&apos;))
+								)
+				)
+	)</errorConditionFormula>
+    <errorMessage>Si rellena el campo check de Traslado debe de rellenar el criterio de preferencia de lista de espera con el valor Traslado hasta que la fecha de ingreso no esté rellena</errorMessage>
+</ValidationRule>

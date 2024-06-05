@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoCentroDia__c</fullName>
+    <description>Nos indica el tipo de centro de día que se va a vender al residente</description>
+    <externalId>false</externalId>
+    <label>Tipo de Centro de Día</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Centro de día con transporte</fullName>
+                <default>false</default>
+                <label>Centro de día con transporte</label>
+            </value>
+            <value>
+                <fullName>Centro de día sin transporte</fullName>
+                <default>false</default>
+                <label>Centro de día sin transporte</label>
+            </value>
+            <value>
+                <fullName>Centro de día a media jornada</fullName>
+                <default>false</default>
+                <label>Centro de día a media jornada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OportunidadCerradaExitoSiempreConPlaza</fullName>
+    <active>true</active>
+    <description>Las oportunidades que ocupan plaza de residencia no se pueden cerrar en éxito sin rellenar la plaza</description>
+    <errorConditionFormula>AND(
+    $Profile.Id  &lt;&gt;  $Label.IdPerfilAdministradorSistema,
+    ISPICKVAL( StageName , &apos;Envío SAP&apos;),
+    ISBLANK(FechaSalida__c),
+    OR(
+       ISPICKVAL( ProductoInteres__c , &apos;Residencia permanente&apos;),
+       ISPICKVAL( ProductoInteres__c , &apos;Estancia temporal&apos;),	
+       ISPICKVAL( ProductoInteres__c , &apos;Estancia de respiro&apos;),
+       ISPICKVAL( ProductoInteres__c , &apos;Estancia nocturna&apos;),
+       ISPICKVAL( ProductoInteres__c , &apos;Apartamento&apos;)
+      ),
+    ISBLANK(Plaza__c)
+)</errorConditionFormula>
+    <errorMessage>Falta completar la plaza de residencia</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactResidenteCustomCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>MobilePhone</fields>
+    <fields>Phone</fields>
+    <fields>IconoBeta__c</fields>
+    <fields>IconoMysteryClient__c</fields>
+    <label>Contact Residente Custom Compact Layout</label>
+</CompactLayout>

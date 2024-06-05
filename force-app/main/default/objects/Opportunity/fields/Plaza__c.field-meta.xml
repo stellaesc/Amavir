@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plaza__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Plaza que ocupa el paciente en la residencia</description>
+    <externalId>false</externalId>
+    <label>Plaza residencia</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Plaza__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Residencia</value>
+        </filterItems>
+        <filterItems>
+            <field>Plaza__c.Cuenta__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.ResidenciaIngreso__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Plaza__c.PlazaInhabilitada__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Plaza__c</referenceTo>
+    <relationshipLabel>Oportunidades (Plaza residencia)</relationshipLabel>
+    <relationshipName>Oportunidades7</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

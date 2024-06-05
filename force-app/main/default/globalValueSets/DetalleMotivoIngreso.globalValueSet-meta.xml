@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Autolisis</fullName>
+        <default>false</default>
+        <label>Autolisis</label>
+    </customValue>
+    <customValue>
+        <fullName>Bipolar</fullName>
+        <default>false</default>
+        <label>Bipolar</label>
+    </customValue>
+    <customValue>
+        <fullName>Depresión / Ansiedad</fullName>
+        <default>false</default>
+        <label>Depresión / Ansiedad</label>
+    </customValue>
+    <customValue>
+        <fullName>Enfermedad neurológica</fullName>
+        <default>false</default>
+        <label>Enfermedad neurológica</label>
+    </customValue>
+    <customValue>
+        <fullName>Esquizofrenia</fullName>
+        <default>false</default>
+        <label>Esquizofrenia</label>
+    </customValue>
+    <customValue>
+        <fullName>TOC</fullName>
+        <default>false</default>
+        <label>TOC</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>ACV / Ictus</fullName>
+        <default>false</default>
+        <label>ACV / Ictus</label>
+    </customValue>
+    <customValue>
+        <fullName>Amputación</fullName>
+        <default>false</default>
+        <label>Amputación</label>
+    </customValue>
+    <customValue>
+        <fullName>Caídas</fullName>
+        <default>false</default>
+        <label>Caídas</label>
+    </customValue>
+    <customValue>
+        <fullName>Cáncer</fullName>
+        <default>false</default>
+        <label>Cáncer</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclerosis</fullName>
+        <default>false</default>
+        <label>Esclerosis</label>
+    </customValue>
+    <customValue>
+        <fullName>Fractura</fullName>
+        <default>false</default>
+        <label>Fractura</label>
+    </customValue>
+    <customValue>
+        <fullName>Problemas cardiovasculares (Infarto, ICC, HTA, Arritmias, Fibrilación, Diabetes…)</fullName>
+        <default>false</default>
+        <label>Problemas cardiovasculares (Infarto, ICC, HTA, Arritmias, Fibrilación, Diabetes…)</label>
+    </customValue>
+    <customValue>
+        <fullName>Movilidad reducida</fullName>
+        <default>false</default>
+        <label>Movilidad reducida</label>
+    </customValue>
+    <customValue>
+        <fullName>Paliativos</fullName>
+        <default>false</default>
+        <label>Paliativos</label>
+    </customValue>
+    <customValue>
+        <fullName>Parkinson</fullName>
+        <default>false</default>
+        <label>Parkinson</label>
+    </customValue>
+    <customValue>
+        <fullName>Operación / Convalecencia</fullName>
+        <default>false</default>
+        <label>Operación / Convalecencia</label>
+    </customValue>
+    <customValue>
+        <fullName>Problemas respiratorios (O2, Neutomonía, EPOC...)</fullName>
+        <default>false</default>
+        <label>Problemas respiratorios (O2, Neutomonía, EPOC...)</label>
+    </customValue>
+    <customValue>
+        <fullName>Otras</fullName>
+        <default>false</default>
+        <label>Otras</label>
+    </customValue>
+    <customValue>
+        <fullName>Alteraciones de conducta</fullName>
+        <default>false</default>
+        <label>Alteraciones de conducta</label>
+    </customValue>
+    <customValue>
+        <fullName>Alzheimer</fullName>
+        <default>false</default>
+        <label>Alzheimer</label>
+    </customValue>
+    <customValue>
+        <fullName>Cuerpo Lewy</fullName>
+        <default>false</default>
+        <label>Cuerpo Lewy</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia fronto-temporal</fullName>
+        <default>false</default>
+        <label>Demencia fronto-temporal</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia senil</fullName>
+        <default>false</default>
+        <label>Demencia senil</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia vascular</fullName>
+        <default>false</default>
+        <label>Demencia vascular</label>
+    </customValue>
+    <customValue>
+        <fullName>Desorientación / Riesgo fuga</fullName>
+        <default>false</default>
+        <label>Desorientación / Riesgo fuga</label>
+    </customValue>
+    <customValue>
+        <fullName>Perdidas memoria</fullName>
+        <default>false</default>
+        <label>Perdidas memoria</label>
+    </customValue>
+    <customValue>
+        <fullName>ELA</fullName>
+        <default>false</default>
+        <label>ELA</label>
+    </customValue>
+    <customValue>
+        <fullName>De la competencia por descontento</fullName>
+        <default>false</default>
+        <label>De la competencia por descontento</label>
+    </customValue>
+    <customValue>
+        <fullName>De la competencia por cercanía familiar</fullName>
+        <default>false</default>
+        <label>De la competencia por cercanía familiar</label>
+    </customValue>
+    <customValue>
+        <fullName>De la competencia por precios y servicios</fullName>
+        <default>false</default>
+        <label>De la competencia por precios y servicios</label>
+    </customValue>
+    <customValue>
+        <fullName>De Amavir</fullName>
+        <default>false</default>
+        <label>De Amavir</label>
+    </customValue>
+    <customValue>
+        <fullName>Problemas cuidadores domicilio</fullName>
+        <default>false</default>
+        <label>Problemas cuidadores domicilio</label>
+    </customValue>
+    <customValue>
+        <fullName>Tranquilidad familiar</fullName>
+        <default>false</default>
+        <label>Tranquilidad familiar</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiro familiar</fullName>
+        <default>false</default>
+        <label>Respiro familiar</label>
+    </customValue>
+    <customValue>
+        <fullName>Soledad no deseada</fullName>
+        <default>false</default>
+        <label>Soledad no deseada</label>
+    </customValue>
+    <customValue>
+        <fullName>Vivienda no adaptada</fullName>
+        <default>false</default>
+        <label>Vivienda no adaptada</label>
+    </customValue>
+    <customValue>
+        <fullName>Problemas de autocuidado</fullName>
+        <default>false</default>
+        <label>Problemas de autocuidado</label>
+    </customValue>
+    <customValue>
+        <fullName>Por decisión propia</fullName>
+        <default>false</default>
+        <label>Por decisión propia</label>
+    </customValue>
+    <customValue>
+        <fullName>Situación insostenible</fullName>
+        <default>false</default>
+        <label>Situación insostenible</label>
+    </customValue>
+    <customValue>
+        <fullName>Aislamiento</fullName>
+        <default>false</default>
+        <label>Aislamiento</label>
+    </customValue>
+    <customValue>
+        <fullName>Plaza Pública</fullName>
+        <default>false</default>
+        <label>Plaza Pública</label>
+    </customValue>
+    <customValue>
+        <fullName>Enfermedad Neurodegenerativa</fullName>
+        <default>false</default>
+        <label>Enfermedad Neurodegenerativa</label>
+    </customValue>
+    <description>Valores del campo Detalle Motivo de Ingreso del Lead y Opp</description>
+    <masterLabel>Detalle Motivo de Ingreso</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

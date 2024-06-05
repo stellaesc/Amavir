@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumeroDelDocumentoFamiliarAllegado__c</fullName>
+    <description>Número del documento del familiar que contacta</description>
+    <externalId>false</externalId>
+    <label>Número del documento Familiar/Allegado</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

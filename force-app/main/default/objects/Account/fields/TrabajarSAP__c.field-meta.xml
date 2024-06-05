@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrabajarSAP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Este campo nos indica que el centro solo trabaja en SAP, en dicho caso no se harán envíos de episodios.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Si se marca como verdadero indica que el centro solo trabaja en SAP y no se permitirán realizar envíos de oportunidades. Si se desmarca después de haber estado marcado contacte con su administrador para sincronizar los episodios, los residentes y las plazas del centro</inlineHelpText>
+    <label>Trabajar solo en SAP</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

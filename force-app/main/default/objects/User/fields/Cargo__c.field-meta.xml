@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo__c</fullName>
+    <description>Cargo del usuario dentro de la organización de Amavir</description>
+    <externalId>false</externalId>
+    <label>Cargo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administración en centros</fullName>
+                <default>false</default>
+                <label>Administración en centros</label>
+            </value>
+            <value>
+                <fullName>Animación</fullName>
+                <default>false</default>
+                <label>Animación</label>
+            </value>
+            <value>
+                <fullName>Asesoría de recursos sociales</fullName>
+                <default>false</default>
+                <label>Asesoría de recursos sociales</label>
+            </value>
+            <value>
+                <fullName>Coordinación de enfermería</fullName>
+                <default>false</default>
+                <label>Coordinación de enfermería</label>
+            </value>
+            <value>
+                <fullName>Coordinación de gerocultores</fullName>
+                <default>false</default>
+                <label>Coordinación de gerocultores</label>
+            </value>
+            <value>
+                <fullName>Coordinación equipo ars</fullName>
+                <default>false</default>
+                <label>Coordinación equipo ars</label>
+            </value>
+            <value>
+                <fullName>Coordinación ssgg</fullName>
+                <default>false</default>
+                <label>Coordinación ssgg</label>
+            </value>
+            <value>
+                <fullName>Dirección comercial y de marketing</fullName>
+                <default>false</default>
+                <label>Dirección comercial y de marketing</label>
+            </value>
+            <value>
+                <fullName>Dirección de centro</fullName>
+                <default>false</default>
+                <label>Dirección de centro</label>
+            </value>
+            <value>
+                <fullName>Fisioterapeuta</fullName>
+                <default>false</default>
+                <label>Fisioterapeuta</label>
+            </value>
+            <value>
+                <fullName>Gerocultor/a</fullName>
+                <default>false</default>
+                <label>Gerocultor/a</label>
+            </value>
+            <value>
+                <fullName>Psicólogo/a</fullName>
+                <default>false</default>
+                <label>Psicólogo/a</label>
+            </value>
+            <value>
+                <fullName>Recepcionista</fullName>
+                <default>false</default>
+                <label>Recepcionista</label>
+            </value>
+            <value>
+                <fullName>Responsable comercial regional</fullName>
+                <default>false</default>
+                <label>Responsable comercial regional</label>
+            </value>
+            <value>
+                <fullName>Terapeuta ocupacional</fullName>
+                <default>false</default>
+                <label>Terapeuta ocupacional</label>
+            </value>
+            <value>
+                <fullName>Trabajador/a social</fullName>
+                <default>false</default>
+                <label>Trabajador/a social</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

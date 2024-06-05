@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MotivoDescarte__c</fullName>
+    <description>Motivo de no conversión del candidato</description>
+    <externalId>false</externalId>
+    <label>Motivo de descarte</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Descontento / Atención tardía</fullName>
+                <default>false</default>
+                <label>Descontento / Atención tardía</label>
+            </value>
+            <value>
+                <fullName>Distancia</fullName>
+                <default>false</default>
+                <label>Distancia</label>
+            </value>
+            <value>
+                <fullName>Duplicado</fullName>
+                <default>false</default>
+                <label>Duplicado</label>
+            </value>
+            <value>
+                <fullName>El residente se niega</fullName>
+                <default>false</default>
+                <label>El residente se niega</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento</fullName>
+                <default>false</default>
+                <label>Fallecimiento</label>
+            </value>
+            <value>
+                <fullName>Falta de acuerdo familiar</fullName>
+                <default>false</default>
+                <label>Falta de acuerdo familiar</label>
+            </value>
+            <value>
+                <fullName>Hospitalización larga duración</fullName>
+                <default>false</default>
+                <label>Hospitalización larga duración</label>
+            </value>
+            <value>
+                <fullName>Información a largo plazo / Curiosidad</fullName>
+                <default>false</default>
+                <label>Información a largo plazo / Curiosidad</label>
+            </value>
+            <value>
+                <fullName>Ingreso, derivación u otro producto Amavir</fullName>
+                <default>false</default>
+                <label>Ingreso, derivación u otro producto Amavir</label>
+            </value>
+            <value>
+                <fullName>No brinda datos o son erróneos / Imposibilidad de contactar</fullName>
+                <default>false</default>
+                <label>No brinda datos o son erróneos / Imposibilidad de contactar</label>
+            </value>
+            <value>
+                <fullName>No cumple requisitos de edad</fullName>
+                <default>false</default>
+                <label>No cumple requisitos de edad</label>
+            </value>
+            <value>
+                <fullName>No disponen de transporte (CD)</fullName>
+                <default>false</default>
+                <label>No disponen de transporte (CD)</label>
+            </value>
+            <value>
+                <fullName>No interesa precio</fullName>
+                <default>false</default>
+                <label>No interesa precio</label>
+            </value>
+            <value>
+                <fullName>No se adapta a sus preferencias</fullName>
+                <default>false</default>
+                <label>No se adapta a sus preferencias</label>
+            </value>
+            <value>
+                <fullName>Otra residencia competencia / residencia pequeña / otra CC.AA.</fullName>
+                <default>false</default>
+                <label>Otra residencia competencia / residencia pequeña / otra CC.AA.</label>
+            </value>
+            <value>
+                <fullName>Otro recurso / Domicilio / Solucionado</fullName>
+                <default>false</default>
+                <label>Otro recurso / Domicilio / Solucionado</label>
+            </value>
+            <value>
+                <fullName>Plaza o producto no disponible</fullName>
+                <default>false</default>
+                <label>Plaza o producto no disponible</label>
+            </value>
+            <value>
+                <fullName>Plaza pública (concedida, en espera, traslado)</fullName>
+                <default>false</default>
+                <label>Plaza pública (concedida, en espera, traslado)</label>
+            </value>
+            <value>
+                <fullName>Recuperación</fullName>
+                <default>false</default>
+                <label>Recuperación</label>
+            </value>
+            <value>
+                <fullName>Residencia pendiente de apertura</fullName>
+                <default>false</default>
+                <label>Residencia pendiente de apertura</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

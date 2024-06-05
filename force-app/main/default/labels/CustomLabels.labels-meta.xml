@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ColaOppPospuestas</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ColaOppPospuestas</shortDescription>
+        <value>00G09000004R43X</value>
+    </labels>
+    <labels>
+        <fullName>ColaTareasSeguimiento</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ColaTareasSeguimiento</shortDescription>
+        <value>00G09000004R43Y</value>
+    </labels>
+    <labels>
+        <fullName>IdPerfilAdministradorSistema</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Id Perfil Administrador de Sistema</shortDescription>
+        <value>00e09000002H73w</value>
+    </labels>
+    <labels>
+        <fullName>IdTipoRegistroContactoResidente</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Id tipo Registro Contacto Residente</shortDescription>
+        <value>01209000000uf8IAAQ</value>
+    </labels>
+    <labels>
+        <fullName>IdTipoRegistroEventoVisita</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>IdTipoRegistroEventoVisita</shortDescription>
+        <value>01209000000uf8LAAQ</value>
+    </labels>
+    <labels>
+        <fullName>IdTipoRegistroTareaLLamada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>IdTipoRegistroTareaLLamada</shortDescription>
+        <value>01209000000uf8SAAQ</value>
+    </labels>
+    <labels>
+        <fullName>RecordType</fullName>
+        <categories>RecordTypeId</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>RecordTypeCentro/Residencia</shortDescription>
+        <value>01209000000uf8DAAQ</value>
+    </labels>
+</CustomLabels>

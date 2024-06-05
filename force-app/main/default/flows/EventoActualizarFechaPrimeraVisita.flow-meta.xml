@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <description>Nodo de decisión para comprobar la fecha de la primera visita vinculada con la cuenta</description>
+        <name>FechaPrimeraVisita</name>
+        <label>Fecha Primera Visita</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>UpdateAccount</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Nueva Visita</defaultConnectorLabel>
+        <rules>
+            <name>Cuenta</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetAccount.FechaPrimeraVisita__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>VisitaAux.ActivityDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GetAccount.FechaPrimeraVisita__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Cuenta</label>
+        </rules>
+    </decisions>
+    <description>Flujo desencadenado automáticamente para actualizar la fecha de primera visita vinculada con la cuenta del evento creado.</description>
+    <environments>Default</environments>
+    <interviewLabel>Visita - Fecha primera visita {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Evento - Actualizar fecha primera visita</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtenemos la cuenta relacionada con la visita</description>
+        <name>GetAccount</name>
+        <label>GetAccount</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FechaPrimeraVisita</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VisitaAux.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Actualizamos la fecha de la primera visita de la cuenta</description>
+        <name>UpdateAccount</name>
+        <label>UpdateAccount</label>
+        <locationX>264</locationX>
+        <locationY>350</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VisitaAux.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>FechaPrimeraVisita__c</field>
+            <value>
+                <elementReference>VisitaAux.ActivityDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetAccount</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo registro que almacena los datos de la visita pasada por parámetro</description>
+        <name>VisitaAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Event</objectType>
+    </variables>
+</Flow>

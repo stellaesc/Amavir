@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlazaMartesOcupada</fullName>
+    <active>true</active>
+    <description>si la plaza que se elige está ocupada debe salir un mensaje</description>
+    <errorConditionFormula>AND(
+$Profile.Id &lt;&gt; $Label.IdPerfilAdministradorSistema,
+ISCHANGED(PlazaMartes__c),
+PlazaMartes__r.PlazaOcupada__c
+)</errorConditionFormula>
+    <errorMessage>La plaza del Martes que intenta seleccionar está ocupada</errorMessage>
+</ValidationRule>

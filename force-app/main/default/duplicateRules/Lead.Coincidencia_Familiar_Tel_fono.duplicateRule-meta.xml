@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>¿Utilizar uno de estos registros?</alertText>
+    <description>Revisa duplicados de candidato y contacto potencial
+Teléfono y/o móvil</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>CoincidenciaFamiliarTelefono</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Contact</matchRuleSObjectType>
+        <matchingRule>CoincidenciaFamiliarTelefono</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>TelefonoFamiliarAllegado__c</inputField>
+                <outputField>MobilePhone</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>TelefonoFamiliarAllegado__c</inputField>
+                <outputField>Phone</outputField>
+            </mappingFields>
+            <outputObject>Contact</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>false</isActive>
+    <masterLabel>Coincidencia Familiar Teléfono</masterLabel>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>5</sortOrder>
+</DuplicateRule>

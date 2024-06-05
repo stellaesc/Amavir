@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>Nodo de decisión para comprobar si existe alguna actividad relacionada con la oportunidad (tarea y/o evento)</description>
+        <name>DecisionExisteActividad</name>
+        <label>Existe Actividad</label>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>AvisoFaltaTarea</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No existe</defaultConnectorLabel>
+        <rules>
+            <name>ExisteActividad</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>GetTareas</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>GetEventos</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>AvisoVacio</targetReference>
+            </connector>
+            <label>Existe Actividad</label>
+        </rules>
+    </decisions>
+    <description>Avisa por pantalla que el usuario debe crear al menos una tarea relacionada, se lanza mediante otro flujo
+--
+V25: Se contempla la creación de eventos (visita)</description>
+    <environments>Default</environments>
+    <interviewLabel>{!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oportunidad: Aviso Falta Tarea</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Obtenemos los eventos relacionados con la oportunidad</description>
+        <name>GetEventos</name>
+        <label>GetEventos</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>DecisionExisteActividad</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>IdOportunidadActual</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Obtenemos las tareas relacionadas con la oportunidad</description>
+        <name>GetTareas</name>
+        <label>GetTareas</label>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetEventos</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>IdOportunidadActual</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>AvisoFaltaTarea</name>
+        <label>Debe haber al menos una Tarea</label>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>avisoTarea</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(234, 49, 49); font-size: 18px;&quot;&gt;Aviso: Falta Actividad&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;﻿Debe de añadir al menos una actividad relacionada a esta oportunidad.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Este aviso desaparecerá cuando se refresque la página&lt;/strong&gt;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>IdOportunidadActual</leftValueReference>
+                    <operator>NotEqualTo</operator>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>AvisoVacio</name>
+        <label>Vacio</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetTareas</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Oportunidad que blablaba</description>
+        <name>IdOportunidadActual</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>es el numero de tareas relacionadas</description>
+        <name>Numerotareas</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

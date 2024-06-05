@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Asignación para almacenar los datos de la oportunidad cerrada a éxito</description>
+        <name>AlmacenarOportunidad</name>
+        <label>Almacenar Oportunidad</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.LeadSource</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ObtenerUltimaOportunidadCerradaExito.LeadSource</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.DetalleOrigen__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ObtenerUltimaOportunidadCerradaExito.DetalleOrigen__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Prescriptor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ObtenerUltimaOportunidadCerradaExito.Prescriptor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.OrigenConocimiento__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ObtenerUltimaOportunidadCerradaExito.OrigenConocimiento__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ObtenerUltimaOportunidadCerradaExito.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lista de espera - Derivación - Traslado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.CriterioPreferenciaListaEspera__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Traslado</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ActualizarOportunidad</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Nodo de decisión para comprobar si existe alguna oportunidad en la cuenta que sea de tipo cerrada éxito</description>
+        <name>ComprobarOportunidad</name>
+        <label>Comprobar Oportunidad</label>
+        <locationX>182</locationX>
+        <locationY>575</locationY>
+        <defaultConnector>
+            <targetReference>NuevaOportunidad</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Existe Oportunidad</defaultConnectorLabel>
+        <rules>
+            <name>ExisteOportunidad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ObtenerUltimaOportunidadCerradaExito</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AlmacenarOportunidad</targetReference>
+            </connector>
+            <label>Existe Oportunidad</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Nodo de decisión para comprobar que la oportunidad actual es de tipo traslado.</description>
+        <name>OportunidadTipoTraslado</name>
+        <label>Oportunidad Tipo Traslado</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>NoEsOportunidadTraslado</defaultConnectorLabel>
+        <rules>
+            <name>EsOportunidadTraslado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Traslado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ObtenerUltimaOportunidadCerradaExito</targetReference>
+            </connector>
+            <label>EsOportunidadTraslado</label>
+        </rules>
+    </decisions>
+    <description>Flujo para que al crear una oportunidad de tipo traslado se cumplimente ciertos campos de la oportunidad cerrada a éxito previamente y en el caso de no existir, con valores predefinidos</description>
+    <environments>Default</environments>
+    <interviewLabel>OPORTUNIDAD - Cumplimentar Información Traslado {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OPORTUNIDAD - Cumplimentar Información Traslado</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtenemos la última oportunidad de la cuenta que se encuentre en estado &quot;Cerrada - Éxito&quot;</description>
+        <name>ObtenerUltimaOportunidadCerradaExito</name>
+        <label>Obtener Última Oportunidad Cerrada - Éxito</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ComprobarOportunidad</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Cerrada - Éxito</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <sortField>FechaIngreso__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Actualizamos los campos de la oportunidad de tipo traslado con los valores de la oportunidad cerrada a éxito</description>
+        <name>ActualizarOportunidad</name>
+        <label>Actualizar Oportunidad</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualizamos los campos de la oportunidad de tipo traslado con valores predefinidos</description>
+        <name>NuevaOportunidad</name>
+        <label>Nueva Oportunidad</label>
+        <locationX>314</locationX>
+        <locationY>695</locationY>
+        <inputAssignments>
+            <field>CriterioPreferenciaListaEspera__c</field>
+            <value>
+                <stringValue>Traslado</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Lista de espera - Derivación - Traslado</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>OportunidadTipoTraslado</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

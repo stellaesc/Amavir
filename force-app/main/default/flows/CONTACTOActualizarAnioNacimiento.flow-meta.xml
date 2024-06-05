@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>Flujo para calcular y actualizar el año de nacimiento del contacto</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Fórmula para calcular el año de nacimiento del contacto</description>
+        <name>FechaNacimientoContacto</name>
+        <dataType>Number</dataType>
+        <expression>IF(NOT(ISBLANK( {!ContactoAux.Edad__c})), YEAR(TODAY()) - {!ContactoAux.Edad__c}, null)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>CONTACTO - Actualizar Año de Nacimiento {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CONTACTO - Actualizar Año de Nacimiento</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Actualizamos la fecha de nacimiento del contacto</description>
+        <name>UpdateContacto</name>
+        <label>UpdateContacto</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ContactoAux.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AnoNacimiento__c</field>
+            <value>
+                <elementReference>FechaNacimientoContacto</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateContacto</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo de registro contacto para almacenar la información del contacto pasado por parámetro</description>
+        <name>ContactoAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

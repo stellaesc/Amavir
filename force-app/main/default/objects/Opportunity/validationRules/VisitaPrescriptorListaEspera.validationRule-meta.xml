@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisitaPrescriptorListaEspera</fullName>
+    <active>true</active>
+    <description>Es obligatorio para entrar en lista de espera que tenga visita o venga de un prescriptor</description>
+    <errorConditionFormula>AND(
+ ISCHANGED(CriterioPreferenciaListaEspera__c ) ,
+ NOT( ISPICKVAL(CriterioPreferenciaListaEspera__c, &apos;&apos;)) ,
+ RecordType.DeveloperName  &lt;&gt; &apos;Traslado&apos;,
+AND(
+ NOT( ISPICKVAL(CriterioPreferenciaListaEspera__c, &apos;Prescriptor&apos;)),
+ ConVisita__c  &lt;&gt; True
+)
+)</errorConditionFormula>
+    <errorMessage>No pueda entrar en la lista de espera, no tiene visita, ni viene de prescriptor.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TieneProblemasFrecuentesDeMemoria__c</fullName>
+    <description>Nos dice si el residente tiene problemas frecuentes de memoria</description>
+    <externalId>false</externalId>
+    <label>¿Tiene problemas frecuentes de memoria?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SeleccionNecesidades</valueSetName>
+    </valueSet>
+</CustomField>

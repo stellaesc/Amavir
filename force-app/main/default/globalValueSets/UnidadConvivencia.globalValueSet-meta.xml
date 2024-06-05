@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Solo</fullName>
+        <default>false</default>
+        <label>Solo</label>
+    </customValue>
+    <customValue>
+        <fullName>Con su cónyuge</fullName>
+        <default>false</default>
+        <label>Con su cónyuge</label>
+    </customValue>
+    <customValue>
+        <fullName>Con hermano/s</fullName>
+        <default>false</default>
+        <label>Con hermano/s</label>
+    </customValue>
+    <customValue>
+        <fullName>Con cuidador/es</fullName>
+        <default>false</default>
+        <label>Con cuidador/es</label>
+    </customValue>
+    <customValue>
+        <fullName>Con hijo/s o sobrino/s</fullName>
+        <default>false</default>
+        <label>Con hijo/s o sobrino/s</label>
+    </customValue>
+    <customValue>
+        <fullName>Institución (residencia /CD,…)</fullName>
+        <default>false</default>
+        <label>Institución (residencia /CD,…)</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <description>Indica la unidad de convivencia del residente</description>
+    <masterLabel>Unidad de convivencia</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

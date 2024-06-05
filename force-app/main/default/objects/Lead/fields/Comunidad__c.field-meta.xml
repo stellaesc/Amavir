@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comunidad__c</fullName>
+    <description>Comunidad donde Amavir tiene ubicación de residencias</description>
+    <externalId>false</externalId>
+    <label>Comunidad</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Comunidad</valueSetName>
+    </valueSet>
+</CustomField>

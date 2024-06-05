@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>CondicionDeEntrada</name>
+        <label>Condición de Entrada</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>BetaMysteryActualizados</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>FamiliaAllegado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarBetaYMysteryClient</targetReference>
+            </connector>
+            <label>Beta o Mystery Actualizados</label>
+        </rules>
+    </decisions>
+    <description>Flujo principal con todos los subflujos que pueden actuar cuando una cuenta es modificada
+--
+V2: Corrección error tipo de registro de cuenta</description>
+    <environments>Default</environments>
+    <interviewLabel>CUENTA - After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CUENTA - After Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CondicionDeEntrada</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Flujo para actualizar los campos Beta y Mystery Client de los contactos y oportunidades relacionadas con la cuenta pasada por parámetro</description>
+        <name>ActualizarBetaYMysteryClient</name>
+        <label>Actualizar Beta y Mystery Client</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <flowName>CUENTAActualizarBetaYMysteryClient</flowName>
+        <inputAssignments>
+            <name>CuentaEntrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

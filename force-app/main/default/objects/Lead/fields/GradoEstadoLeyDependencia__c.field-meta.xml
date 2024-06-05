@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GradoEstadoLeyDependencia__c</fullName>
+    <description>Grado de dependencia del residente</description>
+    <externalId>false</externalId>
+    <label>Información sobre Ley de Dependencia</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>GradoEstadoLeyDependencia</valueSetName>
+    </valueSet>
+</CustomField>

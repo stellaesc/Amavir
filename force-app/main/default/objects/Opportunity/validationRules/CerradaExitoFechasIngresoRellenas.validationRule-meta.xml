@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CerradaExitoFechasIngresoRellenas</fullName>
+    <active>true</active>
+    <description>Cuando vamos a convertir una oportunidad a &quot;Cerrada-Ganada&quot; debemos tener rellenas la fecha de ingreso y la fecha de ingreso planificado</description>
+    <errorConditionFormula>AND(ISPICKVAL(StageName, &apos;Envío SAP&apos;),
+OR ( ISBLANK(FechaIngreso__c ) ,
+ISBLANK(ResidenciaIngreso__c)
+)
+)</errorConditionFormula>
+    <errorMessage>Es necesario rellenar la fecha de ingreso y la residencia  de ingreso para poder enviar la oportunidad a SAP</errorMessage>
+</ValidationRule>

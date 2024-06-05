@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlazaPrivada</fullName>
+    <active>true</active>
+    <businessProcess>Plaza privada</businessProcess>
+    <description>Tipo de registro para el proceso de ventas de las plazas privadas</description>
+    <label>Plaza privada</label>
+    <picklistValues>
+        <picklist>Comunidad__c</picklist>
+        <values>
+            <fullName>Andalucía</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canarias</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Castilla la Mancha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Castilla y León</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cataluña</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murcia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Navarra</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CriterioPreferenciaListaEspera__c</picklist>
+        <values>
+            <fullName>Derivación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergencia Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Familiar Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prescriptor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resto Fecha inscripción</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traslado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Usuario de Centro de día</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DerivacionColaborador__c</picklist>
+        <values>
+            <fullName>ABG %28ASOCIACIÓN BENEFICA GERIATRICA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABUELOS PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALQUILER SEGURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BACULUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUIDADO Y BIENESTAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUIDEMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUIDUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEPENCARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVERMAX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSOLUCIONA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUTUAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PENSIUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETIRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SENNIORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOP MAYORES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DetalleMotivoIngreso__c</picklist>
+        <values>
+            <fullName>ACV %2F Ictus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aislamiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alteraciones de conducta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alzheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amputación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autolisis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bipolar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caídas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuerpo Lewy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cáncer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De la competencia por cercanía familiar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De la competencia por descontento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De la competencia por precios y servicios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demencia fronto-temporal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demencia senil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demencia vascular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Depresión %2F Ansiedad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desorientación %2F Riesgo fuga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfermedad Neurodegenerativa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfermedad neurológica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esclerosis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esquizofrenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fractura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Movilidad reducida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operación %2F Convalecencia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paliativos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parkinson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perdidas memoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaza Pública</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Por decisión propia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problemas cardiovasculares %28Infarto%2C ICC%2C HTA%2C Arritmias%2C Fibrilación%2C Diabetes%E2%80%A6%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problemas cuidadores domicilio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problemas de autocuidado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problemas respiratorios %28O2%2C Neutomonía%2C EPOC%2E%2E%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respiro familiar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Situación insostenible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soledad no deseada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tranquilidad familiar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vivienda no adaptada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DetalleOrigen__c</picklist>
+        <values>
+            <fullName>ABG %28Asociación Benefica Geriatrica%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abuelos Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derivada desde un Centro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infoelder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inforesidencias</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Ayudas Dependencia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Ayudas Temporales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Comparadora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Dossier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Financiación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Productos Apoyo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Te llamamos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutuam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promo Ciudad Real</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senniors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferencia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Alcalá</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Alcorcón</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Apto%2E Encinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Arganzuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Argaray</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Betelu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Cartagena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Cenicientos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Ciudad Lineal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Ciudad Real</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Colmenar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Coslada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Diagonal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Don Quijote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web El Pinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Encinar del Rey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Encinar-Leganes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Getafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Guadalajara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Haria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Hellín</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Horta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Humanes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Ibañeta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Jaen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web La Alameda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web La Gavia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web La Marina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Mutilva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web NuestraCasa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Oblatas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Patones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Pozuelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web S%2E Agustín de G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Sant Cugat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Santa Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Teià</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Tejina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Torrejon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Tías</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Usera</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Valdebernardo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Valle de Egüés</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Vallecas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Vilanova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Villanueva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Villlaverde</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Administración pública</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entidad colaboradora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prescriptor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teléfono</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MotivoIngreso__c</picklist>
+        <values>
+            <fullName>Aspectos sociales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dependencia cognitiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dependencia física</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dependencia física y cognitiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaza Pública</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psicogeriatría</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traslado residencia</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MotivoPerdida__c</picklist>
+        <values>
+            <fullName>Conc%2E púb Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conc%2E púb Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Descontento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Descontento %2F Atención tardía</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distancia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El residente se niega</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Episodio anulado en SAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exitus Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exitus en Resid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fallecimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falta de acuerdo familiar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fin Es TempReha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fin Es TempResp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital LargaE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitalización larga duración</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadaptación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Información a largo plazo %2F Curiosidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ingreso%2C derivación u otro producto Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mot%2E Económicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No brinda datos o son erróneos %2F Imposibilidad de contactar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No cumple requisitos de edad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No disponen de transporte %28CD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No interesa precio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No se adapta a sus preferencias</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otra residencia competencia %2F residencia pequeña %2F otra CC%2EAA%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otro recurso %2F Domicilio %2F Solucionado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaza o producto no disponible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaza pública %28concedida%2C en espera%2C traslado%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recuperación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renuncia Volunt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resid competenc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residencia pendiente de apertura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trasl Domicilio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trasl otro Amav</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trasp CD a Resi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MotivoTraslado__c</picklist>
+        <values>
+            <fullName>Concesión plaza pública</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Descontento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motivos económicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reagrupación familiar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zona%2Fcercanía</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OrigenConocimiento__c</picklist>
+        <values>
+            <fullName>Acuerdo Marco%2F Entidad pública</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acuerdos%2F Colaboraciones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boca a boca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buzoneo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Familiar%2F Conocido Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guías</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otras residencias Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prensa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reingreso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soportes indicativos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS%2F prescriptor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Usuario CD%2C CN%2C CR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Amavir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zona</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PagoReserva__c</picklist>
+        <values>
+            <fullName>Con pago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sin pago</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PerfilPotencialResidente__c</picklist>
+        <values>
+            <fullName>Alteraciones de conducta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asistido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autónomo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-asistido</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ProductoInteres__c</picklist>
+        <values>
+            <fullName>Apartamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro de día de media jornada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro de día de respiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro día%2F SED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estancia de respiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estancia nocturna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estancia temporal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residencia permanente</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ResidenciasInteres__c</picklist>
+        <values>
+            <fullName>Alcalá de Henares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alcorcón</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arganzuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argaray</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Betelu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cartagena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cenicientos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ciudad Real</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ciudad lineal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ciudalcampo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colmenar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coslada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diagonal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Quijote %28Tomelloso%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Balconcillo %28Guadalajara%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Encinar del Rey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Encinar del Rey Apartamentos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Pinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Getafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haría</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibañeta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaén</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Alameda %28Azuqueca%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Gavia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Marina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Hazas %28Hellín%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutilva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuestra Casa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oblatas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pozuelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puente de Vallecas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Agustín de Guadalix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sant Cugat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santa Cruz de Tenerife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teià</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tejina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torrejón</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tías</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Usera</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valdebernardo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valle de Egües</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vicálvaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vilanova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Villanueva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Villaverde</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SolucionesFinancieras__c</picklist>
+        <values>
+            <fullName>Alquiler seguro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grupo Retiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invermax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pensium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoCentroDia__c</picklist>
+        <values>
+            <fullName>Centro de día a media jornada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro de día con transporte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro de día sin transporte</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoPerdida__c</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoPlaza__c</picklist>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UrgenciaPercibida__c</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Zona__c</picklist>
+        <values>
+            <fullName>Madrid Centro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madrid Corredor del Henares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madrid Noroeste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madrid Norte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madrid Sur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Andalucía</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Canarias</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Castilla La Mancha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Castilla y León</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Cataluña</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Murcia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas Navarra</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

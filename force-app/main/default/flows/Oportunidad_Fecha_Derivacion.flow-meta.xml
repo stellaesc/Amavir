@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <description>Si la derivación es marcada a true, actualizamos la fecha de derivación.</description>
+        <name>ActualizarFechaDerivacion</name>
+        <label>¿Actualizar Fecha Derivacion?</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <defaultConnectorLabel>No Actualizar Fecha Derivacion</defaultConnectorLabel>
+        <rules>
+            <name>ActualizarFecha</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Derivacion__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Opportunity.Derivacion__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Opportunity_prior.Derivacion__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarOportunidad</targetReference>
+            </connector>
+            <label>Actualizar Fecha</label>
+        </rules>
+    </decisions>
+    <description>Flujo que actualiza la fecha de derivacion de la oportunidad si esta se cambia a verdadero.</description>
+    <environments>Default</environments>
+    <interviewLabel>Oportunidad - Fecha Derivacion {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oportunidad - Fecha Derivacion</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>ActualizarOportunidad</name>
+        <label>Actualizar oportunidad</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Opportunity.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>FechaDerivacion__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ActualizarFechaDerivacion</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>Opportunity_prior</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción para clonar una oportunidad con su primera llamada o visita y no cuente para los informes</description>
+    <flowDefinition>OPORTUNIDADClonarConActividad</flowDefinition>
+    <label>Clonar con Actividad</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

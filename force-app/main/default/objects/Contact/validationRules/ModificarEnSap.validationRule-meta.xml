@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ModificarEnSap</fullName>
+    <active>false</active>
+    <description>Regla de validación que impide modificar en SF cuando los datos están en SAP. Flujo:Modificar Contactos Sap</description>
+    <errorConditionFormula>(IdExternoSAP__c != null) &amp;&amp; ( $User.Alias !=&apos;uinte&apos;) &amp;&amp; (!ISNEW()) &amp;&amp; ( !ISCHANGED( IdExternoSAP__c ) )</errorConditionFormula>
+    <errorMessage>No se puede modificar este contacto ya que ha sido enviado a SAP, para modificarlo hazlo en SAP directamente.</errorMessage>
+</ValidationRule>

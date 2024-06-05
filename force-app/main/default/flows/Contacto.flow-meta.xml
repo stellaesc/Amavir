@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <decisions>
+        <name>DecisionContacto</name>
+        <label>Decisión Contacto</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>EsCuentaTipoFamiliar</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>EsContactoCovertido</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Convertido__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NombrePersonaContacto__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ApellidosPersonaContacto__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.EmailFamiliarAllegado__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ObtenerRegistroFamiliarAllegado</targetReference>
+            </connector>
+            <label>Es contacto convertido</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Cuando la cuenta es de tipo familiar y se añade un contacto</description>
+        <name>EsCuentaTipoFamiliar</name>
+        <label>Es Cuenta tipo Familiar</label>
+        <locationX>380</locationX>
+        <locationY>731</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>EsCuentaFamiliar</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>FamiliaAllegado</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ObtenerOportunidadesAbiertas</targetReference>
+            </connector>
+            <label>Es Cuenta Familiar</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Existen oportunidades abiertas</description>
+        <name>ExistenOportunidadesAbiertas</name>
+        <label>Existen Oportunidades Abiertas</label>
+        <locationX>182</locationX>
+        <locationY>947</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>SiOportunidadesAbiertas</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ObtenerOportunidadesAbiertas</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CrearFuncionesContacto</targetReference>
+            </connector>
+            <label>Si Oportunidades Abiertas</label>
+        </rules>
+    </decisions>
+    <description>Corregido fallo dos residentes en una misma cuenta de Familia
+--
+Actualización con información del tipo y número de documento del familiar
+
+Añadido campo email del familiar allegado, V5
+--
+V6: Corrección condiciones creación familiar/allegado
+--
+V7: Inclusión móvil familiar/allegado</description>
+    <environments>Default</environments>
+    <interviewLabel>Contacto {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CONTACTO_Creación Contacto Familiar</label>
+    <loops>
+        <description>Creamos funciones de contacto para todos las oportunidades abiertas</description>
+        <name>CrearFuncionesContacto</name>
+        <label>Crear funciones de contacto</label>
+        <locationX>50</locationX>
+        <locationY>1055</locationY>
+        <collectionReference>ObtenerOportunidadesAbiertas</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CrearFuncionDecisor</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CrearContactoFamiliarAllegado</name>
+        <label>Crear Contacto Familiar Allegado</label>
+        <locationX>248</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>EsCuentaTipoFamiliar</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EdadEstimada__c</field>
+            <value>
+                <elementReference>$Record.EdadEstimada__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.EmailFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>$Record.NombrePersonaContacto__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>$Record.ApellidosPersonaContacto__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>$Record.TelefonoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NumeroDelDocumentoFamiliarAllegado__c</field>
+            <value>
+                <elementReference>$Record.NumeroDelDocumentoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Parentesco__c</field>
+            <value>
+                <elementReference>$Record.ParentescoContacto__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.MovilFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>recordTypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TipoDocumentoFamiliarAllegado__c</field>
+            <value>
+                <elementReference>$Record.TipoDocumentoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Crea el registro de función de contacto decisor</description>
+        <name>CrearFuncionDecisor</name>
+        <label>Crear Función Decisor</label>
+        <locationX>138</locationX>
+        <locationY>1163</locationY>
+        <connector>
+            <targetReference>CrearFuncionesContacto</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>CrearFuncionesContacto.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role</field>
+            <value>
+                <stringValue>Decisor</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Obtener oportunidades abiertas de la Cuenta Familiara</description>
+        <name>ObtenerOportunidadesAbiertas</name>
+        <label>Obtener Oportunidades Abiertas</label>
+        <locationX>182</locationX>
+        <locationY>839</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ExistenOportunidadesAbiertas</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Recogemos el tipo de registro Famiiar Allegado</description>
+        <name>ObtenerRegistroFamiliarAllegado</name>
+        <label>Obtener tipo de registro Familiar/Allegado</label>
+        <locationX>248</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CrearContactoFamiliarAllegado</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>FamiliaAllegado</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Contact</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>recordTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DecisionContacto</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>almacenamos el id del registro</description>
+        <name>recordTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

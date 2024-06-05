@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>Flujo de borrado de campos que se rellenan mediante la clonación estándar de una oportunidad</description>
+    <environments>Default</environments>
+    <interviewLabel>OPORTUNIDAD - Borrar Campos Clonación Estándar {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OPORTUNIDAD - Borrar Campos Clonación Estándar</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Borrado de los campos que se rellenan mediante el proceso de clonación estándar y no deben estar en la oportunidad creada</description>
+        <name>UpdateOportunidad</name>
+        <label>UpdateOportunidad</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OportunidadAux.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CodeSAPResponse__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DetallesMotivoPerdida__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FechaSalida__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IdExternoSAP__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MessageSAPResponse__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MotivoPerdida__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RealSAP__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TipoPerdida__c</field>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateOportunidad</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable de tipo registro para almacenar la oportunidad actualizada pasada por parámetro</description>
+        <name>OportunidadAux</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>NombreCompania</fullName>
+        <field>Company</field>
+        <formula>&quot;Familia y allegados&quot;+&quot;- &quot;+FirstName+&quot; &quot;+LastName</formula>
+        <name>Nombre compañía</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>a_o_de_nacimiento</fullName>
+        <field>AnoNacimiento__c</field>
+        <formula>AnoNacimientoNoUsar__c</formula>
+        <name>año de nacimiento</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Autocompletar campo compañía</fullName>
+        <actions>
+            <name>NombreCompania</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>true</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calculo año de nacimiento candidato</fullName>
+        <actions>
+            <name>a_o_de_nacimiento</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>Edad__c  &gt; 1</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

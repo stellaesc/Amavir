@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teléfono</fullName>
+        <default>false</default>
+        <label>Teléfono</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prescriptor</fullName>
+        <default>false</default>
+        <label>Prescriptor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Entidad colaboradora</fullName>
+        <default>false</default>
+        <label>Entidad colaboradora</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Presencial</fullName>
+        <default>false</default>
+        <label>Presencial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Administración pública</fullName>
+        <default>false</default>
+        <label>Administración pública</label>
+    </standardValue>
+</StandardValueSet>

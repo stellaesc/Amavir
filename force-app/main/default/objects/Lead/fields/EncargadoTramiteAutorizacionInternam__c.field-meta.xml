@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EncargadoTramiteAutorizacionInternam__c</fullName>
+    <description>Campo de tipo selección para conocer quién se encargará del tramitar la solicitud de autorización de Internam.Judicial</description>
+    <externalId>false</externalId>
+    <label>¿Quién se encarga de tramitarla?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SolicitudAutorizInternamJudicial__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Centro</fullName>
+                <default>false</default>
+                <label>Centro</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sí</controllingFieldValue>
+            <valueName>Centro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sí</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

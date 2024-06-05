@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TiempoAbiertoFormateado__c</fullName>
+    <description>Convierte la hora en formato militar y crea un rango para ese tiempo.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+     LEN( TiempoAbierto__c  ) = 1, 
+          &apos;0&apos; + TiempoAbierto__c  + &apos;:00 - 0&apos; + TiempoAbierto__c  + &apos;:59&apos;,
+          TiempoAbierto__c  + &apos;:00 - &apos; + TiempoAbierto__c  + &apos;:59&apos;
+  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tiempo abierto formateado</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

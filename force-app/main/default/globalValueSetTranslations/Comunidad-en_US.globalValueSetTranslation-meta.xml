@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Andalucía</masterLabel>
+        <translation>Andalusia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Canarias</masterLabel>
+        <translation>Canary Islands</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Castilla la Mancha</masterLabel>
+        <translation>Castile-La Mancha</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Castilla y León</masterLabel>
+        <translation><!-- Castilla y León --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cataluña</masterLabel>
+        <translation>Catalonia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Madrid</masterLabel>
+        <translation>Madrid</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Murcia</masterLabel>
+        <translation>Murcia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Navarra</masterLabel>
+        <translation>Navarre</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

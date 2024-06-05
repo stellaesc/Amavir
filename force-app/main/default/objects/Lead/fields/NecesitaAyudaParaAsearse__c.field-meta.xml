@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NecesitaAyudaParaAsearse__c</fullName>
+    <description>Nos dice si el residente necesita ayuda para asearse</description>
+    <externalId>false</externalId>
+    <label>¿Necesita Ayuda para Asearse?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SeleccionNecesidades</valueSetName>
+    </valueSet>
+</CustomField>

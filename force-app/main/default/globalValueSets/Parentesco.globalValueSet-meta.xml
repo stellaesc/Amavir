@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>B</fullName>
+        <default>false</default>
+        <label>Hermano/a</label>
+    </customValue>
+    <customValue>
+        <fullName>C</fullName>
+        <default>false</default>
+        <label>Cuñado/a</label>
+    </customValue>
+    <customValue>
+        <fullName>G</fullName>
+        <default>false</default>
+        <label>Cónyuge</label>
+    </customValue>
+    <customValue>
+        <fullName>H</fullName>
+        <default>false</default>
+        <label>Pareja de hecho</label>
+    </customValue>
+    <customValue>
+        <fullName>K</fullName>
+        <default>false</default>
+        <label>Hijo/a</label>
+    </customValue>
+    <customValue>
+        <fullName>L</fullName>
+        <default>false</default>
+        <label>Otro familiar</label>
+    </customValue>
+    <customValue>
+        <fullName>N</fullName>
+        <default>false</default>
+        <label>Nieto</label>
+    </customValue>
+    <customValue>
+        <fullName>O</fullName>
+        <default>false</default>
+        <label>Tío/a</label>
+    </customValue>
+    <customValue>
+        <fullName>P</fullName>
+        <default>false</default>
+        <label>Padre/Madre</label>
+    </customValue>
+    <customValue>
+        <fullName>Q</fullName>
+        <default>false</default>
+        <label>Sobrino</label>
+    </customValue>
+    <customValue>
+        <fullName>R</fullName>
+        <default>false</default>
+        <label>Nuera/ Yerno</label>
+    </customValue>
+    <customValue>
+        <fullName>U</fullName>
+        <default>false</default>
+        <label>Profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>V</fullName>
+        <default>false</default>
+        <label>Tutor/a</label>
+    </customValue>
+    <customValue>
+        <fullName>W</fullName>
+        <default>false</default>
+        <label>No aporta</label>
+    </customValue>
+    <customValue>
+        <fullName>X</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>Y</fullName>
+        <default>false</default>
+        <label>Yerno</label>
+    </customValue>
+    <description>Parentesco o relacion del contacto familiar/ allegado con el residente</description>
+    <masterLabel>Parentesco/ Relación</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

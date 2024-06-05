@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FormatoMovilResidente</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+LEFT(MobilePhone, 1) = &apos;+&apos;,
+AND(
+LEFT(MobilePhone, 3) &lt;&gt; &apos;+34&apos;,
+LEFT(MobilePhone, 2) &lt;&gt; &apos;+1&apos;,
+LEFT(MobilePhone, 3) &lt;&gt; &apos;+32&apos;,
+LEFT(MobilePhone, 3) &lt;&gt; &apos;+49&apos;,
+LEFT(MobilePhone, 3) &lt;&gt; &apos;+44&apos;)
+),
+AND( LEFT(MobilePhone, 3) = &apos;+34&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 2) = &apos;+1&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 12
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 3) = &apos;+49&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 3) = &apos;+32&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 3) = &apos;+44&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 1) &lt;&gt; &apos;+&apos;,
+OR( LEN(MobilePhone) &lt; 9,
+LEN(MobilePhone) &gt; 9
+),
+!ISBLANK(MobilePhone) ),
+CONTAINS(MobilePhone, &apos; &apos;)
+)</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>El número de móvil del Potencial/Residente no cumple el formato establecido</errorMessage>
+</ValidationRule>

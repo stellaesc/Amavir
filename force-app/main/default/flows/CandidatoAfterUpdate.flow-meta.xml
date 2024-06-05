@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>CondicionDeEntrada</name>
+        <label>Condición de Entrada</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>AptoEnMarketingCloud</name>
+            <conditionLogic>(1 OR 2 OR 9) AND 3 AND 4 AND 5 AND 6 AND 7 AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Phone</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Descartado</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HasOptedOutOfEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.et4ae5__HasOptedOutOfMobile__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MarketingCloud__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>ActivarEnMarketingCloud</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Apto en Marketing Cloud</label>
+        </rules>
+        <rules>
+            <name>NoAptoEnMarketingCloud</name>
+            <conditionLogic>((1 AND 2 AND 9) OR 3 OR 4 OR 5 OR 6 OR 7) AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Phone</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Descartado</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HasOptedOutOfEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.et4ae5__HasOptedOutOfMobile__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MarketingCloud__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>DesactivarEnMarketingCloud</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>No Apto en Marketing Cloud</label>
+        </rules>
+        <rules>
+            <name>DescripcionActualizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ConvertedOpportunityId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarDescripcionOportunidadConvertida</targetReference>
+            </connector>
+            <label>Descripción actualizada</label>
+        </rules>
+        <rules>
+            <name>NombreApellidosCuentaActualizada</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.FirstName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LastName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Company</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarNombreCuentaFamiliar</targetReference>
+            </connector>
+            <label>Nombre, apellidos o cuenta actualizada</label>
+        </rules>
+        <rules>
+            <name>EdadActualizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Edad__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Edad__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarAnioNacimiento</targetReference>
+            </connector>
+            <label>Edad actualizada</label>
+        </rules>
+        <rules>
+            <name>AnioNacimientoActualizado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AnoNacimiento__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.AnoNacimiento__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1900.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarEdad</targetReference>
+            </connector>
+            <label>Año Nacimiento Actualizado</label>
+        </rules>
+    </decisions>
+    <description>Actualizar candidatos
+--
+V3, V4: PB&apos;s To Flow -&gt; Actualizar Nombre Cuenta Familiar
+--
+V5, V6: PB to Flow -&gt; Funcionalidad calcular año de nacimiento
+--
+V7: Funcionalidad actualizar edad
+--
+V8: Funcionalidad Activar en Marketing Cloud
+--
+V9: Inclusión &quot;Móvil potencial/ residente&quot; en nodo de decisión para subflows Marketing Cloud</description>
+    <environments>Default</environments>
+    <interviewLabel>Candidato - After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CANDIDATO - After Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CondicionDeEntrada</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Flujo secundario que pasa por parámetro el candidato modificado para marcar el check &quot;Marketing Cloud&quot;</description>
+        <name>ActivarEnMarketingCloud</name>
+        <label>Activar en Marketing Cloud</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <flowName>CANDIDATOActivarEnMarketingCloud</flowName>
+        <inputAssignments>
+            <name>CandidatoID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para actualizar el año de nacimiento del candidato</description>
+        <name>ActualizarAnioNacimiento</name>
+        <label>Actualizar año nacimiento</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <flowName>CANDIDATOActualizarAnioNacimiento</flowName>
+        <inputAssignments>
+            <name>CandidatoAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Actualiza la descripción de la oportunidad con la descripción del candidato convertido</description>
+        <name>ActualizarDescripcionOportunidadConvertida</name>
+        <label>Actualizar Descripción Oportunidad Convertida</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>ActualizarTipoRegistroOportunidadConvertida</targetReference>
+        </connector>
+        <flowName>ActualizarDescripcionOportunidadConvertida</flowName>
+        <inputAssignments>
+            <name>CandidatoConvertido</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para actualizar la edad del candidato</description>
+        <name>ActualizarEdad</name>
+        <label>Actualizar Edad</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <flowName>CANDIDATOActualizarEdad</flowName>
+        <inputAssignments>
+            <name>CandidatoAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para actualizar el nombre de la cuenta familiar del candidato</description>
+        <name>ActualizarNombreCuentaFamiliar</name>
+        <label>Actualizar Nombre Cuenta Familiar</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <flowName>CANDIDATOActualizarNombreCuentaFamiliar</flowName>
+        <inputAssignments>
+            <name>CandidatoAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Actualizar Tipo de Registro Oportunidad Convertida</description>
+        <name>ActualizarTipoRegistroOportunidadConvertida</name>
+        <label>Actualizar Tipo de Registro Oportunidad Convertida</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <flowName>ActualizarTipoRegistroOportunidadConvertida</flowName>
+        <inputAssignments>
+            <name>CandidatoConvertido</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo secundario que pasa por parámetro el candidato modificado para desmarcar el check &quot;Marketing Cloud&quot;</description>
+        <name>DesactivarEnMarketingCloud</name>
+        <label>Desactivar en Marketing Cloud</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <flowName>CANDIDATODesactivarEnMarketingCloud</flowName>
+        <inputAssignments>
+            <name>CandidatoID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

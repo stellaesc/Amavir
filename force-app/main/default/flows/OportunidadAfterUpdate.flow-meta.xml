@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>CerradaLaOportunidad</name>
+        <label>¿Está cerrada la oportunidad?</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>CondicionDeEntrada</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>SiEstaCerrada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CompletarTareas</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Sí</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CondicionDeEntrada</name>
+        <label>Condición de Entrada</label>
+        <locationX>842</locationX>
+        <locationY>731</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>OportunidadCerradaExito</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cerrada - Éxito</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreacionTareas</targetReference>
+            </connector>
+            <label>Oportunidad Cerrada Éxito</label>
+        </rules>
+        <rules>
+            <name>OportunidadCerradaExitoFechaSalidaCambiada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.FechaSalida__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cerrada - Éxito</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FechaSalida__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreacionTareasSalida</targetReference>
+            </connector>
+            <label>Oportunidad Cerrada Éxito y Fecha Salida cambiada</label>
+        </rules>
+        <rules>
+            <name>OportunidadCerradaPerdida</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cerrada - Perdida</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreacionTareaOportunidadCerradaPerdida</targetReference>
+            </connector>
+            <label>Oportunidad Cerrada Perdida</label>
+        </rules>
+        <rules>
+            <name>ProductoInteresActualizado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProductoInteres__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ProductoInteres__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizacionNombreOportunidad</targetReference>
+            </connector>
+            <label>Producto de interés actualizado</label>
+        </rules>
+        <rules>
+            <name>BetaMysteryActualizados</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarBetaYMysteryClient</targetReference>
+            </connector>
+            <label>Beta o Mystery Actualizados</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Nodo de decisión para comprobar si el motivo de pérdida es &quot;Fallecimiento&quot;, &quot;El residente se niega&quot; o &quot;Otra residencia competencia/ Residencia pequeña / Otra CC.AA&quot;</description>
+        <name>MotivoPerdidaFallecimientoSeNiegaOCompetencia</name>
+        <label>Motivo de Pérdida Fallecimiento, Se Niega o Competencia</label>
+        <locationX>710</locationX>
+        <locationY>947</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Si</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MotivoPerdida__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fallecimiento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MotivoPerdida__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>El residente se niega</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MotivoPerdida__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Otra residencia competencia / residencia pequeña / otra CC.AA.</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>OPORTUNIDADCerrarOportunidadesAbiertasAPerdidas</targetReference>
+            </connector>
+            <label>Si</label>
+        </rules>
+    </decisions>
+    <description>V13: Fecha de derivacion
+--------------
+Actualizar oportunidad
+V11: Añadido casuistica de completar tareas
+--
+V7: Implementación subflujo actualizar campo Centro/Residencia actual
+--
+V8:Implementación subflujo cerrar oportunidades abiertas a perdidas (menos las de traslado) cuando se cierra una oportunidad a &quot;Cerrada - Exito&quot;
+--
+V9: Eliminación subflujo Residencia Actual (todavía no implementado)
+--
+V10: Implementación subflujo cerrar oportunidades abiertas a perdidas cuando se cierra una oportunidad a &quot;Cerrada - Perdida&quot; con motivo de perdida fallecimiento, se niega o competencia
+--
+V11: Corrección erratas
+--
+V12: PB To Flow - Actualización nombre oportunidad cuando se cambia el producto de interés
+--
+V13: Implementación subflujo Actualización Centro/Residencia Actual
+--
+V14: Implementación subflujo Actualización Beta y/o Mystery Client
+--
+V15: Implementación nodo decisión Tipo Plaza Centro Día</description>
+    <environments>Default</environments>
+    <interviewLabel>OPORTUNIDAD - After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OPORTUNIDAD - After Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>FechaDerivacion</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Actualiza el Centro/Residencia Actual de la cuenta</description>
+        <name>ActualizaCentroResidenciaActual</name>
+        <label>Actualizar Centro/Residencia Actual</label>
+        <locationX>314</locationX>
+        <locationY>947</locationY>
+        <flowName>ActualizarCentroResidenciaActual</flowName>
+        <inputAssignments>
+            <name>OportunidadCerradaExito</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para actualiizar el nombre de la oportunidad cuando se ha modificado el producto de interés</description>
+        <name>ActualizacionNombreOportunidad</name>
+        <label>Actualización Nombre Oportunidad</label>
+        <locationX>1106</locationX>
+        <locationY>839</locationY>
+        <flowName>OPORTUNIDAD_Actualizar_Nombre</flowName>
+        <inputAssignments>
+            <name>OportunidadActualizada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo para actualizar los campos Beta y Mystery Client de las oportunidades relacionadas con la cuenta de la oportunidad pasada por parámetro, cuenta y contactos</description>
+        <name>ActualizarBetaYMysteryClient</name>
+        <label>Actualizar Beta y Mystery Client</label>
+        <locationX>1370</locationX>
+        <locationY>839</locationY>
+        <flowName>OPORTUNIDADActualizarBetaYMysteryClient</flowName>
+        <inputAssignments>
+            <name>OppEntrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Actualiza el Centro/Residencia Actual de la cuenta</description>
+        <name>ActualizarCentroResidenciaActual</name>
+        <label>Actualizar Centro/Residencia Actual</label>
+        <locationX>50</locationX>
+        <locationY>1055</locationY>
+        <flowName>ActualizarCentroResidenciaActual</flowName>
+        <inputAssignments>
+            <name>OportunidadCerradaExito</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo para cerrar las oportunidades abiertas (que no sean de tipo Traslado) a &quot;Cerrada - Perdida&quot; de la misma cuenta que la oportunidad &quot;Cerrada - Exito&quot;</description>
+        <name>CerrarOportunidadesAbiertas</name>
+        <label>Cerrar Oportunidades Abiertas a Cerradas (Opt Exito)</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <connector>
+            <targetReference>ActualizarCentroResidenciaActual</targetReference>
+        </connector>
+        <flowName>OPORTUNIDADCerrarOportunidadesAbiertas</flowName>
+        <inputAssignments>
+            <name>oportunidadCerradaExito</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>CompletarTareas</name>
+        <label>Completar Tareas</label>
+        <locationX>710</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>CondicionDeEntrada</targetReference>
+        </connector>
+        <flowName>TareasCompletarTareas</flowName>
+        <inputAssignments>
+            <name>Oportunidad</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo que crea una tarea cuando una oportunidad perdida se cierra</description>
+        <name>CreacionTareaOportunidadCerradaPerdida</name>
+        <label>Creación de tarea oportunidad perdida</label>
+        <locationX>710</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>MotivoPerdidaFallecimientoSeNiegaOCompetencia</targetReference>
+        </connector>
+        <flowName>CreacionTareaOportunidadCerrada</flowName>
+        <inputAssignments>
+            <name>OportunidadCerrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creación de tareas de ingreso, salida y traslado</description>
+        <name>CreacionTareas</name>
+        <label>Creación de tareas de ingreso, salida y traslado</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>CerrarOportunidadesAbiertas</targetReference>
+        </connector>
+        <flowName>CreacionTareas</flowName>
+        <inputAssignments>
+            <name>OportunidadCerradaExito</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creación de tareas de salida</description>
+        <name>CreacionTareasSalida</name>
+        <label>Creación de tareas de salida</label>
+        <locationX>314</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>ActualizaCentroResidenciaActual</targetReference>
+        </connector>
+        <flowName>CreacionTareasSalida</flowName>
+        <inputAssignments>
+            <name>OportunidadCerradaExito</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo que comprueba si hay que actualizar la fecha de derivación. De ser así la actualiza</description>
+        <name>FechaDerivacion</name>
+        <label>Fecha Derivacion</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>CerradaLaOportunidad</targetReference>
+        </connector>
+        <flowName>Oportunidad_Fecha_Derivacion</flowName>
+        <inputAssignments>
+            <name>Opportunity</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Opportunity_prior</name>
+            <value>
+                <elementReference>$Record__Prior</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo para cerrar las oportunidades abiertas de una cuenta a &quot;Cerrada - Perdida&quot; cuando se cierra una oportunidad como &quot;Cerrada - Perdida&quot; con motivo de pérdida fallecimiento, se niega o competencia</description>
+        <name>OPORTUNIDADCerrarOportunidadesAbiertasAPerdidas</name>
+        <label>OPORTUNIDAD - Cerrar Oportunidades Abiertas a Perdidas</label>
+        <locationX>578</locationX>
+        <locationY>1055</locationY>
+        <flowName>OPORTUNIDADCerrarOportunidadesAbiertasAPerdidas</flowName>
+        <inputAssignments>
+            <name>oportunidadCerradaPerdida</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

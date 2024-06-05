@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Acuerdo Marco/ Entidad pública</masterLabel>
+        <translation><!-- Acuerdo Marco/ Entidad pública --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Boca a boca</masterLabel>
+        <translation>Word of mouth</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Buzoneo</masterLabel>
+        <translation>Mailboxing</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Entidades colaboradoras</masterLabel>
+        <translation>Associates</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Familiar/ Conocido Amavir</masterLabel>
+        <translation>Family/Acquaintance Amavir</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Guías</masterLabel>
+        <translation>Guides</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internet</masterLabel>
+        <translation>Internet</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Otras residencias Amavir</masterLabel>
+        <translation>Otras residencias Amavir</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prensa</masterLabel>
+        <translation>Newspaper</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Radio</masterLabel>
+        <translation>Radio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Reingreso</masterLabel>
+        <translation>Re-entry</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Soportes indicativos</masterLabel>
+        <translation>Indicative supports</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TS/ prescriptor</masterLabel>
+        <translation>Supreme Court/ Prescriber</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TV</masterLabel>
+        <translation>TV</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Usuario CD, CN, CR</masterLabel>
+        <translation>Day Center, Night Center, Respite Center user</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web Amavir</masterLabel>
+        <translation>Amavir Website</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Zona</masterLabel>
+        <translation>Zone</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

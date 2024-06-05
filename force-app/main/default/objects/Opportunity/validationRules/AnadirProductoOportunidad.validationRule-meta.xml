@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AnadirProductoOportunidad</fullName>
+    <active>false</active>
+    <description>SI la cantidad de producto está vacía, es obligatorio añadir producto tanto en estado &quot;Envío SAP&quot; como cuando se encuentre cerrada la oportunidad</description>
+    <errorConditionFormula>AND(
+$Profile.Id &lt;&gt; $Label.IdPerfilAdministradorSistema,
+ISBLANK(TotalOpportunityQuantity),
+OR(ISPICKVAL(StageName, &apos;Cerrada - Éxito&apos;), ISPICKVAL(StageName, &apos;Envío SAP&apos;)) 
+)</errorConditionFormula>
+    <errorMessage>Agrega el producto que corresponda a la oportunidad</errorMessage>
+</ValidationRule>

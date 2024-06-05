@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>P</fullName>
+        <default>false</default>
+        <label>Privada</label>
+    </customValue>
+    <customValue>
+        <fullName>C</fullName>
+        <default>false</default>
+        <label>Pública</label>
+    </customValue>
+    <description>Tipo de plaza que se solicita</description>
+    <masterLabel>Tipo de plaza</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

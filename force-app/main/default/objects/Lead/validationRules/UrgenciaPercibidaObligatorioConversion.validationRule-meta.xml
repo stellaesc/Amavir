@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UrgenciaPercibidaObligatorioConversion</fullName>
+    <active>true</active>
+    <description>Cunplimentar la urgencia percibida es obligatorio en la conversión</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL( Status , &apos;Convertido&apos;),
+    ISPICKVAL( UrgenciaPercibida__c , &apos;&apos;),
+    ISPICKVAL(TipoPlaza__c , &apos;P&apos;)
+)</errorConditionFormula>
+    <errorMessage>Es obligatorio cumplimentar la urgencia percibida</errorMessage>
+</ValidationRule>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <description>Nodo de decisión para comprobar si el evento creado es una visita</description>
+        <name>Visita</name>
+        <label>Visita</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Si</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Visita</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarFechaPrimeraVisita</targetReference>
+            </connector>
+            <label>Si</label>
+        </rules>
+    </decisions>
+    <description>Flujo padre para ejecutar subflujos post creación de un evento
+--
+V2: Nodo de decisión Visita</description>
+    <environments>Default</environments>
+    <interviewLabel>EVENTO - After Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EVENTO - After Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Visita</targetReference>
+        </connector>
+        <object>Event</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Flujo desencadenado automáticamente para actualizar la fecha de primera visita vinculada con la cuenta del evento creado.</description>
+        <name>ActualizarFechaPrimeraVisita</name>
+        <label>Actualizar fecha primera visita</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <flowName>EventoActualizarFechaPrimeraVisita</flowName>
+        <inputAssignments>
+            <name>VisitaAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

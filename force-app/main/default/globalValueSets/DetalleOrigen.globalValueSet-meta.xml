@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ABG (Asociación Benefica Geriatrica)</fullName>
+        <default>false</default>
+        <label>ABG (Asociación Benefica Geriatrica)</label>
+    </customValue>
+    <customValue>
+        <fullName>Inforesidencias</fullName>
+        <default>false</default>
+        <label>Inforesidencias</label>
+    </customValue>
+    <customValue>
+        <fullName>Infoelder</fullName>
+        <default>false</default>
+        <label>Infoelder</label>
+    </customValue>
+    <customValue>
+        <fullName>Call Center</fullName>
+        <default>false</default>
+        <label>Call Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Transferencia</fullName>
+        <default>false</default>
+        <label>Transferencia</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Haria</fullName>
+        <default>false</default>
+        <label>Web Haria</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Tías</fullName>
+        <default>false</default>
+        <label>Web Tías</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Tejina</fullName>
+        <default>false</default>
+        <label>Web Tejina</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Hellín</fullName>
+        <default>false</default>
+        <label>Web Hellín</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Don Quijote</fullName>
+        <default>false</default>
+        <label>Web Don Quijote</label>
+    </customValue>
+    <customValue>
+        <fullName>Web El Pinar</fullName>
+        <default>false</default>
+        <label>Web El Pinar</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Guadalajara</fullName>
+        <default>false</default>
+        <label>Web Guadalajara</label>
+    </customValue>
+    <customValue>
+        <fullName>Web La Alameda</fullName>
+        <default>false</default>
+        <label>Web La Alameda</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Apto. Encinar</fullName>
+        <default>false</default>
+        <label>Web Apto. Encinar</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Encinar del Rey</fullName>
+        <default>false</default>
+        <label>Web Encinar del Rey</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Diagonal</fullName>
+        <default>false</default>
+        <label>Web Diagonal</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Horta</fullName>
+        <default>false</default>
+        <label>Web Horta</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Sant Cugat</fullName>
+        <default>false</default>
+        <label>Web Sant Cugat</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Teià</fullName>
+        <default>false</default>
+        <label>Web Teià</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Vilanova</fullName>
+        <default>false</default>
+        <label>Web Vilanova</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Alcalá</fullName>
+        <default>false</default>
+        <label>Web Alcalá</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Alcorcón</fullName>
+        <default>false</default>
+        <label>Web Alcorcón</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Arganzuela</fullName>
+        <default>false</default>
+        <label>Web Arganzuela</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Cenicientos</fullName>
+        <default>false</default>
+        <label>Web Cenicientos</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Ciudad Lineal</fullName>
+        <default>false</default>
+        <label>Web Ciudad Lineal</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Colmenar</fullName>
+        <default>false</default>
+        <label>Web Colmenar</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Coslada</fullName>
+        <default>false</default>
+        <label>Web Coslada</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Encinar-Leganes</fullName>
+        <default>false</default>
+        <label>Web Encinar-Leganes</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Getafe</fullName>
+        <default>false</default>
+        <label>Web Getafe</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Humanes</fullName>
+        <default>false</default>
+        <label>Web Humanes</label>
+    </customValue>
+    <customValue>
+        <fullName>Web La Marina</fullName>
+        <default>false</default>
+        <label>Web La Marina</label>
+    </customValue>
+    <customValue>
+        <fullName>Web NuestraCasa</fullName>
+        <default>false</default>
+        <label>Web NuestraCasa</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Patones</fullName>
+        <default>false</default>
+        <label>Web Patones</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Pozuelo</fullName>
+        <default>false</default>
+        <label>Web Pozuelo</label>
+    </customValue>
+    <customValue>
+        <fullName>Web S. Agustín de G</fullName>
+        <default>false</default>
+        <label>Web S. Agustín de G</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Torrejon</fullName>
+        <default>false</default>
+        <label>Web Torrejon</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Usera</fullName>
+        <default>false</default>
+        <label>Web Usera</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Valdebernardo</fullName>
+        <default>false</default>
+        <label>Web Valdebernardo</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Vallecas</fullName>
+        <default>false</default>
+        <label>Web Vallecas</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Villanueva</fullName>
+        <default>false</default>
+        <label>Web Villanueva</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Villlaverde</fullName>
+        <default>false</default>
+        <label>Web Villlaverde</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Cartagena</fullName>
+        <default>false</default>
+        <label>Web Cartagena</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Argaray</fullName>
+        <default>false</default>
+        <label>Web Argaray</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Betelu</fullName>
+        <default>false</default>
+        <label>Web Betelu</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Ibañeta</fullName>
+        <default>false</default>
+        <label>Web Ibañeta</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Mutilva</fullName>
+        <default>false</default>
+        <label>Web Mutilva</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Oblatas</fullName>
+        <default>false</default>
+        <label>Web Oblatas</label>
+    </customValue>
+    <customValue>
+        <fullName>Directa</fullName>
+        <default>false</default>
+        <label>Directa</label>
+    </customValue>
+    <customValue>
+        <fullName>Derivada desde un Centro</fullName>
+        <default>false</default>
+        <label>Derivada desde un Centro</label>
+    </customValue>
+    <customValue>
+        <fullName>Web La Gavia</fullName>
+        <default>false</default>
+        <label>Web La Gavia</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Ciudad Real</fullName>
+        <default>false</default>
+        <label>Web Ciudad Real</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Valle de Egüés</fullName>
+        <default>false</default>
+        <label>Web Valle de Egüés</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Dossier</fullName>
+        <default>false</default>
+        <label>Landing Dossier</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Ayudas Dependencia</fullName>
+        <default>false</default>
+        <label>Landing Ayudas Dependencia</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Financiación</fullName>
+        <default>false</default>
+        <label>Landing Financiación</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Ayudas Temporales</fullName>
+        <default>false</default>
+        <label>Landing Ayudas Temporales</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Comparadora</fullName>
+        <default>false</default>
+        <label>Landing Comparadora</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Te llamamos</fullName>
+        <default>false</default>
+        <label>Landing Te llamamos</label>
+    </customValue>
+    <customValue>
+        <fullName>Abuelos Plus</fullName>
+        <default>false</default>
+        <label>Abuelos Plus</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutuam</fullName>
+        <default>false</default>
+        <label>Mutuam</label>
+    </customValue>
+    <customValue>
+        <fullName>Senniors</fullName>
+        <default>false</default>
+        <label>Senniors</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Productos Apoyo</fullName>
+        <default>false</default>
+        <label>Landing Productos Apoyo</label>
+    </customValue>
+    <customValue>
+        <fullName>Promo Ciudad Real</fullName>
+        <default>false</default>
+        <label>Promo Ciudad Real</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Jaen</fullName>
+        <default>false</default>
+        <label>Web Jaen</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Santa Cruz</fullName>
+        <default>false</default>
+        <label>Web Santa Cruz</label>
+    </customValue>
+    <customValue>
+        <fullName>Web HARÍA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Web HARÍA</label>
+    </customValue>
+    <customValue>
+        <fullName>Oblatas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Oblatas</label>
+    </customValue>
+    <description>Detalle del origen de candidatos</description>
+    <masterLabel>Detalle del origen</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

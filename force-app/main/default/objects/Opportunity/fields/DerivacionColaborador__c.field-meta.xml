@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DerivacionColaborador__c</fullName>
+    <description>Si se ha derivado a un colaborador indica cual</description>
+    <externalId>false</externalId>
+    <label>Derivaciones a otros colaboradores</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABG (ASOCIACIÓN BENEFICA GERIATRICA)</fullName>
+                <default>false</default>
+                <label>ABG (ASOCIACIÓN BENEFICA GERIATRICA)</label>
+            </value>
+            <value>
+                <fullName>CUIDADO Y BIENESTAR</fullName>
+                <default>false</default>
+                <label>CUIDADO Y BIENESTAR</label>
+            </value>
+            <value>
+                <fullName>PENSIUM</fullName>
+                <default>false</default>
+                <label>PENSIUM</label>
+            </value>
+            <value>
+                <fullName>MSOLUCIONA</fullName>
+                <default>false</default>
+                <label>MSOLUCIONA</label>
+            </value>
+            <value>
+                <fullName>ALQUILER SEGURO</fullName>
+                <default>false</default>
+                <label>ALQUILER SEGURO</label>
+            </value>
+            <value>
+                <fullName>RETIRO</fullName>
+                <default>false</default>
+                <label>RETIRO</label>
+            </value>
+            <value>
+                <fullName>CUIDUM</fullName>
+                <default>false</default>
+                <label>CUIDUM</label>
+            </value>
+            <value>
+                <fullName>TOP MAYORES</fullName>
+                <default>false</default>
+                <label>TOP MAYORES</label>
+            </value>
+            <value>
+                <fullName>BACULUM</fullName>
+                <default>false</default>
+                <label>BACULUM</label>
+            </value>
+            <value>
+                <fullName>CUIDEMI</fullName>
+                <default>false</default>
+                <label>CUIDEMI</label>
+            </value>
+            <value>
+                <fullName>ABUELOS PLUS</fullName>
+                <default>false</default>
+                <label>ABUELOS PLUS</label>
+            </value>
+            <value>
+                <fullName>INVERMAX</fullName>
+                <default>false</default>
+                <label>INVERMAX</label>
+            </value>
+            <value>
+                <fullName>MUTUAM</fullName>
+                <default>false</default>
+                <label>MUTUAM</label>
+            </value>
+            <value>
+                <fullName>SENNIORS</fullName>
+                <default>false</default>
+                <label>SENNIORS</label>
+            </value>
+            <value>
+                <fullName>DEPENCARE</fullName>
+                <default>false</default>
+                <label>DEPENCARE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

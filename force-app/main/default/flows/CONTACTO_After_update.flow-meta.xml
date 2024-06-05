@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <description>Nodo de decisión para comprobar si se ha modificado el Beta o el Mystery Client de un residente</description>
+        <name>BetaYMysteryClient</name>
+        <label>Beta y Mystery Client</label>
+        <locationX>446</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Si</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarBetaMysteryClientOportunidades</targetReference>
+            </connector>
+            <label>Si</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Nodo de decisión para comprobar si se ha modificado el Beta o el Mystery Client de un residente</description>
+        <name>BetaYOMysteryClient</name>
+        <label>Beta y Mystery Client</label>
+        <locationX>1238</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>No Modificado</defaultConnectorLabel>
+        <rules>
+            <name>Modificado</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizaBetaYMysteryClientOportunidades</targetReference>
+            </connector>
+            <label>Modificado</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Nodo de decisión para evaluar las condiciones de entrada y desencadenar los subflujos correspondientes</description>
+        <name>Condicion_de_entrada</name>
+        <label>Condición de entrada</label>
+        <locationX>1238</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>CambiosBetaMysteryClient</name>
+            <conditionLogic>1 AND ((2 AND 3) OR (4 AND 5))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarBetaYMysteryClientOportunidades</targetReference>
+            </connector>
+            <label>Cambios Beta y Mystery Client</label>
+        </rules>
+        <rules>
+            <name>AptoEnMarketingCloud</name>
+            <conditionLogic>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 AND (9 OR 10 OR 11)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MarketingCloud__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HasOptedOutOfEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.et4ae5__HasOptedOutOfMobile__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FechaFallecimiento__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.EstadoContacto__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Fallecido</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Prescriptor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Phone</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>ActivarEnMarketingCloud</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Apto en Marketing Cloud</label>
+        </rules>
+        <rules>
+            <name>Fallecimiento</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.FechaFallecimiento__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.EstadoContacto__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fallecido</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MarketingCloud__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DesactivarContactosCuentaResidenteEnMarketingCloud</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Fallecimiento</label>
+        </rules>
+        <rules>
+            <name>NoAptoEnMarketingCloud</name>
+            <conditionLogic>(1 OR 2 OR (3 AND 4 AND 5) OR 6 OR 7) AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Beta__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MysteryClient__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Phone</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HasOptedOutOfEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.et4ae5__Mobile_Country_Code__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MarketingCloud__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DesactivarEnMarketingCloud</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>No apto en Marketing Cloud</label>
+        </rules>
+        <rules>
+            <name>ModificacionNombreOApellidos</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.FirstName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LastName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PotencialResidente</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Actualizar_Cuenta_Familia_y_Oportunidades</targetReference>
+            </connector>
+            <label>Si se modifica el nombre o apellidos</label>
+        </rules>
+        <rules>
+            <name>EdadModificada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Edad__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Edad__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarAnioNacimiento</targetReference>
+            </connector>
+            <label>Edad modificada</label>
+        </rules>
+        <rules>
+            <name>AnioNacimientoModificado</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AnoNacimiento__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.AnoNacimiento__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1900.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActualizarEdad</targetReference>
+            </connector>
+            <label>Año nacimiento modificado</label>
+        </rules>
+    </decisions>
+    <description>Flujo principal con todos los subflujos que pueden actuar cuando un contacto es modificado
+--
+V5, V6: PB to Flow -&gt; Funcionalidad calculo y actualización año de nacimiento
+--
+V7: Funcionalidad actualizar edad
+--
+V8: Actualización subflujo Actualizar Beta Mystery Client
+--
+V9: Funcionalidad Marketing Cloud y reubicación Beta y Mystery Client
+--
+V10: Corrección lógica nodo de decisión Cambios Beta y Mystery Client y parámetro subflow Fallecimiento</description>
+    <environments>Default</environments>
+    <interviewLabel>CONTACTO - After update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CONTACTO - After Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1112</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Condicion_de_entrada</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Flujo secundario que pasa por parámetro el contacto modificado para marcar el check &quot;Marketing Cloud&quot;</description>
+        <name>ActivarEnMarketingCloud</name>
+        <label>Activar en Marketing Cloud</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>BetaYMysteryClient</targetReference>
+        </connector>
+        <flowName>CONTACTOActivarEnMarketingCloud</flowName>
+        <inputAssignments>
+            <name>ContactoID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo que actualiza los campos &quot;Beta&quot; y &quot;Mystery Client&quot; de las oportunidades relacionadas con el contacto, su cuenta y contactos</description>
+        <name>ActualizaBetaYMysteryClientOportunidades</name>
+        <label>Actualizar Beta y Mystery Client Oportunidades</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <flowName>ActualizarBetaYMysteryClientOportunidades</flowName>
+        <inputAssignments>
+            <name>ContactoEntrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Actualización del nombre de la cuenta familia y las oportunidades de la misma</description>
+        <name>Actualizar_Cuenta_Familia_y_Oportunidades</name>
+        <label>Actualizar Cuenta Familia y Oportunidades</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <flowName>CONTACTO_Actualizar_nombre_Cuenta_Familia_y_Oportunidades</flowName>
+        <inputAssignments>
+            <name>ContactoPropietarioCuentaFamilia</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para calcular y actualizar el año de nacimiento del contacto</description>
+        <name>ActualizarAnioNacimiento</name>
+        <label>Actualizar año nacimiento</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <flowName>CONTACTOActualizarAnioNacimiento</flowName>
+        <inputAssignments>
+            <name>ContactoAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo que actualiza los campos &quot;Beta&quot; y &quot;Mystery Client&quot; de las oportunidades relacionadas con el contacto, su cuenta y contactos</description>
+        <name>ActualizarBetaMysteryClientOportunidades</name>
+        <label>Actualizar Beta y Mystery Client Oportunidades</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <flowName>ActualizarBetaYMysteryClientOportunidades</flowName>
+        <inputAssignments>
+            <name>ContactoEntrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo que actualiza los campos &quot;Beta&quot; y &quot;Mystery Client&quot; de las oportunidades relacionadas con el contacto, su cuenta y contactos</description>
+        <name>ActualizarBetaYMysteryClientOportunidades</name>
+        <label>Actualizar Beta y Mystery Client Oportunidades</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <flowName>ActualizarBetaYMysteryClientOportunidades</flowName>
+        <inputAssignments>
+            <name>ContactoEntrada</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflujo para actualizar la edad del contacto</description>
+        <name>ActualizarEdad</name>
+        <label>Actualizar Edad</label>
+        <locationX>2162</locationX>
+        <locationY>431</locationY>
+        <flowName>CONTACTOActualizarEdad</flowName>
+        <inputAssignments>
+            <name>ContactoAux</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo desencadenado automáticamente para desmarcar el check &quot;Marketing Cloud&quot; de los contactos de la cuenta del residente.</description>
+        <name>DesactivarContactosCuentaResidenteEnMarketingCloud</name>
+        <label>Desactivar Contactos Cuenta Residente en Marketing Cloud</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <flowName>CONTACTODesactivarContactosCuentaResidenteEnMarketingCloud</flowName>
+        <inputAssignments>
+            <name>ContactoAccountID</name>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Flujo secundario que pasa por parámetro el contacto modificado para desmarcar el check &quot;Marketing Cloud&quot;</description>
+        <name>DesactivarEnMarketingCloud</name>
+        <label>Desactivar en Marketing Cloud</label>
+        <locationX>1238</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>BetaYOMysteryClient</targetReference>
+        </connector>
+        <flowName>CONTACTODesactivarEnMarketingCloud</flowName>
+        <inputAssignments>
+            <name>ContactoID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

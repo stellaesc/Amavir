@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Acción para redireccionar el flow al registro creado de Demandante de Empleo</description>
+        <name>RedireccionarADemandanteEmpleo</name>
+        <label>Redireccionar a Demandante de Empleo</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>DemandanteEmpleo__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>CrearDemandanteEmpleo</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>mode</name>
+            <value>
+                <stringValue>View</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>c:navigateToRecord</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>Flujo para descartar a los candidatos que son demandantes de empleo.
+
+V5: Añadir el nuevo campo &quot;Origen&quot; para conocer la procedencia de los demandantes de empleo.
+---
+V4: Reducir versión del flujo a la 56
+--
+V3: Modificación matcheo campos y redirección al registro demandante de empleo creado</description>
+    <environments>Default</environments>
+    <interviewLabel>Candidato - Demandante de empleo {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Candidato - Demandante de empleo</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>CrearDemandanteEmpleo</name>
+        <label>Crear Demandante de Empleo</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <connector>
+            <targetReference>EliminarCandidato_Delete</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <elementReference>recordId.CorreoElectronicoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName__c</field>
+            <value>
+                <elementReference>recordId.ApellidosFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>recordId.ContactoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Origen__c</field>
+            <value>
+                <elementReference>recordId.DetalleOrigen__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PhoneNumber__c</field>
+            <value>
+                <elementReference>recordId.TelefonoFamiliarAllegado__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>DemandanteEmpleo__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordDeletes>
+        <name>EliminarCandidato_Delete</name>
+        <label>Eliminar candidato</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>RedireccionarADemandanteEmpleo</targetReference>
+        </connector>
+        <inputReference>recordId</inputReference>
+    </recordDeletes>
+    <screens>
+        <name>EliminarCandidato</name>
+        <label>¿Eliminar candidato?</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CrearDemandanteEmpleo</targetReference>
+        </connector>
+        <fields>
+            <name>EliminarCandidato_Descripcion</name>
+            <fieldText>&lt;p&gt; Este candidato se va a &lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;eliminar &lt;/strong&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;para crear un &lt;/span&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;demandante de empleo.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Si es un &lt;/span&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;error &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;por favor, cierre esta ventana y no le de a finalizar.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Crear demandante de empleo</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>EliminarCandidato</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+</Flow>

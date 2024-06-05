@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Madrid</fullName>
+        <default>false</default>
+        <label>Madrid</label>
+    </customValue>
+    <customValue>
+        <fullName>Canarias</fullName>
+        <default>false</default>
+        <label>Canarias</label>
+    </customValue>
+    <customValue>
+        <fullName>Castilla la Mancha</fullName>
+        <default>false</default>
+        <label>Castilla la Mancha</label>
+    </customValue>
+    <customValue>
+        <fullName>Castilla y León</fullName>
+        <default>false</default>
+        <label>Castilla y León</label>
+    </customValue>
+    <customValue>
+        <fullName>Cataluña</fullName>
+        <default>false</default>
+        <label>Cataluña</label>
+    </customValue>
+    <customValue>
+        <fullName>Murcia</fullName>
+        <default>false</default>
+        <label>Murcia</label>
+    </customValue>
+    <customValue>
+        <fullName>Navarra</fullName>
+        <default>false</default>
+        <label>Navarra</label>
+    </customValue>
+    <customValue>
+        <fullName>Andalucía</fullName>
+        <default>false</default>
+        <label>Andalucía</label>
+    </customValue>
+    <customValue>
+        <fullName>Navarra;Navarra</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Navarra;Navarra</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid;Madrid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Madrid;Madrid</label>
+    </customValue>
+    <description>Comunidad donde Amavir tiene ubicación de residencias</description>
+    <masterLabel>Comunidad</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

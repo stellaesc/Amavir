@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoPanal__c</fullName>
+    <description>Campo de tipo lista de selección para conocer el tipo de pañal que utiliza</description>
+    <externalId>false</externalId>
+    <label>¿Qué tipo de pañal?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UsaPanyales__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Día</fullName>
+                <default>false</default>
+                <label>Día</label>
+            </value>
+            <value>
+                <fullName>Noche</fullName>
+                <default>false</default>
+                <label>Noche</label>
+            </value>
+            <value>
+                <fullName>Día y Noche</fullName>
+                <default>false</default>
+                <label>Día y Noche</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sí</controllingFieldValue>
+            <valueName>Día</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sí</controllingFieldValue>
+            <valueName>Noche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sí</controllingFieldValue>
+            <valueName>Día y Noche</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResidenciaIngresoNoVacio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   ISCHANGED(StageName),
+   ISPICKVAL(StageName, &apos;Envío SAP&apos;),
+   OR(
+     ISPICKVAL(ProductoInteres__c, &apos;Residencia permanente&apos;),
+     ISPICKVAL(ProductoInteres__c, &apos;Estancia nocturna&apos;)
+   ),
+   ISBLANK( ResidenciaIngreso__c ) 
+)</errorConditionFormula>
+    <errorMessage>El campo Residencia de ingreso no puede estar vacío</errorMessage>
+</ValidationRule>

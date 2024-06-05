@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Nueva Contactado</fullName>
+        <default>false</default>
+        <label>Nueva Contactado</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Seguimiento llamada</fullName>
+        <default>false</default>
+        <label>Seguimiento llamada</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Visita - Seguimiento</fullName>
+        <default>false</default>
+        <label>Visita - Seguimiento</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Lista de espera - Derivación - Traslado</fullName>
+        <default>false</default>
+        <label>Lista de espera - Derivación - Traslado</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Reserva de plaza</fullName>
+        <default>false</default>
+        <label>Reserva de plaza</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrada - Éxito</fullName>
+        <default>false</default>
+        <label>Cerrada - Éxito</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrada - Perdida</fullName>
+        <default>false</default>
+        <label>Cerrada - Perdida</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Envío SAP</fullName>
+        <default>false</default>
+        <description>Envío SAP</description>
+        <label>Envío SAP</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>100</probability>
+        <won>false</won>
+    </standardValue>
+</StandardValueSet>

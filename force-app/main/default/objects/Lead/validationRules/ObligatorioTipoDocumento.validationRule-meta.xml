@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ObligatorioTipoDocumento</fullName>
+    <active>true</active>
+    <description>Cuando se rellene el número de documento de identidad del Familiar/Allegado, deberá estar marcado el tipo del mismo.</description>
+    <errorConditionFormula>AND( NOT( ISNULL( NumeroDelDocumentoFamiliarAllegado__c ) ), NOT( ISBLANK( NumeroDelDocumentoFamiliarAllegado__c ) ) ,
+ISPICKVAL(TipoDocumentoFamiliarAllegado__c, &apos;&apos;) )</errorConditionFormula>
+    <errorDisplayField>TipoDocumentoFamiliarAllegado__c</errorDisplayField>
+    <errorMessage>Se debe indicar el tipo de documento del familiar/allegado</errorMessage>
+</ValidationRule>

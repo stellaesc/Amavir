@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alcalá de Henares</fullName>
+        <default>false</default>
+        <label>Alcalá de Henares</label>
+    </customValue>
+    <customValue>
+        <fullName>Alcorcón</fullName>
+        <default>false</default>
+        <label>Alcorcón</label>
+    </customValue>
+    <customValue>
+        <fullName>Arganzuela</fullName>
+        <default>false</default>
+        <label>Arganzuela</label>
+    </customValue>
+    <customValue>
+        <fullName>Argaray</fullName>
+        <default>false</default>
+        <label>Argaray</label>
+    </customValue>
+    <customValue>
+        <fullName>Betelu</fullName>
+        <default>false</default>
+        <label>Betelu</label>
+    </customValue>
+    <customValue>
+        <fullName>Cartagena</fullName>
+        <default>false</default>
+        <label>Cartagena</label>
+    </customValue>
+    <customValue>
+        <fullName>Cenicientos</fullName>
+        <default>false</default>
+        <label>Cenicientos</label>
+    </customValue>
+    <customValue>
+        <fullName>Ciudad lineal</fullName>
+        <default>false</default>
+        <label>Ciudad lineal</label>
+    </customValue>
+    <customValue>
+        <fullName>Colmenar</fullName>
+        <default>false</default>
+        <label>Colmenar</label>
+    </customValue>
+    <customValue>
+        <fullName>Coslada</fullName>
+        <default>false</default>
+        <label>Coslada</label>
+    </customValue>
+    <customValue>
+        <fullName>Diagonal</fullName>
+        <default>false</default>
+        <label>Diagonal</label>
+    </customValue>
+    <customValue>
+        <fullName>Don Quijote (Tomelloso)</fullName>
+        <default>false</default>
+        <label>Don Quijote (Tomelloso)</label>
+    </customValue>
+    <customValue>
+        <fullName>El Balconcillo (Guadalajara)</fullName>
+        <default>false</default>
+        <label>El Balconcillo (Guadalajara)</label>
+    </customValue>
+    <customValue>
+        <fullName>El Encinar del Rey</fullName>
+        <default>false</default>
+        <label>El Encinar del Rey</label>
+    </customValue>
+    <customValue>
+        <fullName>El Encinar del Rey Apartamentos</fullName>
+        <default>false</default>
+        <label>El Encinar del Rey Apartamentos</label>
+    </customValue>
+    <customValue>
+        <fullName>El Pinar</fullName>
+        <default>false</default>
+        <label>El Pinar</label>
+    </customValue>
+    <customValue>
+        <fullName>Getafe</fullName>
+        <default>false</default>
+        <label>Getafe</label>
+    </customValue>
+    <customValue>
+        <fullName>Haría</fullName>
+        <default>false</default>
+        <label>Haría</label>
+    </customValue>
+    <customValue>
+        <fullName>Horta</fullName>
+        <default>false</default>
+        <label>Horta</label>
+    </customValue>
+    <customValue>
+        <fullName>Humanes</fullName>
+        <default>false</default>
+        <label>Humanes</label>
+    </customValue>
+    <customValue>
+        <fullName>Ibañeta</fullName>
+        <default>false</default>
+        <label>Ibañeta</label>
+    </customValue>
+    <customValue>
+        <fullName>La Alameda (Azuqueca)</fullName>
+        <default>false</default>
+        <label>La Alameda (Azuqueca)</label>
+    </customValue>
+    <customValue>
+        <fullName>La Gavia</fullName>
+        <default>false</default>
+        <label>La Gavia</label>
+    </customValue>
+    <customValue>
+        <fullName>La Marina</fullName>
+        <default>false</default>
+        <label>La Marina</label>
+    </customValue>
+    <customValue>
+        <fullName>Las Hazas (Hellín)</fullName>
+        <default>false</default>
+        <label>Las Hazas (Hellín)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mutilva</fullName>
+        <default>false</default>
+        <label>Mutilva</label>
+    </customValue>
+    <customValue>
+        <fullName>Nuestra Casa</fullName>
+        <default>false</default>
+        <label>Nuestra Casa</label>
+    </customValue>
+    <customValue>
+        <fullName>Oblatas</fullName>
+        <default>false</default>
+        <label>Oblatas</label>
+    </customValue>
+    <customValue>
+        <fullName>Patones</fullName>
+        <default>false</default>
+        <label>Patones</label>
+    </customValue>
+    <customValue>
+        <fullName>Pozuelo</fullName>
+        <default>false</default>
+        <label>Pozuelo</label>
+    </customValue>
+    <customValue>
+        <fullName>Puente de Vallecas</fullName>
+        <default>false</default>
+        <label>Puente de Vallecas</label>
+    </customValue>
+    <customValue>
+        <fullName>San Agustín de Guadalix</fullName>
+        <default>false</default>
+        <label>San Agustín de Guadalix</label>
+    </customValue>
+    <customValue>
+        <fullName>Sant Cugat</fullName>
+        <default>false</default>
+        <label>Sant Cugat</label>
+    </customValue>
+    <customValue>
+        <fullName>Teià</fullName>
+        <default>false</default>
+        <label>Teià</label>
+    </customValue>
+    <customValue>
+        <fullName>Tejina</fullName>
+        <default>false</default>
+        <label>Tejina</label>
+    </customValue>
+    <customValue>
+        <fullName>Tías</fullName>
+        <default>false</default>
+        <label>Tías</label>
+    </customValue>
+    <customValue>
+        <fullName>Torrejón</fullName>
+        <default>false</default>
+        <label>Torrejón</label>
+    </customValue>
+    <customValue>
+        <fullName>Usera</fullName>
+        <default>false</default>
+        <label>Usera</label>
+    </customValue>
+    <customValue>
+        <fullName>Valdebernardo</fullName>
+        <default>false</default>
+        <label>Valdebernardo</label>
+    </customValue>
+    <customValue>
+        <fullName>Valle de Egües</fullName>
+        <default>false</default>
+        <label>Valle de Egües</label>
+    </customValue>
+    <customValue>
+        <fullName>Vilanova</fullName>
+        <default>false</default>
+        <label>Vilanova</label>
+    </customValue>
+    <customValue>
+        <fullName>Villanueva</fullName>
+        <default>false</default>
+        <label>Villanueva</label>
+    </customValue>
+    <customValue>
+        <fullName>Villaverde</fullName>
+        <default>false</default>
+        <label>Villaverde</label>
+    </customValue>
+    <customValue>
+        <fullName>Ciudad Real</fullName>
+        <default>false</default>
+        <label>Ciudad Real</label>
+    </customValue>
+    <customValue>
+        <fullName>Ciudalcampo</fullName>
+        <default>false</default>
+        <label>Ciudalcampo</label>
+    </customValue>
+    <customValue>
+        <fullName>Santa Cruz de Tenerife</fullName>
+        <default>false</default>
+        <label>Santa Cruz de Tenerife</label>
+    </customValue>
+    <customValue>
+        <fullName>Vicálvaro</fullName>
+        <default>false</default>
+        <label>Vicálvaro</label>
+    </customValue>
+    <customValue>
+        <fullName>Jaén</fullName>
+        <default>false</default>
+        <label>Jaén</label>
+    </customValue>
+    <customValue>
+        <fullName>El Encinar Leganés</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>El Encinar Leganés</label>
+    </customValue>
+    <description>Listado de residencias Amavir</description>
+    <masterLabel>Residencias</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

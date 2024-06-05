@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Residencia permanente</fullName>
+        <default>false</default>
+        <label>Residencia permanente</label>
+    </customValue>
+    <customValue>
+        <fullName>Estancia temporal</fullName>
+        <default>false</default>
+        <label>Estancia temporal</label>
+    </customValue>
+    <customValue>
+        <fullName>Centro día/ SED</fullName>
+        <default>false</default>
+        <label>Centro día/ SED</label>
+    </customValue>
+    <customValue>
+        <fullName>Estancia de respiro</fullName>
+        <default>false</default>
+        <label>Estancia de respiro</label>
+    </customValue>
+    <customValue>
+        <fullName>Centro de día de respiro</fullName>
+        <default>false</default>
+        <label>Centro de día de respiro</label>
+    </customValue>
+    <customValue>
+        <fullName>Estancia nocturna</fullName>
+        <default>false</default>
+        <label>Estancia nocturna</label>
+    </customValue>
+    <customValue>
+        <fullName>Apartamento</fullName>
+        <default>false</default>
+        <label>Apartamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Centro de día de media jornada</fullName>
+        <default>false</default>
+        <label>Centro de día de media jornada</label>
+    </customValue>
+    <customValue>
+        <fullName>Estancia diurna</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Estancia diurna</label>
+    </customValue>
+    <description>Recoge el producto de interés del candidato</description>
+    <masterLabel>Producto de interés</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

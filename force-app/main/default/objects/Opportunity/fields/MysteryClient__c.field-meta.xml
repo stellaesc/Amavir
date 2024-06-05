@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MysteryClient__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Si es un cliente de la competencia que ha llamado para hacer un estudio de mercado</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Solo se cumplimentará desde Dirección Comercial</inlineHelpText>
+    <label>Mystery Client</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

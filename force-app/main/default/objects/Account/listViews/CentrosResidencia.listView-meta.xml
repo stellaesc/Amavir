@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CentrosResidencia</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CodigoCentroSAP__c</columns>
+    <columns>TasaOcupacionCentroDia__c</columns>
+    <columns>TasaOcupacionResidencia__c</columns>
+    <columns>TasaOcupacionPrivadaCentroDia__c</columns>
+    <columns>TasaOcupacionPrivadaResidencia__c</columns>
+    <columns>TasaOcupacionPublicaCentroDia__c</columns>
+    <columns>TasaOcupacionPublicaResidencia__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.CentroResidencia</value>
+    </filters>
+    <label>Centros/Residencias</label>
+</ListView>

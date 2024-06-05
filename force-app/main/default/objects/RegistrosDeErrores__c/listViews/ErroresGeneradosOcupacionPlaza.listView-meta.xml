@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ErroresGeneradosOcupacionPlaza</fullName>
+    <columns>NAME</columns>
+    <columns>CodigoError__c</columns>
+    <columns>DescripcionError__c</columns>
+    <columns>ClaseGeneradora__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CodigoError__c</field>
+        <operation>equals</operation>
+        <value>5</value>
+    </filters>
+    <label>Errores generados por ocupación de plaza</label>
+</ListView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CentroDia</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>FormatoCompactoPlaza</compactLayoutAssignment>
+    <description>Tipo de registro para las plazas de centro de día</description>
+    <label>Centro de día</label>
+    <picklistValues>
+        <picklist>Categoria__c</picklist>
+        <values>
+            <fullName>Centro de día de respiro %28S-D%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centro de día%2F SED %28L-V%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DiaSemana__c</picklist>
+        <values>
+            <fullName>Domingo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jueves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miércoles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sábado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viernes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subcategoria__c</picklist>
+        <values>
+            <fullName>Temporal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoPlaza__c</picklist>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

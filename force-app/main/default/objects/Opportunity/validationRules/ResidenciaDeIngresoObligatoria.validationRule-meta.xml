@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResidenciaDeIngresoObligatoria</fullName>
+    <active>true</active>
+    <description>Es necesario rellenar el campo &quot;Residencia de Ingreso&quot; al tener cumplimentado el campo &quot;Fecha de ingreso planificado&quot;. No cumple para las oportunidades &quot;Cerrada - Perdida&quot;</description>
+    <errorConditionFormula>AND(
+				ISBLANK(ResidenciaIngreso__c),
+				NOT(ISBLANK(FechaIngresoPlanificado__c)),
+
+NOT(IsPickval(StageName, &quot;Cerrada - Perdida&quot;))
+
+			)</errorConditionFormula>
+    <errorMessage>Es necesario rellenar el campo &quot;Residencia de Ingreso&quot; si está cumplimentada la &quot;Fecha de ingreso planificado&quot;</errorMessage>
+</ValidationRule>

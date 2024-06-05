@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BAPlazaResidencia</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISPICKVAL(StageName, &apos;Envío SAP&apos;),
+  ISBLANK( FechaSalida__c ),
+  NOT(ISBLANK ( Plaza__c )),
+OR(    
+     ISPICKVAL(ProductoInteres__c, &apos;Estancia de respiro&apos;),
+     ISPICKVAL(ProductoInteres__c, &apos;Estancia nocturna&apos;),
+     ISPICKVAL(ProductoInteres__c, &apos;Estancia temporal&apos;),
+     ISPICKVAL(ProductoInteres__c, &apos;Apartamento&apos;),
+     ISPICKVAL(ProductoInteres__c, &apos;Residencia permanente&apos;)
+),
+  OR(
+     NOT(ISBLANK(PlazaLunes__c)),
+     NOT(ISBLANK(PlazaMartes__c)),
+     NOT(ISBLANK(PlazaMiercoles__c)),
+     NOT(ISBLANK(PlazaJueves__c)),
+     NOT(ISBLANK(PlazaViernes__c)),
+     NOT(ISBLANK(PlazaSabado__c)),
+     NOT(ISBLANK(PlazaDomingo__c))
+    )
+)</errorConditionFormula>
+    <errorMessage>Si está rellena la plaza de residencia, las plazas de centro de día deben estar vacías.</errorMessage>
+</ValidationRule>

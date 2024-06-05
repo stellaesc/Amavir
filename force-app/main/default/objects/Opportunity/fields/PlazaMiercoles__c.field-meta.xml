@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlazaMiercoles__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Si ocupa plaza el Miercoles en el centro de día ha de rellenarse este campo</description>
+    <externalId>false</externalId>
+    <label>Miércoles</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Plaza__c.DiaSemana__c</field>
+            <operation>equals</operation>
+            <value>Miércoles</value>
+        </filterItems>
+        <filterItems>
+            <field>Plaza__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>CentroDia</value>
+        </filterItems>
+        <filterItems>
+            <field>Plaza__c.PlazaInhabilitada__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Plaza__c</referenceTo>
+    <relationshipLabel>Oportunidades (Miércoles)</relationshipLabel>
+    <relationshipName>Oportunidades2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZonaPromocion__c</fullName>
+    <description>Zona (Comunidad o Municipio) donde se aplica la promoción, es dependiente de Ámbito</description>
+    <externalId>false</externalId>
+    <label>Zona de promocion</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Ambito__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ARGANZUELA</fullName>
+                <default>false</default>
+                <label>ARGANZUELA</label>
+            </value>
+            <value>
+                <fullName>COLMENAR</fullName>
+                <default>false</default>
+                <label>COLMENAR</label>
+            </value>
+            <value>
+                <fullName>VALLECAS</fullName>
+                <default>false</default>
+                <label>VALLECAS</label>
+            </value>
+            <value>
+                <fullName>COSLADA</fullName>
+                <default>false</default>
+                <label>COSLADA</label>
+            </value>
+            <value>
+                <fullName>HUMANES</fullName>
+                <default>false</default>
+                <label>HUMANES</label>
+            </value>
+            <value>
+                <fullName>VICÁLVARO</fullName>
+                <default>false</default>
+                <label>VICÁLVARO</label>
+            </value>
+            <value>
+                <fullName>ALCORCON</fullName>
+                <default>false</default>
+                <label>ALCORCON</label>
+            </value>
+            <value>
+                <fullName>VILLANUEVA DE LA CAÑADA</fullName>
+                <default>false</default>
+                <label>VILLANUEVA DE LA CAÑADA</label>
+            </value>
+            <value>
+                <fullName>POZUELO</fullName>
+                <default>false</default>
+                <label>POZUELO</label>
+            </value>
+            <value>
+                <fullName>USERA</fullName>
+                <default>false</default>
+                <label>USERA</label>
+            </value>
+            <value>
+                <fullName>VILLALBA</fullName>
+                <default>false</default>
+                <label>VILLALBA</label>
+            </value>
+            <value>
+                <fullName>CENICIENTOS</fullName>
+                <default>false</default>
+                <label>CENICIENTOS</label>
+            </value>
+            <value>
+                <fullName>PATONES</fullName>
+                <default>false</default>
+                <label>PATONES</label>
+            </value>
+            <value>
+                <fullName>CIUDAD LINEAL</fullName>
+                <default>false</default>
+                <label>CIUDAD LINEAL</label>
+            </value>
+            <value>
+                <fullName>ALCALÁ DE HENARES</fullName>
+                <default>false</default>
+                <label>ALCALÁ DE HENARES</label>
+            </value>
+            <value>
+                <fullName>VILLAVERDE</fullName>
+                <default>false</default>
+                <label>VILLAVERDE</label>
+            </value>
+            <value>
+                <fullName>GETAFE</fullName>
+                <default>false</default>
+                <label>GETAFE</label>
+            </value>
+            <value>
+                <fullName>LA MARINA</fullName>
+                <default>false</default>
+                <label>LA MARINA</label>
+            </value>
+            <value>
+                <fullName>SAN AGUSTÍN</fullName>
+                <default>false</default>
+                <label>SAN AGUSTÍN</label>
+            </value>
+            <value>
+                <fullName>TORREJÓN</fullName>
+                <default>false</default>
+                <label>TORREJÓN</label>
+            </value>
+            <value>
+                <fullName>TEIÀ</fullName>
+                <default>false</default>
+                <label>TEIÀ</label>
+            </value>
+            <value>
+                <fullName>VILANOVA</fullName>
+                <default>false</default>
+                <label>VILANOVA</label>
+            </value>
+            <value>
+                <fullName>HORTA</fullName>
+                <default>false</default>
+                <label>HORTA</label>
+            </value>
+            <value>
+                <fullName>SANT CUGAT</fullName>
+                <default>false</default>
+                <label>SANT CUGAT</label>
+            </value>
+            <value>
+                <fullName>BARCELONA</fullName>
+                <default>false</default>
+                <label>BARCELONA</label>
+            </value>
+            <value>
+                <fullName>HELLIN</fullName>
+                <default>false</default>
+                <label>HELLIN</label>
+            </value>
+            <value>
+                <fullName>TOMELLOSO</fullName>
+                <default>false</default>
+                <label>TOMELLOSO</label>
+            </value>
+            <value>
+                <fullName>CIUDAD REAL</fullName>
+                <default>false</default>
+                <label>CIUDAD REAL</label>
+            </value>
+            <value>
+                <fullName>CHILLARÓN DE CUENCA</fullName>
+                <default>false</default>
+                <label>CHILLARÓN DE CUENCA</label>
+            </value>
+            <value>
+                <fullName>GUADALAJARA</fullName>
+                <default>false</default>
+                <label>GUADALAJARA</label>
+            </value>
+            <value>
+                <fullName>AZUQUECA DE HENARES</fullName>
+                <default>false</default>
+                <label>AZUQUECA DE HENARES</label>
+            </value>
+            <value>
+                <fullName>VALLE DE ARANGUREN</fullName>
+                <default>false</default>
+                <label>VALLE DE ARANGUREN</label>
+            </value>
+            <value>
+                <fullName>VALCARLOS - RONCESVALLES</fullName>
+                <default>false</default>
+                <label>VALCARLOS - RONCESVALLES</label>
+            </value>
+            <value>
+                <fullName>PAMPLONA</fullName>
+                <default>false</default>
+                <label>PAMPLONA</label>
+            </value>
+            <value>
+                <fullName>VALLE DE EGÜES</fullName>
+                <default>false</default>
+                <label>VALLE DE EGÜES</label>
+            </value>
+            <value>
+                <fullName>HARÍA</fullName>
+                <default>false</default>
+                <label>HARÍA</label>
+            </value>
+            <value>
+                <fullName>TÍAS</fullName>
+                <default>false</default>
+                <label>TÍAS</label>
+            </value>
+            <value>
+                <fullName>SAN CRISTÓBAL</fullName>
+                <default>false</default>
+                <label>SAN CRISTÓBAL</label>
+            </value>
+            <value>
+                <fullName>VALLADOLID</fullName>
+                <default>false</default>
+                <label>VALLADOLID</label>
+            </value>
+            <value>
+                <fullName>CARTAGENA</fullName>
+                <default>false</default>
+                <label>CARTAGENA</label>
+            </value>
+            <value>
+                <fullName>MADRID</fullName>
+                <default>false</default>
+                <label>MADRID</label>
+            </value>
+            <value>
+                <fullName>CATALUÑA</fullName>
+                <default>false</default>
+                <label>CATALUÑA</label>
+            </value>
+            <value>
+                <fullName>CASTILLA LA MANCHA</fullName>
+                <default>false</default>
+                <label>CASTILLA LA MANCHA</label>
+            </value>
+            <value>
+                <fullName>NAVARRA</fullName>
+                <default>false</default>
+                <label>NAVARRA</label>
+            </value>
+            <value>
+                <fullName>CANARIAS</fullName>
+                <default>false</default>
+                <label>CANARIAS</label>
+            </value>
+            <value>
+                <fullName>CASTILLA Y LEÓN</fullName>
+                <default>false</default>
+                <label>CASTILLA Y LEÓN</label>
+            </value>
+            <value>
+                <fullName>MURCIA</fullName>
+                <default>false</default>
+                <label>MURCIA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>ARGANZUELA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>COLMENAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VALLECAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>COSLADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>HUMANES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VICÁLVARO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>ALCORCON</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VILLANUEVA DE LA CAÑADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>POZUELO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>USERA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VILLALBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>CENICIENTOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>PATONES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>CIUDAD LINEAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>ALCALÁ DE HENARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VILLAVERDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>GETAFE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>LA MARINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>SAN AGUSTÍN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>TORREJÓN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>TEIÀ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VILANOVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>HORTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>SANT CUGAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>BARCELONA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>HELLIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>TOMELLOSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>CIUDAD REAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>CHILLARÓN DE CUENCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>GUADALAJARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>AZUQUECA DE HENARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VALLE DE ARANGUREN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VALCARLOS - RONCESVALLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>PAMPLONA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VALLE DE EGÜES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>HARÍA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>TÍAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>SAN CRISTÓBAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>VALLADOLID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <valueName>CARTAGENA</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

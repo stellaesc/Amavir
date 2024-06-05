@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Servicios__c</fullName>
+    <description>Lista de servicios de competidores</description>
+    <externalId>false</externalId>
+    <label>Servicios</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fisioterapia</fullName>
+                <default>false</default>
+                <label>Fisioterapia</label>
+            </value>
+            <value>
+                <fullName>Trabajo Social</fullName>
+                <default>false</default>
+                <label>Trabajo Social</label>
+            </value>
+            <value>
+                <fullName>Logopedia</fullName>
+                <default>false</default>
+                <label>Logopedia</label>
+            </value>
+            <value>
+                <fullName>Terapia ocupacional</fullName>
+                <default>false</default>
+                <label>Terapia ocupacional</label>
+            </value>
+            <value>
+                <fullName>Psicología</fullName>
+                <default>false</default>
+                <label>Psicología</label>
+            </value>
+            <value>
+                <fullName>Medicina</fullName>
+                <default>false</default>
+                <label>Medicina</label>
+            </value>
+            <value>
+                <fullName>Enfermería</fullName>
+                <default>false</default>
+                <label>Enfermería</label>
+            </value>
+            <value>
+                <fullName>Peluquería</fullName>
+                <default>false</default>
+                <label>Peluquería</label>
+            </value>
+            <value>
+                <fullName>Podología</fullName>
+                <default>false</default>
+                <label>Podología</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
