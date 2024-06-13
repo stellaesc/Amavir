@@ -15,10 +15,10 @@
     ),
     OR(
 								ISBLANK(ResidenciaIngreso__c),
-								ISNULL(FechaIngresoPlanificado__c),
+								ISNULL( FechaIngreso__c ),
 								ISBLANK( TEXT(TipoPlaza__c) )
 	 			)
 )</errorConditionFormula>
     <errorDisplayField>ResidenciaIngreso__c</errorDisplayField>
-    <errorMessage>Si la plaza de residencia o alguna plaza de centro de día está rellena, la residencia de ingreso, la fecha de ingreso planificada y el tipo de plaza no pueden estar vacíos</errorMessage>
+    <errorMessage>Si la plaza de residencia o alguna plaza de centro de día está rellena, la residencia de ingreso, la fecha de ingreso y el tipo de plaza no pueden estar vacíos</errorMessage>
 </ValidationRule>
