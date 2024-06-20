@@ -3,6 +3,8 @@
 Handler de la clase TaskTrigger
 
 DATE 		AUTHOR 		DESCRIPTION
+20/06/2024  LCS - MSA   Las oportunidades de plaza publica y de traslado no sufren el cambio de etapa
+10/06/2024  LCS - MSA   Añadir el cambio de etapa en las oportunidades
 04/05/2023  LCS - MSA   Buscar si el contacto y la oportunidad están relacionados pero no por la misma cuenta,
                         sino por el AccountContactRelation.
 13/03/2023  LCS - MSA   Creación
@@ -12,6 +14,9 @@ DATE 		AUTHOR 		DESCRIPTION
 */
 
 public class TriggerTaskHandler {
+
+    private static final string PLAZA_PUBLICA_DEVELOPER_NAME_RT = 'PlazaPublica';
+    private static final string TRASLADO_DEVELOPER_NAME_RT = 'Traslado';
 
         /* 
     @description Método que se ejecuta desde el trigger y comprueba los Ids relacionados de la Tarea.
@@ -68,5 +73,37 @@ public class TriggerTaskHandler {
 
             }
 
+    }
+
+    public void ChangeOpportunityStage(List<task> listTask){
+
+        List<String> listOppsLlamadaId = new List<String>();
+
+        for(Task singleTask : listTask){
+
+            //Comprobamos que se ha rellenado con una oportunidad, la tarea está completada
+            //Y la tarea es de tipo llamada
+            if((singleTask.WhatId != null) && (singleTask.Status == 'Completed') && 
+            (((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada'))))){
+                String idOpp = singleTask.WhatId;
+                if(idOpp.startsWith('006')){
+                    listOppsLlamadaId.add(idOpp);
+                }
+            }
+        }
+
+        List<Opportunity> oppsRelatedToTask = [SELECT Id, StageName, RecordType.DeveloperName from Opportunity WHERE Id = :listOppsLlamadaId];
+        
+        for(Opportunity oppRelatedToTask : oppsRelatedToTask){
+            if((oppRelatedToTask.StageName == 'Nueva Contactado') && 
+            (oppRelatedToTask.RecordType.DeveloperName != PLAZA_PUBLICA_DEVELOPER_NAME_RT) && 
+            (oppRelatedToTask.RecordType.DeveloperName != TRASLADO_DEVELOPER_NAME_RT)){
+                oppRelatedToTask.StageName = 'Seguimiento llamada';
+            }
+        }
+
+        if(oppsRelatedToTask.size() > 0){
+            update oppsRelatedToTask;
+        }
     }
 }
