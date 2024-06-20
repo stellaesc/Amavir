@@ -92,7 +92,7 @@ public class TriggerTaskHandler {
             }
         }
 
-        List<Opportunity> oppsRelatedToTask = [SELECT Id, StageName, RecordType.DeveloperName from Opportunity WHERE Id = :listOppsLlamadaId LIMIT 1];
+        List<Opportunity> oppsRelatedToTask = [SELECT Id, StageName, RecordType.DeveloperName from Opportunity WHERE Id = :listOppsLlamadaId];
         
         for(Opportunity oppRelatedToTask : oppsRelatedToTask){
             if((oppRelatedToTask.StageName == 'Nueva Contactado') && 
