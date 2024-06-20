@@ -1,3 +1,15 @@
+/**
+@description
+Clase test de WSReajustarOcupacion
+
+DATE 		AUTHOR 		DESCRIPTION
+16/01/2024  LCS - MSA	Creación.
+14/06/2024  LCS - MSA   Corrección por cambio en VR.
+
+@author Leadclic Solutions
+@date 16/01/2024
+*/
+
 @isTest
 public with sharing class TestWSReajustarOcupacion {
     
@@ -166,7 +178,7 @@ public with sharing class TestWSReajustarOcupacion {
             StageName='Cerrada - Éxito',
             ResidenciaIngreso__c = acctResidencia.Id,
             CloseDate=date.parse('01/01/2018'),
-            FechaIngresoPlanificado__c = Date.today(),
+            FechaIngreso__c = Date.today(),
             TipoPlaza__c = 'P',
             ResidenciaPreferencia__c = acctResidencia.Id,
             RealSAP__c = true,
@@ -185,7 +197,7 @@ public with sharing class TestWSReajustarOcupacion {
             StageName='Cerrada - Éxito',
             ResidenciaIngreso__c = acctResidencia.Id,
             CloseDate=date.parse('01/01/2018'),
-            FechaIngresoPlanificado__c = Date.today(),
+            FechaIngreso__c = Date.today(),
             TipoPlaza__c = 'P',
             ResidenciaPreferencia__c = acctResidencia.Id,
             RealSAP__c = true,
