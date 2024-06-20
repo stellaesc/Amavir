@@ -77,19 +77,28 @@ public class TriggerTaskHandler {
 
     public void ChangeOpportunityStage(List<task> listTask){
 
+        List<Opportunity> listOppsUpdate = new List<Opportunity>();
+
         for(Task singleTask : listTask){
 
             //Comprobamos que se ha rellenado con una oportunidad
             if((singleTask.WhatId != null) && (singleTask.Status == 'Completed')){
                 String IdOpp = singleTask.WhatId;
                 if(IdOpp.startsWith('006')){
-                    UpdateOpportunityStage(singleTask);
+                    Opportunity opp = UpdateOpportunityStage(singleTask);
+                    if(opp != null){
+                        listOppsUpdate.add(opp);
+                    }
                 }
             }
         }
+
+        if(listOppsUpdate.size() > 0){
+            update listOppsUpdate;
+        }
     }
 
-    public void UpdateOpportunityStage(Task singleTask){
+    public Opportunity UpdateOpportunityStage(Task singleTask){
 
         if (((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))){
 
@@ -99,8 +108,10 @@ public class TriggerTaskHandler {
             (oppRelatedToTask.RecordType.DeveloperName != PLAZA_PUBLICA_DEVELOPER_NAME_RT) && 
             (oppRelatedToTask.RecordType.DeveloperName != TRASLADO_DEVELOPER_NAME_RT)){
                 oppRelatedToTask.StageName = 'Seguimiento llamada';
-                update oppRelatedToTask;
+                return oppRelatedToTask;
             }
         }
+
+        return null;
     }
 }
