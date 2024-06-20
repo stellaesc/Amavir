@@ -3,8 +3,9 @@
 Test Methods de la clase TriggerOpportunityHandler
 
 DATE 		AUTHOR 		DESCRIPTION
-14/09/2023  MSA - LCS   Correccion parentesco
-22/05/2023  MSA - LCS   Corrección errores por el nuevo cambio en las oportunidades
+14/06/2024  LCS - MSA   Corrección por cambio en VR.
+14/09/2023  LCS - MSA   Correccion parentesco
+22/05/2023  LCS - MSA   Corrección errores por el nuevo cambio en las oportunidades
 10/10/2022  LCS - MSA   Comentado el test testFalloSinDocumento para evitar los fallos.
 21/09/2022  LCS - MSA   Correcciones para evitar los fallos.
 19/01/2022  LCS - MMV   Correcciones para evitar los fallos.
@@ -205,7 +206,7 @@ public class TestTriggerOpportunityHandler {
             ResidenciaIngreso__c = centro.Id,
             Plaza__c = plazaResi.Id,
             TipoPlaza__c = 'P',
-            FechaIngresoPlanificado__c = Date.today(),
+            FechaIngreso__c = Date.today(),
             MotivoIngreso__c = 'Psicogeriatría',
             DetalleMotivoIngreso__c = 'Autolisis'
         );
