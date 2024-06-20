@@ -77,41 +77,33 @@ public class TriggerTaskHandler {
 
     public void ChangeOpportunityStage(List<task> listTask){
 
-        List<Opportunity> listOppsUpdate = new List<Opportunity>();
+        List<String> listOppsLlamadaId = new List<String>();
 
         for(Task singleTask : listTask){
 
-            //Comprobamos que se ha rellenado con una oportunidad
-            if((singleTask.WhatId != null) && (singleTask.Status == 'Completed')){
-                String IdOpp = singleTask.WhatId;
-                if(IdOpp.startsWith('006')){
-                    Opportunity opp = UpdateOpportunityStage(singleTask);
-                    if(opp != null){
-                        listOppsUpdate.add(opp);
-                    }
+            //Comprobamos que se ha rellenado con una oportunidad, la tarea está completada
+            //Y la tarea es de tipo llamada
+            if((singleTask.WhatId != null) && (singleTask.Status == 'Completed') && 
+            (((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada'))))){
+                String idOpp = singleTask.WhatId;
+                if(idOpp.startsWith('006')){
+                    listOppsLlamadaId.add(idOpp);
                 }
             }
         }
 
-        if(listOppsUpdate.size() > 0){
-            update listOppsUpdate;
-        }
-    }
-
-    public Opportunity UpdateOpportunityStage(Task singleTask){
-
-        if (((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))){
-
-            Opportunity oppRelatedToTask = [SELECT Id, StageName, RecordType.DeveloperName from Opportunity WHERE Id =:singleTask.WhatId LIMIT 1];
-
+        List<Opportunity> oppsRelatedToTask = [SELECT Id, StageName, RecordType.DeveloperName from Opportunity WHERE Id = :listOppsLlamadaId LIMIT 1];
+        
+        for(Opportunity oppRelatedToTask : oppsRelatedToTask){
             if((oppRelatedToTask.StageName == 'Nueva Contactado') && 
             (oppRelatedToTask.RecordType.DeveloperName != PLAZA_PUBLICA_DEVELOPER_NAME_RT) && 
             (oppRelatedToTask.RecordType.DeveloperName != TRASLADO_DEVELOPER_NAME_RT)){
                 oppRelatedToTask.StageName = 'Seguimiento llamada';
-                return oppRelatedToTask;
             }
         }
 
-        return null;
+        if(oppsRelatedToTask.size() > 0){
+            update oppsRelatedToTask;
+        }
     }
 }
