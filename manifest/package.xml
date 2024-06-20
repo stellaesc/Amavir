@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>TestTriggerOpportunityHandler</members>
-		<members>TestWSMovimientoPaciente</members>
-		<members>TestWSReajustarOcupacion</members>
+		<members>TriggerTaskHandler</members>
 		<name>ApexClass</name>
 	</types>
 	<version>60.0</version>
