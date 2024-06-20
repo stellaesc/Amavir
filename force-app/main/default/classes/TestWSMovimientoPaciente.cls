@@ -13,7 +13,8 @@ FECHA       AUTOR   	    DESCRIPCION<br/>
 21/09/2022  MSA - LCS       Añadido OpportunityContactRole que relaciona contactos y oportunidades.
 22/05/2023  MSA - LCS       Corrección de las clases test.
 24/07/2023  MSA - LCS       Corrección de las clases test.
-16/01/2024  LCS - MSA	    Corrección por la capacidad de clonar oportunidades.
+16/01/2024  MSA - LCS	    Corrección por la capacidad de clonar oportunidades.
+14/06/2024  MSA - LCS       Corrección por cambio en VR.
 </pre>
 @author Leadclic Solutions
 @date 19/07/2021
@@ -185,7 +186,7 @@ public with sharing class TestWSMovimientoPaciente {
             StageName='Cerrada - Éxito',
             ResidenciaIngreso__c = acctResidencia.Id,
             CloseDate=date.parse('01/01/2018'),
-            FechaIngresoPlanificado__c = Date.today(),
+            FechaIngreso__c = Date.today(),
             TipoPlaza__c = 'P',
             ResidenciaPreferencia__c = acctResidencia.Id,
             RealSAP__c = true,
@@ -204,7 +205,7 @@ public with sharing class TestWSMovimientoPaciente {
             StageName='Cerrada - Éxito',
             ResidenciaIngreso__c = acctResidencia.Id,
             CloseDate=date.parse('01/01/2018'),
-            FechaIngresoPlanificado__c = Date.today(),
+            FechaIngreso__c = Date.today(),
             TipoPlaza__c = 'P',
             ResidenciaPreferencia__c = acctResidencia.Id,
             RealSAP__c = true,
