@@ -3,15 +3,19 @@
     <label>Desarrollo</label>
     <protected>false</protected>
     <values>
+        <field>EndpointFamiliar__c</field>
+        <value xsi:type="xsd:string">http://sapcal.amavir.es:8000/sap/bc/srt/rfc/sap/zwsfamiliarsf/200/z_familiares_sf/zbind_famsf</value>
+    </values>
+    <values>
         <field>Endpoint__c</field>
-        <value xsi:type="xsd:string">http://213.4.61.122:8000/sap/bc/srt/rfc/sap/zwsadmisionessf/200/z_admisiones/zbind_adm</value>
+        <value xsi:type="xsd:string">http://sapcal.amavir.es:8000/sap/bc/srt/rfc/sap/zwsadmisionessf/200/z_admisiones/zbind_adm</value>
     </values>
     <values>
         <field>PasswordLogin__c</field>
-        <value xsi:type="xsd:string">@VERDE-2205&amp;</value>
+        <value xsi:type="xsd:string">Inicial</value>
     </values>
     <values>
         <field>UsuarioLogin__c</field>
-        <value xsi:type="xsd:string">9999SALESFOR</value>
+        <value xsi:type="xsd:string">9999SFORCE01</value>
     </values>
 </CustomMetadata>

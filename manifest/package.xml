@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>TriggerTaskHandler</members>
-		<name>ApexClass</name>
+		<members>IntegracionSAP__mdt.EndpointFamiliar__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>IntegracionSAP.Desarrollo</members>
+		<name>CustomMetadata</name>
+	</types>
+	<types>
+		<members>IntegracionSAP__mdt-Formato IntegracionSAP</members>
+		<name>Layout</name>
 	</types>
 	<version>60.0</version>
 </Package>
