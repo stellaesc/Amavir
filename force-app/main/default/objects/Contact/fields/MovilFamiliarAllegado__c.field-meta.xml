@@ -3,7 +3,7 @@
     <fullName>MovilFamiliarAllegado__c</fullName>
     <description>Móvil del familiar que contacta</description>
     <externalId>false</externalId>
-    <inlineHelpText>Números de España (con y sin prefijo +34 y 9 dígitos), Alemania (+49 y 9-10 dígitos), Reino Unido (+44 y 9-10 dígitos), Bélgica (+32 y 9-10 dígitos), Países Bajos (+31 y 9-10 dígitos), Portugal (+351 y 9-10 dígitos), Italia (+39 y 10 dígitos) y Estados Unidos (+1 y 10 dígitos). No se aceptan espacios.</inlineHelpText>
+    <inlineHelpText>Números de España (con y sin prefijo +34 y 9-10 dígitos), Alemania (+49 y 9-10 dígitos), Reino Unido (+44 y 9-10 dígitos), Bélgica (+32 y 9-10 dígitos), Países Bajos (+31 y 9-10 dígitos), Portugal (+351 y 9-10 dígitos), Italia (+39 y 10 dígitos) y Estados Unidos (+1 y 10 dígitos). No se aceptan espacios.</inlineHelpText>
     <label>Móvil Familiar/Allegado</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
