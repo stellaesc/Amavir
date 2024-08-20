@@ -7,9 +7,12 @@ AND(
 				LEFT(MobilePhone, 1) = &apos;+&apos;,
 				AND(
 								LEFT(MobilePhone, 3) &lt;&gt; &apos;+34&apos;,
+								LEFT(MobilePhone, 3) &lt;&gt; &apos;+39&apos;,
 								LEFT(MobilePhone, 2) &lt;&gt; &apos;+1&apos;,
 								LEFT(MobilePhone, 3) &lt;&gt; &apos;+49&apos;,
 								LEFT(MobilePhone, 3) &lt;&gt; &apos;+32&apos;,
+								LEFT(MobilePhone, 3) &lt;&gt; &apos;+31&apos;,
+								LEFT(MobilePhone, 4) &lt;&gt; &apos;+351&apos;,
 								LEFT(MobilePhone, 3) &lt;&gt; &apos;+44&apos;)
 ),
 AND( LEFT(MobilePhone, 3) = &apos;+34&apos;,
@@ -27,9 +30,24 @@ OR( LEN(MobilePhone) &lt; 12,
 LEN(MobilePhone) &gt; 12
 ),
 !ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 3) = &apos;+39&apos;,
+OR( LEN(MobilePhone) &lt; 13,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
 AND( LEFT(MobilePhone, 3) = &apos;+32&apos;,
 OR( LEN(MobilePhone) &lt; 12,
 LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 3) = &apos;+31&apos;,
+OR( LEN(MobilePhone) &lt; 12,
+LEN(MobilePhone) &gt; 13
+),
+!ISBLANK(MobilePhone) ),
+AND( LEFT(MobilePhone, 4) = &apos;+351&apos;,
+OR( LEN(MobilePhone) &lt; 13,
+LEN(MobilePhone) &gt; 14
 ),
 !ISBLANK(MobilePhone) ),
 AND( LEFT(MobilePhone, 3) = &apos;+44&apos;,
