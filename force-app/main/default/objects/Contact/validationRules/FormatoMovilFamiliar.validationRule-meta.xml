@@ -7,7 +7,10 @@ AND(
 LEFT(MovilFamiliarAllegado__c, 1) = &apos;+&apos;,
 AND(
 LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+34&apos;,
+LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+39&apos;,
 LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+32&apos;,
+LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+31&apos;,
+LEFT(MovilFamiliarAllegado__c, 4) &lt;&gt; &apos;+351&apos;,
 LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+49&apos;,
 LEFT(MovilFamiliarAllegado__c, 2) &lt;&gt; &apos;+1&apos;,
 LEFT(MovilFamiliarAllegado__c, 3) &lt;&gt; &apos;+44&apos;)
@@ -22,6 +25,16 @@ OR( LEN(MovilFamiliarAllegado__c) &lt; 12,
 LEN(MovilFamiliarAllegado__c) &gt; 13
 ),
 !ISBLANK(MovilFamiliarAllegado__c) ),
+AND( LEFT(MovilFamiliarAllegado__c, 3) = &apos;+31&apos;,
+OR( LEN(MovilFamiliarAllegado__c) &lt; 12,
+LEN(MovilFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(MovilFamiliarAllegado__c) ),
+AND( LEFT(MovilFamiliarAllegado__c, 4) = &apos;+351&apos;,
+OR( LEN(MovilFamiliarAllegado__c) &lt; 13,
+LEN(MovilFamiliarAllegado__c) &gt; 14
+),
+!ISBLANK(MovilFamiliarAllegado__c) ),
 AND( LEFT(MovilFamiliarAllegado__c, 3) = &apos;+49&apos;,
 OR( LEN(MovilFamiliarAllegado__c) &lt; 12,
 LEN(MovilFamiliarAllegado__c) &gt; 13
@@ -30,6 +43,11 @@ LEN(MovilFamiliarAllegado__c) &gt; 13
 AND( LEFT(MovilFamiliarAllegado__c, 2) = &apos;+1&apos;,
 OR( LEN(MovilFamiliarAllegado__c) &lt; 12,
 LEN(MovilFamiliarAllegado__c) &gt; 12
+),
+!ISBLANK(MovilFamiliarAllegado__c) ),
+AND( LEFT(MovilFamiliarAllegado__c, 3) = &apos;+39&apos;,
+OR( LEN(MovilFamiliarAllegado__c) &lt; 13,
+LEN(MovilFamiliarAllegado__c) &gt; 13
 ),
 !ISBLANK(MovilFamiliarAllegado__c) ),
 AND( LEFT(MovilFamiliarAllegado__c, 3) = &apos;+44&apos;,

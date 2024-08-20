@@ -7,8 +7,11 @@ AND(
 				LEFT(Phone, 1) = &apos;+&apos;,
 				AND(
 								LEFT(Phone, 3) &lt;&gt; &apos;+34&apos;,
+								LEFT(Phone, 3) &lt;&gt; &apos;+39&apos;,
 								LEFT(Phone, 2) &lt;&gt; &apos;+1&apos;,
 								LEFT(Phone, 3) &lt;&gt; &apos;+32&apos;,
+								LEFT(Phone, 3) &lt;&gt; &apos;+31&apos;,
+								LEFT(Phone, 4) &lt;&gt; &apos;+351&apos;,
 								LEFT(Phone, 3) &lt;&gt; &apos;+49&apos;,
 								LEFT(Phone, 3) &lt;&gt; &apos;+44&apos;)
 ),
@@ -27,6 +30,16 @@ OR( LEN(Phone) &lt; 12,
 LEN(Phone) &gt; 13
 ),
 !ISBLANK(Phone) ),
+AND( LEFT(Phone, 3) = &apos;+31&apos;,
+OR( LEN(Phone) &lt; 12,
+LEN(Phone) &gt; 13
+),
+!ISBLANK(Phone) ),
+AND( LEFT(Phone, 4) = &apos;+351&apos;,
+OR( LEN(Phone) &lt; 13,
+LEN(Phone) &gt; 14
+),
+!ISBLANK(Phone) ),
 AND( LEFT(Phone, 3) = &apos;+44&apos;,
 OR( LEN(Phone) &lt; 12,
 LEN(Phone) &gt; 13
@@ -35,6 +48,11 @@ LEN(Phone) &gt; 13
 AND( LEFT(Phone, 2) = &apos;+1&apos;,
 OR( LEN(Phone) &lt; 12,
 LEN(Phone) &gt; 12
+),
+!ISBLANK(Phone) ),
+AND( LEFT(Phone, 3) = &apos;+39&apos;,
+OR( LEN(Phone) &lt; 13,
+LEN(Phone) &gt; 13
 ),
 !ISBLANK(Phone) ),
 AND( LEFT(Phone, 1) &lt;&gt; &apos;+&apos;,
