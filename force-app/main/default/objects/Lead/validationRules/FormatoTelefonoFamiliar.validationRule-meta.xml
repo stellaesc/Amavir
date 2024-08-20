@@ -7,8 +7,11 @@ AND(
 LEFT(TelefonoFamiliarAllegado__c, 1) = &apos;+&apos;,
 AND(
 LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+34&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+39&apos;,
 LEFT(TelefonoFamiliarAllegado__c, 2) &lt;&gt; &apos;+1&apos;,
 LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+32&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+31&apos;,
+LEFT(TelefonoFamiliarAllegado__c, 4) &lt;&gt; &apos;+351&apos;,
 LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+49&apos;,
 LEFT(TelefonoFamiliarAllegado__c, 3) &lt;&gt; &apos;+44&apos;)
 ),
@@ -27,9 +30,24 @@ OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
 LEN(TelefonoFamiliarAllegado__c) &gt; 12
 ),
 !ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+39&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 13,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
 AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+32&apos;,
 OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
 LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+31&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 12,
+LEN(TelefonoFamiliarAllegado__c) &gt; 13
+),
+!ISBLANK(TelefonoFamiliarAllegado__c) ),
+AND( LEFT(TelefonoFamiliarAllegado__c, 4) = &apos;+351&apos;,
+OR( LEN(TelefonoFamiliarAllegado__c) &lt; 13,
+LEN(TelefonoFamiliarAllegado__c) &gt; 14
 ),
 !ISBLANK(TelefonoFamiliarAllegado__c) ),
 AND( LEFT(TelefonoFamiliarAllegado__c, 3) = &apos;+44&apos;,
