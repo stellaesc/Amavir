@@ -220,6 +220,11 @@
         <default>false</default>
         <label>Enfermedad Neurodegenerativa</label>
     </customValue>
+    <customValue>
+        <fullName>Ingreso de pareja</fullName>
+        <default>false</default>
+        <label>Ingreso de pareja</label>
+    </customValue>
     <description>Valores del campo Detalle Motivo de Ingreso del Lead y Opp</description>
     <masterLabel>Detalle Motivo de Ingreso</masterLabel>
     <sorted>false</sorted>

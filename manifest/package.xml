@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>ConectorFamiliares</members>
-		<members>TestTriggerOpportunityContact</members>
-		<members>TriggerOpportunityContactHandler</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>TriggerOpportunityContact</members>
-		<name>ApexTrigger</name>
-	</types>
-	<types>
-		<members>IntegracionSAP__mdt.EndpointFamiliar__c</members>
+		<members>Lead.DetalleMotivoIngreso__c</members>
+		<members>Opportunity.DetalleMotivoIngreso__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>IntegracionSAP__mdt-Formato IntegracionSAP</members>
-		<name>Layout</name>
+		<members>DetalleMotivoIngreso</members>
+		<name>GlobalValueSet</name>
 	</types>
 	<version>60.0</version>
 </Package>
