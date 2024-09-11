@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Account.Phone</members>
-		<members>Contact.Phone</members>
-		<members>Contact.MobnilePhone</members>
-		<members>Contact.MovilFamiliarAllegado__c</members>
-		<members>Contact.TelefonoFamiliarAllegado__c</members>
-		<members>Lead.MovilFamiliarAllegado__c</members>
-		<members>Lead.Phone</members>
-		<members>Lead.MobilePhone</members>
-		<members>Lead.TelefonoFamiliarAllegado__c</members>
-		<name>CustomField</name>
-	</types>
-	<types>
-		<members>Account.FormatoTelefono</members>
-		<members>Contact.FormatoMovilFamiliar</members>
-		<members>Contact.FormatoMovilResidente</members>
-		<members>Contact.FormatoTelefonoFamiliar</members>
-		<members>Contact.FormatoTelefonoResidente</members>
-		<members>Lead.FormatoMovilFamiliar</members>
-		<members>Lead.FormatoMovilResidente</members>
-		<members>Lead.FormatoTelefonoFamiliar</members>
-		<members>Lead.FormatoTelefonoResidente</members>
-		<name>ValidationRule</name>
+		<members>OpportunityClosedWon</members>
+		<name>Flow</name>
 	</types>
 	<version>60.0</version>
 </Package>
