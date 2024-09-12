@@ -3,6 +3,7 @@
 Handler de la clase TaskTrigger
 
 DATE 		AUTHOR 		DESCRIPTION
+12/09/2024  LCS - MSA   Añadir cambio de imágenes en las tareas.
 20/06/2024  LCS - MSA   Las oportunidades de plaza publica y de traslado no sufren el cambio de etapa
 10/06/2024  LCS - MSA   Añadir el cambio de etapa en las oportunidades
 04/05/2023  LCS - MSA   Buscar si el contacto y la oportunidad están relacionados pero no por la misma cuenta,
@@ -21,7 +22,7 @@ public class TriggerTaskHandler {
         /* 
     @description Método que se ejecuta desde el trigger y comprueba los Ids relacionados de la Tarea.
                 Si es un contacto y una oportunidad que no están relacionados dará un error.
-    @param TriggerNew Lista de relaciones entre registros y archivos.
+    @param TriggerNew Lista de tareas.
     @return void no se realiza devolución
     */  
 
@@ -75,6 +76,12 @@ public class TriggerTaskHandler {
 
     }
 
+    /* 
+    @description Método que cambia el estado de la oportunidad si hay una tarea de tipo llamada
+    @param TriggerNew Lista de tareas.
+    @return void no se realiza devolución
+    */  
+
     public void ChangeOpportunityStage(List<task> listTask){
 
         List<String> listOppsLlamadaId = new List<String>();
@@ -104,6 +111,22 @@ public class TriggerTaskHandler {
 
         if(oppsRelatedToTask.size() > 0){
             update oppsRelatedToTask;
+        }
+    }
+
+    /* 
+    @description Método que cambia subtipo de tarea a llamada si la tarea es de llamada
+    @param TriggerNew Lista tareas.
+    @return void no se realiza devolución
+    */ 
+
+    public void changeTaskSubtype(List<task> listTask){
+        for(Task singleTask : listTask){
+            System.debug(singleTask.Subject.contains('Llamada'));
+            System.debug(singleTask.Type.contains('Llamada'));
+            if(((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))){
+                singleTask.TaskSubtype = 'Call';
+            }
         }
     }
 }
