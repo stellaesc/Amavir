@@ -122,8 +122,6 @@ public class TriggerTaskHandler {
 
     public void changeTaskSubtype(List<task> listTask){
         for(Task singleTask : listTask){
-            System.debug(singleTask.Subject.contains('Llamada'));
-            System.debug(singleTask.Type.contains('Llamada'));
             if(((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))){
                 singleTask.TaskSubtype = 'Call';
             }
