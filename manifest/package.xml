@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Lead.DetalleMotivoIngreso__c</members>
-		<members>Opportunity.DetalleMotivoIngreso__c</members>
-		<name>CustomField</name>
+		<members>TestTriggerTask</members>
+		<members>TriggerTaskHandler</members>
+		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>DetalleMotivoIngreso</members>
-		<name>GlobalValueSet</name>
+		<members>TaskTrigger</members>
+		<name>ApexTrigger</name>
 	</types>
 	<version>60.0</version>
 </Package>
