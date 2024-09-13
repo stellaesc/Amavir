@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Account-Centro%2FResidencia</members>
-		<members>Account-Centro%2FResidencia con acción Crear</members>
-		<members>Account-Familia%2FAllegado</members>
-		<members>Account-Familia%2FAllegado con acción Crear</members>
-		<name>Layout</name>
+		<members>TestTriggerTask</members>
+		<members>TriggerTaskHandler</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>TaskTrigger</members>
+		<name>ApexTrigger</name>
 	</types>
 	<version>60.0</version>
 </Package>

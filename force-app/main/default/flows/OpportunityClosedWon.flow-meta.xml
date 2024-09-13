@@ -5,7 +5,7 @@
         <name>Call2SAP</name>
         <label>Call2SAP</label>
         <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationY>431</locationY>
         <actionName>TriggerOpportunityHandler</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -19,7 +19,10 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>52.0</apiVersion>
-    <description>Usa el código Apex para realizar la llamada al servicio de SAP</description>
+    <description>MSA (11/09/2024): Cuando se hace un envío a SAP actualizar el owner de la oportunidad al owner de la residencia de ingreso
+--- 
+Usa el código Apex para realizar la llamada al servicio de SAP</description>
+    <environments>Default</environments>
     <interviewLabel>Opportunity Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity Closed Won</label>
     <processMetadataValues>
@@ -41,11 +44,28 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the opportunity owner to the owner of &quot;Residencia de ingreso&quot;</description>
+        <name>UpdateOpportunityOwner</name>
+        <label>Update Opportunity Owner</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Call2SAP</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.ResidenciaIngreso__r.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Call2SAP</targetReference>
+            <targetReference>UpdateOpportunityOwner</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
