@@ -3,6 +3,8 @@
 Test Methods de la clase TaskTrigger
 
 DATE 		AUTHOR 		DESCRIPTION
+12/09/2024  MSA - LCS   Corregir tests.
+10/06/2024  MSA - LCS   Añadir test cambio de etapas.
 24/07/2023  MSA - LCS   Corrección de las clases test.
 13/03/2023  LCS - MSA   Creación
 
@@ -19,6 +21,7 @@ public class TestTriggerTask {
     private static final Id contactFamiliarRTId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName().get('FamiliaAllegado').getRecordTypeId();
     private static final Id contactResidenteRTId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName().get('PotencialResidente').getRecordTypeId();
     private static final Id opportunityPlazaPrivadaRTId = Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('PlazaPrivada').getRecordTypeId();
+    private static final Id idQueue = [SELECT Id FROM group WHERE DeveloperName = 'SeguimientLlamada' LIMIT 1].Id;
 
     @TestSetup
     static void setup(){        
@@ -119,13 +122,14 @@ public class TestTriggerTask {
             AccountId = familia.Id,
             Name = 'Oportunidad de prueba',
             RecordTypeId = opportunityPlazaPrivadaRTId,
-            StageName = Opportunity.StageName.getDescribe().getPicklistValues()[0].getValue(),
+            StageName = 'Nueva Contactado',
             CloseDate = Date.today(),
             ResidenciaIngreso__c = centro.Id,
             TipoPlaza__c = 'P',
             FechaIngresoPlanificado__c = Date.today(),
             MotivoIngreso__c = 'Psicogeriatría',
-            DetalleMotivoIngreso__c = 'Autolisis'
+            DetalleMotivoIngreso__c = 'Autolisis',
+            UrgenciaPercibida__c = 'Baja'
         );
         insert oportunidad;
     }
@@ -139,6 +143,8 @@ public class TestTriggerTask {
         tarea.WhatId = oportunidad.Id;
         tarea.WhoId = contacto.Id;
         tarea.status = 'Open';
+        tarea.Subject = 'test Llamada test';
+        tarea.Type = 'Llamada';
         test.startTest();
         try{
         insert tarea;
@@ -158,10 +164,30 @@ public class TestTriggerTask {
         tarea.WhatId = oportunidad.Id;
         tarea.WhoId = contacto.Id;
         tarea.status = 'Open';
+        tarea.Subject = 'test Llamada test';
+        tarea.Type = 'Llamada';
         test.startTest();
         insert tarea;
         test.stopTest();
         List<Task> tareas = [Select Id from TASK];
         System.assert(tareas.size()==1); 
+    }
+
+    @isTest 
+    static void testUpdateOpportunity(){
+
+        Opportunity oportunidad = [SELECT Id from Opportunity WHERE TipoPlaza__c = 'P'];
+        Contact contacto = [Select Id from Contact WHERE LastName = 'ApellidoPruebaFamiliar2Influyente'];
+        Task tarea = new Task();
+        tarea.WhatId = oportunidad.Id;
+        tarea.WhoId = contacto.Id;
+        tarea.status = 'Completed';
+        tarea.Subject = 'test Llamada test';
+        tarea.OwnerId=idQueue;
+        test.startTest();
+        insert tarea;
+        test.stopTest();
+        List<Opportunity> opp = [Select Id FROM Opportunity WHERE StageName = 'Seguimiento llamada'];
+        System.assert(opp.size()==1); 
     }
 }

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>OpportunityClosedWon</members>
-		<name>Flow</name>
+		<members>TestTriggerTask</members>
+		<members>TriggerTaskHandler</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>TaskTrigger</members>
+		<name>ApexTrigger</name>
 	</types>
 	<version>60.0</version>
 </Package>
