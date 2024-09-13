@@ -189,6 +189,10 @@
             <valueName>Aislamiento</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Aspectos sociales</controllingFieldValue>
+            <valueName>Ingreso de pareja</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Traslado residencia</controllingFieldValue>
             <valueName>De la competencia por descontento</valueName>
         </valueSettings>
