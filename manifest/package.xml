@@ -4,5 +4,9 @@
 		<members>OPORT_ActualizarOportunidadV3</members>
 		<name>Flow</name>
 	</types>
+	<types>
+		<members>Opportunity.VisitaPrescriptorListaEspera</members>
+		<name>ValidationRule</name>
+	</types>
 	<version>60.0</version>
 </Package>

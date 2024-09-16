@@ -10,7 +10,8 @@
 AND(
  NOT( ISPICKVAL(CriterioPreferenciaListaEspera__c, &apos;Prescriptor&apos;)),
  ConVisita__c  &lt;&gt; True
-)
+),
+ NOT (ISPICKVAL(CriterioPreferenciaListaEspera__c , &quot;Familiar Amavir&quot; ))
 )</errorConditionFormula>
     <errorMessage>No pueda entrar en la lista de espera, no tiene visita, ni viene de prescriptor.</errorMessage>
 </ValidationRule>
