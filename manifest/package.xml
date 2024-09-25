@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>TestTriggerTask</members>
-		<members>TriggerTaskHandler</members>
-		<name>ApexClass</name>
+		<members>Opportunity.CriterioPreferenciaListaEspera__c</members>
+		<name>CustomField</name>
 	</types>
 	<types>
-		<members>TaskTrigger</members>
-		<name>ApexTrigger</name>
+		<members>OPORT_ActualizarOportunidadV3</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Opportunity.VisitaPrescriptorListaEspera</members>
+		<name>ValidationRule</name>
 	</types>
 	<version>60.0</version>
 </Package>

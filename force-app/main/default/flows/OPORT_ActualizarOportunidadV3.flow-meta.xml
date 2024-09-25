@@ -4,7 +4,7 @@
         <name>Alerta_0_0</name>
         <label>Alerta</label>
         <locationX>2833</locationX>
-        <locationY>1271</locationY>
+        <locationY>1163</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidades</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -23,8 +23,8 @@
     <actionCalls>
         <name>AlertaEquipoOpptDerivacion_0</name>
         <label>Alerta equipo oppt derivación</label>
-        <locationX>3933</locationX>
-        <locationY>2519</locationY>
+        <locationX>3911</locationX>
+        <locationY>2471</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidadesDerivacion</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -43,8 +43,8 @@
     <actionCalls>
         <name>EmailEquipoDerivacion_0_0</name>
         <label>Email Equipo Derivación</label>
-        <locationX>3053</locationX>
-        <locationY>2519</locationY>
+        <locationX>3031</locationX>
+        <locationY>2279</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidadesDerivacion</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -64,8 +64,8 @@
         <description>Envia mnsaje a Opp Team</description>
         <name>Opp_Team_0_0</name>
         <label>Opp Team</label>
-        <locationX>1733</locationX>
-        <locationY>2519</locationY>
+        <locationX>1711</locationX>
+        <locationY>2279</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidades</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -85,8 +85,8 @@
         <description>Envia mensaje</description>
         <name>Opp_Team_3_0</name>
         <label>Opp Team 3</label>
-        <locationX>2173</locationX>
-        <locationY>2519</locationY>
+        <locationX>2151</locationX>
+        <locationY>2279</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidades</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -106,8 +106,8 @@
         <description>Envia mnsaje a Opp Team</description>
         <name>Opp_Team_5_0</name>
         <label>Opp Team 5</label>
-        <locationX>2613</locationX>
-        <locationY>2519</locationY>
+        <locationX>2591</locationX>
+        <locationY>2279</locationY>
         <actionName>Opportunity.AlertaCorreoEquipoOportunidades</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -132,7 +132,7 @@ Se cambia la derivación</description>
         <name>Actualizacionporpiedaddelaoportunidad</name>
         <label>Actualización propiedad oportunidad</label>
         <locationX>3119</locationX>
-        <locationY>1583</locationY>
+        <locationY>1439</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -324,7 +324,7 @@ Se cambia la derivación</description>
         <name>CreadorOportunidad</name>
         <label>CreadorOportunidad</label>
         <locationX>182</locationX>
-        <locationY>4199</locationY>
+        <locationY>3971</locationY>
         <defaultConnector>
             <targetReference>CrearTarea_0_0_0</targetReference>
         </defaultConnector>
@@ -350,7 +350,7 @@ Se cambia la derivación</description>
         <name>CreadorOportunidad_0</name>
         <label>CreadorOportunidad</label>
         <locationX>710</locationX>
-        <locationY>4199</locationY>
+        <locationY>3971</locationY>
         <defaultConnector>
             <targetReference>CrearTarea_0_0_0_0_0_0_0</targetReference>
         </defaultConnector>
@@ -376,7 +376,7 @@ Se cambia la derivación</description>
         <name>CreadorOportunidad_0_0</name>
         <label>CreadorOportunidad</label>
         <locationX>1238</locationX>
-        <locationY>4199</locationY>
+        <locationY>3971</locationY>
         <defaultConnector>
             <targetReference>CrearTarea_0_0_0_0_0_0_0_0</targetReference>
         </defaultConnector>
@@ -398,11 +398,37 @@ Se cambia la derivación</description>
         </rules>
     </decisions>
     <decisions>
+        <description>Comprobamos si la derivación es nula</description>
+        <name>DerivacionNula</name>
+        <label>¿Derivación Nula?</label>
+        <locationX>4043</locationX>
+        <locationY>1955</locationY>
+        <defaultConnector>
+            <targetReference>Actualiza_Owner_Opp_4_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>La derivación no es nula</defaultConnectorLabel>
+        <rules>
+            <name>DerivacionNulaVerdadero</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ResidenciaDerivacion__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ObtenerEquipoOportunidades4_0</targetReference>
+            </connector>
+            <label>La derivación es nula</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>Encuentra visita, si o no</description>
         <name>Encuentra_visita</name>
         <label>Encuentra visita?</label>
         <locationX>3614</locationX>
-        <locationY>4199</locationY>
+        <locationY>3971</locationY>
         <defaultConnector>
             <targetReference>Urgencia_Percibida_No_visita</targetReference>
         </defaultConnector>
@@ -426,8 +452,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>1865</locationX>
-        <locationY>2399</locationY>
+        <locationX>1843</locationX>
+        <locationY>2171</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -451,8 +477,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>2305</locationX>
-        <locationY>2399</locationY>
+        <locationX>2283</locationX>
+        <locationY>2171</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -476,8 +502,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>2745</locationX>
-        <locationY>2399</locationY>
+        <locationX>2723</locationX>
+        <locationY>2171</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -501,8 +527,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>3185</locationX>
-        <locationY>2399</locationY>
+        <locationX>3163</locationX>
+        <locationY>2171</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -526,8 +552,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>1865</locationX>
-        <locationY>1823</locationY>
+        <locationX>1843</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>Actualiza_Owner_Opp2_0</targetReference>
         </defaultConnector>
@@ -551,8 +577,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>4065</locationX>
-        <locationY>2399</locationY>
+        <locationX>4043</locationX>
+        <locationY>2363</locationY>
         <defaultConnector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </defaultConnector>
@@ -576,8 +602,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>2305</locationX>
-        <locationY>1823</locationY>
+        <locationX>2283</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>Actualiza_Owner_Opp_3</targetReference>
         </defaultConnector>
@@ -601,8 +627,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>2745</locationX>
-        <locationY>1823</locationY>
+        <locationX>2723</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>Actualiza_Owner_Opp5</targetReference>
         </defaultConnector>
@@ -626,8 +652,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>3185</locationX>
-        <locationY>1823</locationY>
+        <locationX>3163</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>ActualizarEtapaPropietario_0</targetReference>
         </defaultConnector>
@@ -651,8 +677,8 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>3625</locationX>
-        <locationY>1823</locationY>
+        <locationX>3603</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
             <targetReference>Actualiza_Owner_Opp_4</targetReference>
         </defaultConnector>
@@ -676,10 +702,10 @@ Se cambia la derivación</description>
     <decisions>
         <name>EquipoObtenido_0_0_0_0_0_0_0_0_0_0_0</name>
         <label>Equipo Obtenido?</label>
-        <locationX>4065</locationX>
-        <locationY>1823</locationY>
+        <locationX>4043</locationX>
+        <locationY>1655</locationY>
         <defaultConnector>
-            <targetReference>Actualiza_Owner_Opp_4_0</targetReference>
+            <targetReference>DerivacionNula</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
@@ -703,7 +729,7 @@ Se cambia la derivación</description>
         <name>FechaIngresoResidenciaIngreso</name>
         <label>Fecha ingreso y Residencia de ingreso???</label>
         <locationX>3119</locationX>
-        <locationY>3623</locationY>
+        <locationY>3455</locationY>
         <defaultConnector>
             <targetReference>QueEstadoTieneOportunidad</targetReference>
         </defaultConnector>
@@ -736,7 +762,7 @@ Se cambia la derivación</description>
         <name>Ha_cambiado_la_urgencia_percibidad_de_la_Opp</name>
         <label>Ha cambiado la urgencia percibidad de la Opp?</label>
         <locationX>3119</locationX>
-        <locationY>2951</locationY>
+        <locationY>2855</locationY>
         <defaultConnector>
             <targetReference>ObtenerTipoRegistroTarea</targetReference>
         </defaultConnector>
@@ -769,7 +795,7 @@ Se cambia la derivación</description>
         <name>HemosObtenidoVisita</name>
         <label>Hemos obtenido visita??</label>
         <locationX>2162</locationX>
-        <locationY>4679</locationY>
+        <locationY>4187</locationY>
         <defaultConnector>
             <targetReference>ActualizaFechaListaEspera_Oppt_0_0</targetReference>
         </defaultConnector>
@@ -823,7 +849,7 @@ Se cambia la derivación</description>
         <name>OportunidadNueva</name>
         <label>Oportunidad Nueva</label>
         <locationX>3119</locationX>
-        <locationY>791</locationY>
+        <locationY>731</locationY>
         <defaultConnector>
             <targetReference>Actualizacionporpiedaddelaoportunidad</targetReference>
         </defaultConnector>
@@ -856,7 +882,7 @@ Se cambia la derivación</description>
         <name>QueEstadoTieneOportunidad</name>
         <label>¿Qué estado tiene la oportunidad?</label>
         <locationX>3119</locationX>
-        <locationY>3959</locationY>
+        <locationY>3755</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>EtapaseguimientoLlamada</name>
@@ -980,7 +1006,7 @@ Se cambia la derivación</description>
         <name>TieneEquipo1</name>
         <label>Tiene Equipo?</label>
         <locationX>2965</locationX>
-        <locationY>1151</locationY>
+        <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Actualizacionporpiedaddelaoportunidad</targetReference>
         </defaultConnector>
@@ -1005,7 +1031,7 @@ Se cambia la derivación</description>
         <name>TieneMarcadaVisitaContactoResidente</name>
         <label>Tiene Marcada Visita Contacto Residente</label>
         <locationX>3119</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <defaultConnector>
             <targetReference>OportunidadNueva</targetReference>
         </defaultConnector>
@@ -1031,7 +1057,7 @@ Se cambia la derivación</description>
         <name>Urgencia_Percibida_No_visita</name>
         <label>Urgencia Percibida No visita</label>
         <locationX>4142</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>Alta2</name>
@@ -1084,7 +1110,7 @@ Se cambia la derivación</description>
         <name>UrgenciaPercibida</name>
         <label>Urgencia percibida</label>
         <locationX>908</locationX>
-        <locationY>4079</locationY>
+        <locationY>3863</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>Alta</name>
@@ -1137,7 +1163,7 @@ Se cambia la derivación</description>
         <name>UrgenciaPercibida_0</name>
         <label>Urgencia percibida</label>
         <locationX>3086</locationX>
-        <locationY>4439</locationY>
+        <locationY>4187</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>Alta_0</name>
@@ -1185,7 +1211,11 @@ Se cambia la derivación</description>
             <label>Baja</label>
         </rules>
     </decisions>
-    <description>Actualización Nodo Decisión Y Caminos Actualización Fecha Espera
+    <description>MSA (13/09/2024): Ya no se tiene en cuenta el contacto a la hora de poner la fecha de lista de espera
+--
+MSA (03/06/2024): Actualización en modificar derivación, cuando la derivación es nula no se actualiza el propietario de la oportunidad
+--
+Actualización Nodo Decisión Y Caminos Actualización Fecha Espera
 --
 Actualización con casuística Usuario de Centro de día (Criterio Pref Lista Espera)
 --
@@ -1225,7 +1255,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Recoge_todos_las_tareas_de_la_Opp</name>
         <label>Recoge todos las tareas de la Opp</label>
         <locationX>3011</locationX>
-        <locationY>3071</locationY>
+        <locationY>2963</locationY>
         <collectionReference>TodaslasTareasdelaOpp</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1259,7 +1289,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0</name>
         <label>Crear Tarea</label>
         <locationX>50</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1328,7 +1358,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>314</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1397,7 +1427,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>578</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1466,7 +1496,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>1106</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1535,7 +1565,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>2690</locationX>
-        <locationY>4559</locationY>
+        <locationY>4295</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1604,7 +1634,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>842</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1673,7 +1703,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>1370</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1742,7 +1772,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>2954</locationX>
-        <locationY>4559</locationY>
+        <locationY>4295</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1811,7 +1841,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>CrearTarea_0_0_0_0_0_0_0_0_0_0</name>
         <label>Crear Tarea</label>
         <locationX>3218</locationX>
-        <locationY>4559</locationY>
+        <locationY>4295</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1879,7 +1909,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Tarea_Alta</name>
         <label>Tarea Alta</label>
         <locationX>3746</locationX>
-        <locationY>4439</locationY>
+        <locationY>4187</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -1947,7 +1977,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Tarea_Baja</name>
         <label>Tarea Baja</label>
         <locationX>4274</locationX>
-        <locationY>4439</locationY>
+        <locationY>4187</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -2015,7 +2045,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Tarea_Media</name>
         <label>Tarea Media</label>
         <locationX>4010</locationX>
-        <locationY>4439</locationY>
+        <locationY>4187</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -2082,8 +2112,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo1_0</name>
         <label>Eliminamos el equipo antiguo 1</label>
-        <locationX>1733</locationX>
-        <locationY>1943</locationY>
+        <locationX>1711</locationX>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>Actualiza_Owner_Opp2_0</targetReference>
         </connector>
@@ -2092,8 +2122,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo3_0</name>
         <label>Eliminamos el equipo antiguo 3</label>
-        <locationX>2173</locationX>
-        <locationY>1943</locationY>
+        <locationX>2151</locationX>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>Actualiza_Owner_Opp_3</targetReference>
         </connector>
@@ -2102,18 +2132,18 @@ Actualización fecha criterios preferencia Lista Espera</description>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo4_0</name>
         <label>Eliminamos el equipo antiguo 4</label>
-        <locationX>3933</locationX>
-        <locationY>1943</locationY>
+        <locationX>3911</locationX>
+        <locationY>1763</locationY>
         <connector>
-            <targetReference>Actualiza_Owner_Opp_4_0</targetReference>
+            <targetReference>DerivacionNula</targetReference>
         </connector>
         <inputReference>ObtenerEquipoOportunidades4</inputReference>
     </recordDeletes>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo5_0</name>
         <label>Eliminamos el equipo antiguo 5</label>
-        <locationX>2613</locationX>
-        <locationY>1943</locationY>
+        <locationX>2591</locationX>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>Actualiza_Owner_Opp5</targetReference>
         </connector>
@@ -2122,8 +2152,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo6_0</name>
         <label>Eliminamos el equipo antiguo 6</label>
-        <locationX>3053</locationX>
-        <locationY>1943</locationY>
+        <locationX>3031</locationX>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>ActualizarEtapaPropietario_0</targetReference>
         </connector>
@@ -2132,8 +2162,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
     <recordDeletes>
         <name>EliminamosEquipoAntiguo7_0</name>
         <label>Eliminamos el equipo antiguo 7</label>
-        <locationX>3493</locationX>
-        <locationY>1943</locationY>
+        <locationX>3471</locationX>
+        <locationY>1763</locationY>
         <connector>
             <targetReference>Actualiza_Owner_Opp_4</targetReference>
         </connector>
@@ -2144,7 +2174,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Obtener_todas_las_tareas_de_la_Opp</name>
         <label>Obtener todas las tareas de la Opp</label>
         <locationX>3119</locationX>
-        <locationY>2831</locationY>
+        <locationY>2747</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Ha_cambiado_la_urgencia_percibidad_de_la_Opp</targetReference>
@@ -2169,40 +2199,11 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <recordLookups>
-        <description>Obtenemos el contacto con tipo de registro Potencial/ Resiente de la Cuenta Relacionada con la oppt</description>
-        <name>ObtenerContactoPotencialResidenteCuenta</name>
-        <label>Obtener contacto Potencial Residente de la Cuenta</label>
-        <locationX>2162</locationX>
-        <locationY>4319</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>ObtenerVisita</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>ObtenerTipoRegistroContactPotencialResidente.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>AccountId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Contact</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades1</name>
         <label>Obtener equipo oportunidades 1</label>
-        <locationX>1865</locationX>
-        <locationY>1703</locationY>
+        <locationX>1843</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0</targetReference>
@@ -2223,8 +2224,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades1_0</name>
         <label>Obtener equipo oportunidades 1</label>
-        <locationX>1865</locationX>
-        <locationY>2279</locationY>
+        <locationX>1843</locationX>
+        <locationY>2063</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0</targetReference>
@@ -2245,8 +2246,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades3</name>
         <label>Obtener equipo oportunidades 3</label>
-        <locationX>2305</locationX>
-        <locationY>1703</locationY>
+        <locationX>2283</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0_0</targetReference>
@@ -2267,8 +2268,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades3_0</name>
         <label>Obtener equipo oportunidades 3</label>
-        <locationX>2305</locationX>
-        <locationY>2279</locationY>
+        <locationX>2283</locationX>
+        <locationY>2063</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0</targetReference>
@@ -2289,8 +2290,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades4</name>
         <label>Obtener equipo oportunidades 4</label>
-        <locationX>4065</locationX>
-        <locationY>1703</locationY>
+        <locationX>4043</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0_0_0_0_0_0</targetReference>
@@ -2311,8 +2312,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades4_0</name>
         <label>Obtener equipo oportunidades 4</label>
-        <locationX>4065</locationX>
-        <locationY>2279</locationY>
+        <locationX>4043</locationX>
+        <locationY>2255</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0</targetReference>
@@ -2333,8 +2334,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades5</name>
         <label>Obtener equipo oportunidades 5</label>
-        <locationX>2745</locationX>
-        <locationY>1703</locationY>
+        <locationX>2723</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0_0_0</targetReference>
@@ -2355,8 +2356,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades5_0</name>
         <label>Obtener equipo oportunidades 5</label>
-        <locationX>2745</locationX>
-        <locationY>2279</locationY>
+        <locationX>2723</locationX>
+        <locationY>2063</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0</targetReference>
@@ -2377,8 +2378,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades6</name>
         <label>Obtener equipo oportunidades 6</label>
-        <locationX>3185</locationX>
-        <locationY>1703</locationY>
+        <locationX>3163</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0_0_0_0</targetReference>
@@ -2399,8 +2400,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades6_0</name>
         <label>Obtener equipo oportunidades 6</label>
-        <locationX>3185</locationX>
-        <locationY>2279</locationY>
+        <locationX>3163</locationX>
+        <locationY>2063</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0</targetReference>
@@ -2421,8 +2422,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Obtenemos el equipo de oportunidades</description>
         <name>ObtenerEquipoOportunidades7</name>
         <label>Obtener equipo oportunidades 7</label>
-        <locationX>3625</locationX>
-        <locationY>1703</locationY>
+        <locationX>3603</locationX>
+        <locationY>1547</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>EquipoObtenido_0_0_0_0_0_0_0_0_0_0</targetReference>
@@ -2444,7 +2445,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerEquipoOportunidades8</name>
         <label>Obtener equipo oportunidades</label>
         <locationX>2965</locationX>
-        <locationY>1031</locationY>
+        <locationY>947</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>TieneEquipo1</targetReference>
@@ -2466,7 +2467,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerPrimeraTarea</name>
         <label>Obtener la primera tarea</label>
         <locationX>2162</locationX>
-        <locationY>4559</locationY>
+        <locationY>4079</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>HemosObtenidoVisita</targetReference>
@@ -2489,7 +2490,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerPropietarioVisita</name>
         <label>ObtenerPropietarioVisita</label>
         <locationX>3614</locationX>
-        <locationY>4079</locationY>
+        <locationY>3863</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Encuentra_visita</targetReference>
@@ -2520,7 +2521,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerResidente</name>
         <label>Obtener Residente</label>
         <locationX>3119</locationX>
-        <locationY>335</locationY>
+        <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>TieneMarcadaVisitaContactoResidente</targetReference>
@@ -2545,40 +2546,11 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <description>Obtener tipo registro contacto Potencial Residente</description>
-        <name>ObtenerTipoRegistroContactPotencialResidente</name>
-        <label>Obtener tipo registro contacto Potencial Residente</label>
-        <locationX>2162</locationX>
-        <locationY>4199</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>ObtenerContactoPotencialResidenteCuenta</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>SobjectType</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Contact</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>PotencialResidente</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>RecordType</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <description>Obtenemos el tipo de registro de tarea</description>
         <name>ObtenerTipoRegistroTarea</name>
         <label>ObtenerTipoRegistroTarea</label>
         <locationX>3119</locationX>
-        <locationY>3503</locationY>
+        <locationY>3347</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>FechaIngresoResidenciaIngreso</targetReference>
@@ -2599,10 +2571,10 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerTiposRegistroEventoVisita</name>
         <label>Obtener tipos de registro evento visita</label>
         <locationX>2162</locationX>
-        <locationY>4079</locationY>
+        <locationY>3863</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>ObtenerTipoRegistroContactPotencialResidente</targetReference>
+            <targetReference>ObtenerVisita</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -2623,7 +2595,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ObtenerVisita</name>
         <label>Obtener visita</label>
         <locationX>2162</locationX>
-        <locationY>4439</locationY>
+        <locationY>3971</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>ObtenerPrimeraTarea</targetReference>
@@ -2637,10 +2609,10 @@ Actualización fecha criterios preferencia Lista Espera</description>
             </value>
         </filters>
         <filters>
-            <field>WhoId</field>
+            <field>WhatId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>ObtenerContactoPotencialResidenteCuenta.Id</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -2653,7 +2625,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>Actualiza_las_tareas_de_la_Opp</name>
         <label>Actualiza las tareas de la Opp</label>
         <locationX>3099</locationX>
-        <locationY>3191</locationY>
+        <locationY>3071</locationY>
         <connector>
             <targetReference>Recoge_todos_las_tareas_de_la_Opp</targetReference>
         </connector>
@@ -2677,8 +2649,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualiza Owner de la OPP</description>
         <name>Actualiza_Owner_Opp2_0</name>
         <label>Actualiza Owner Opp</label>
-        <locationX>1865</locationX>
-        <locationY>2159</locationY>
+        <locationX>1843</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades1_0</targetReference>
         </connector>
@@ -2694,8 +2666,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualiza Owner de la OPP</description>
         <name>Actualiza_Owner_Opp5</name>
         <label>Actualiza Owner Opp 5</label>
-        <locationX>2745</locationX>
-        <locationY>2159</locationY>
+        <locationX>2723</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades5_0</targetReference>
         </connector>
@@ -2711,8 +2683,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualizamos Owner Opp</description>
         <name>Actualiza_Owner_Opp_3</name>
         <label>Actualiza Owner Opp 3</label>
-        <locationX>2305</locationX>
-        <locationY>2159</locationY>
+        <locationX>2283</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades3_0</targetReference>
         </connector>
@@ -2728,8 +2700,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualizamos Owner Opp</description>
         <name>Actualiza_Owner_Opp_4</name>
         <label>Actualiza Owner Opp 4</label>
-        <locationX>3625</locationX>
-        <locationY>2159</locationY>
+        <locationX>3603</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>Obtener_todas_las_tareas_de_la_Opp</targetReference>
         </connector>
@@ -2745,8 +2717,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualizamos Owner Opp</description>
         <name>Actualiza_Owner_Opp_4_0</name>
         <label>Actualiza Owner Opp 4</label>
-        <locationX>4065</locationX>
-        <locationY>2159</locationY>
+        <locationX>4131</locationX>
+        <locationY>2063</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades4_0</targetReference>
         </connector>
@@ -2763,7 +2735,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizaFechaListaEspera_Oppt_0</name>
         <label>Actualiza Fecha Lista Espera Oppt</label>
         <locationX>1898</locationX>
-        <locationY>4799</locationY>
+        <locationY>4295</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -2797,7 +2769,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizaFechaListaEspera_Oppt_0_0</name>
         <label>Actualiza Fecha Lista Espera Oppt</label>
         <locationX>2426</locationX>
-        <locationY>4799</locationY>
+        <locationY>4295</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -2825,7 +2797,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizaFechaListaEspera_Oppt_0_0_0_0</name>
         <label>Actualiza Fecha Lista Espera Oppt</label>
         <locationX>2162</locationX>
-        <locationY>4799</locationY>
+        <locationY>4295</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -2859,7 +2831,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizamosOpp</name>
         <label>Actualizamos la Oportunidad</label>
         <locationX>4802</locationX>
-        <locationY>4079</locationY>
+        <locationY>3863</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -2886,7 +2858,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizaPropietarioOportunidad_0</name>
         <label>Actualiza el propietario de la Oportunidad</label>
         <locationX>2965</locationX>
-        <locationY>911</locationY>
+        <locationY>839</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades8</targetReference>
         </connector>
@@ -2910,8 +2882,8 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <description>Actualiza la etapa de la oportunidad a Lista de espera - Derivación y el propietario al de la residencia de derivación</description>
         <name>ActualizarEtapaPropietario_0</name>
         <label>Actualiza etapa y propietario</label>
-        <locationX>3185</locationX>
-        <locationY>2159</locationY>
+        <locationX>3163</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>ObtenerEquipoOportunidades6_0</targetReference>
         </connector>
@@ -2934,7 +2906,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>ActualizarUrgenciaPercibidaOportunidad</name>
         <label>Actualizar Urgencia Percibida Oportunidad</label>
         <locationX>3086</locationX>
-        <locationY>4319</locationY>
+        <locationY>4079</locationY>
         <connector>
             <targetReference>UrgenciaPercibida_0</targetReference>
         </connector>
@@ -2951,7 +2923,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>MarcamosOportConVisita</name>
         <label>Marcamos Oport Con Visita</label>
         <locationX>2987</locationX>
-        <locationY>575</locationY>
+        <locationY>539</locationY>
         <connector>
             <targetReference>OportunidadNueva</targetReference>
         </connector>
@@ -2968,7 +2940,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>VaciarDatosListaEspera_0</name>
         <label>Vaciar Datos Lista Espera</label>
         <locationX>5066</locationX>
-        <locationY>4079</locationY>
+        <locationY>3863</locationY>
         <inputAssignments>
             <field>CriterioPreferenciaListaEspera__c</field>
         </inputAssignments>
@@ -2988,7 +2960,7 @@ Actualización fecha criterios preferencia Lista Espera</description>
         <name>VaciarDatosListaEspera_0_0</name>
         <label>Vaciar Datos Lista Espera</label>
         <locationX>2987</locationX>
-        <locationY>3743</locationY>
+        <locationY>3563</locationY>
         <connector>
             <targetReference>QueEstadoTieneOportunidad</targetReference>
         </connector>
