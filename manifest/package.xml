@@ -6,8 +6,12 @@
 		<name>WebLink</name>
 	</types>
 	<types>
-		<members>informesAmavir.ListaEsperaPerfilPotencial</members>
-		<members>InformesAmavir</members>
+		<members> Account.Centros__c</members>
+		<name>customfield</name>
+	</types>
+	<types>
+		<members>InformesAmavir/ListaPrescriptores</members>
+		<members>InformesAmavir/ListaEsperaPerfilPotencial</members>
 		<name>Report</name>
 	</types>
 	<version>60.0</version>
