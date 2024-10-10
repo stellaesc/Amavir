@@ -180,7 +180,7 @@
                 <componentName>flowruntime:interview</componentName>
                 <identifier>flowruntime_interview</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+                    <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
                     <criteria>
                         <leftValue>{!$User.Email}</leftValue>
                         <operator>EQUAL</operator>
@@ -195,6 +195,11 @@
                         <leftValue>{!$User.Email}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>lalvarez@amavir.es</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!$User.Email}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>svedia@amavir.es</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
