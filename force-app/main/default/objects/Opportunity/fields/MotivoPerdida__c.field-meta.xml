@@ -141,6 +141,11 @@
                 <label>No se adapta a sus preferencias</label>
             </value>
             <value>
+                <fullName>Oportunidad Vencida</fullName>
+                <default>false</default>
+                <label>Oportunidad Vencida</label>
+            </value>
+            <value>
                 <fullName>Otra residencia competencia / residencia pequeña / otra CC.AA.</fullName>
                 <default>false</default>
                 <label>Otra residencia competencia / residencia pequeña / otra CC.AA.</label>
@@ -311,6 +316,10 @@
         <valueSettings>
             <controllingFieldValue>Otros</controllingFieldValue>
             <valueName>No se adapta a sus preferencias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Otros</controllingFieldValue>
+            <valueName>Oportunidad Vencida</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Otros</controllingFieldValue>
