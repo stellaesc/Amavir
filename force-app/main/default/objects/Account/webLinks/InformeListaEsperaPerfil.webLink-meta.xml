@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>InformeListaEspera</fullName>
+    <fullName>InformeListaEsperaPerfil</fullName>
     <availability>online</availability>
     <description>Nos muestra el informe &quot;Lista de espera&quot; agrupado por Criterio preferencia lista espera</description>
     <displayType>button</displayType>
@@ -11,11 +11,11 @@
     <height>600</height>
     <isResizable>true</isResizable>
     <linkType>url</linkType>
-    <masterLabel>Informe - Lista de espera (Criterio)</masterLabel>
+    <masterLabel>Informe - Lista de espera (Perfil)</masterLabel>
     <openType>newWindow</openType>
     <position>none</position>
     <protected>false</protected>
     <showsLocation>false</showsLocation>
     <showsStatus>false</showsStatus>
-    <url>https://amavir.lightning.force.com/lightning/r/Report/00O09000008zQzlEAE/view?queryScope=userFolders&amp;fv1={!Account.Id}</url>
+    <url>https://amavir--amavirdev.sandbox.lightning.force.com/lightning/r/Report/00OUD000002FO5h2AG/view?queryScope=userFolders&amp;fv1={!Account.Id}</url>
 </WebLink>
