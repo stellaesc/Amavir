@@ -46,6 +46,7 @@
             <value>
                 <fullName>Derivación</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Derivación</label>
             </value>
         </valueSetDefinition>
