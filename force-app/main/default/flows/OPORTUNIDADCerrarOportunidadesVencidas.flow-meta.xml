@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>61.0</apiVersion>
-    <description>Flujo programado para cerrar a perdidas las oportunidades que han vencido.</description>
+    <description>Flujo programado para cerrar a perdidas las oportunidades que han vencido.
+V2: Modificación filtro fecha obtención oportunidades.</description>
     <environments>Default</environments>
     <formulas>
         <description>Obtiene la fecha de hace un año a partir de la fecha de ejecución del flujo</description>
@@ -46,7 +47,7 @@
         </filters>
         <filters>
             <field>LastModifiedDate</field>
-            <operator>GreaterThan</operator>
+            <operator>LessThan</operator>
             <value>
                 <elementReference>FechaOportunidadVencida</elementReference>
             </value>
