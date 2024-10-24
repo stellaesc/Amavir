@@ -4,6 +4,8 @@
 Servicio web RESTful que dará de alta nuevos familiares (contactos) en Salesforce según los datos recibidos</br>
 
 FECHA       AUTOR   	    DESCRIPCION<br/>
+22/04/2024  MSA - LCS       Cerrar las oportunidades como pérdida cuando se anula el episodio en SAP
+22/04/2024  MSA - LCS       Cuando viene una plaza y está ya ocupada por el residente no salta error
 16/01/2024  MSA - LCS       Ractivar errores de plaza ocupada.
 21/11/2023  MSA - LCS       Reestructuración de la clase haciéndola por métodos..
 21/11/2023  MSA - LCS       Traslados de respiro.
@@ -685,6 +687,10 @@ global with sharing class WSMovimientoPaciente {
 
             auxiliares.auxOpportunity.TipoPerdida__c = 'Alta';
             auxiliares.auxOpportunity.MotivoPerdida__c = 'Trasp CD a Resi';
+        }
+
+        if(OpportunidadesTraslado.size() > 0){
+            auxiliares.OpportunidadesTraslado = OpportunidadesTraslado;
         }
         return auxiliares;
     }
