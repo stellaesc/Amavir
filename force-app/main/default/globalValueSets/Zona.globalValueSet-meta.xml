@@ -65,6 +65,76 @@
         <default>false</default>
         <label>Todas Andalucía</label>
     </customValue>
+    <customValue>
+        <fullName>Las Palmas de Gran Canaria</fullName>
+        <default>false</default>
+        <label>Las Palmas de Gran Canaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Sta. Cruz de Tenerife</fullName>
+        <default>false</default>
+        <label>Sta. Cruz de Tenerife</label>
+    </customValue>
+    <customValue>
+        <fullName>Hellín</fullName>
+        <default>false</default>
+        <label>Hellín</label>
+    </customValue>
+    <customValue>
+        <fullName>Tomelloso</fullName>
+        <default>false</default>
+        <label>Tomelloso</label>
+    </customValue>
+    <customValue>
+        <fullName>Ciudad Real</fullName>
+        <default>false</default>
+        <label>Ciudad Real</label>
+    </customValue>
+    <customValue>
+        <fullName>Cuenca</fullName>
+        <default>false</default>
+        <label>Cuenca</label>
+    </customValue>
+    <customValue>
+        <fullName>Guadalajara</fullName>
+        <default>false</default>
+        <label>Guadalajara</label>
+    </customValue>
+    <customValue>
+        <fullName>Azuqueca</fullName>
+        <default>false</default>
+        <label>Azuqueca</label>
+    </customValue>
+    <customValue>
+        <fullName>Valladolid</fullName>
+        <default>false</default>
+        <label>Valladolid</label>
+    </customValue>
+    <customValue>
+        <fullName>Barcelona</fullName>
+        <default>false</default>
+        <label>Barcelona</label>
+    </customValue>
+    <customValue>
+        <fullName>Tarragona</fullName>
+        <default>false</default>
+        <label>Tarragona</label>
+    </customValue>
+    <customValue>
+        <fullName>Cartagena</fullName>
+        <default>false</default>
+        <label>Cartagena</label>
+    </customValue>
+    <customValue>
+        <fullName>Pamplona</fullName>
+        <default>false</default>
+        <label>Pamplona</label>
+    </customValue>
+    <customValue>
+        <fullName>Jaén</fullName>
+        <default>false</default>
+        <label>Jaén</label>
+    </customValue>
     <description>Zona comercial a la que corresponde el candidato</description>
     <masterLabel>Zona</masterLabel>
     <sorted>false</sorted>
