@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>OPORT_ActualizarOportunidadV3</members>
-		<name>Flow</name>
-	</types>
-	<version>60.0</version>
+  <types>
+    <members>Account-Centro%2FResidencia</members>
+    <members>Account-Centro%2FResidencia con acción Crear</members>
+    <name>Layout</name>
+  </types>
+  <version>60.0</version>
 </Package>
