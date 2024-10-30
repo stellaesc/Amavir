@@ -3,7 +3,7 @@
     <fullName>Tutor__c</fullName>
     <description>Campo de candidato y contacto donde se indica si el tutor es familiar o entidad</description>
     <externalId>false</externalId>
-    <label>Tutor</label>
+    <label>Curador</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
