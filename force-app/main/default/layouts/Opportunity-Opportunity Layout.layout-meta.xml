@@ -3,6 +3,7 @@
     <excludeButtons>ChangeOwnerOne</excludeButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
     <excludeButtons>Clone</excludeButtons>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -133,8 +134,8 @@
                 <field>LeadSource</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Prescriptor__c</field>
+                <behavior>Required</behavior>
+                <field>OrigenConocimiento__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -143,8 +144,8 @@
                 <field>DetalleOrigen__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>OrigenConocimiento__c</field>
+                <behavior>Edit</behavior>
+                <field>Prescriptor__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

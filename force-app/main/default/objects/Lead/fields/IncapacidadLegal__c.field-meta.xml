@@ -3,7 +3,7 @@
     <fullName>IncapacidadLegal__c</fullName>
     <description>Estado de los trámites de incapacidad legal</description>
     <externalId>false</externalId>
-    <label>Incapacidad legal/ Curatela</label>
+    <label>Curatela</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
