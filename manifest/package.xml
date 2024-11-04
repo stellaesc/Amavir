@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>Account.Centros__c</members>
+		<members>Account.Comunidad__c</members>
 		<members>Account.Zona__c</members>
+		<members>Lead.Comunidad__c</members>
+		<members>Lead.ResidenciasInteres__c</members>
 		<members>Lead.Zona__c</members>
+		<members>Opportunity.Comunidad__c</members>
+		<members>Opportunity.ResidenciasInteres__c</members>
 		<members>Opportunity.Zona__c</members>
 		<name>CustomField</name>
 	</types>
