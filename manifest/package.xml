@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>Contact.IncapacidadLegal__c</members>
-        <members>Contact.Tutor__c</members>
-        <members>Lead.IncapacidadLegal__c</members>
-        <members>Lead.Tutor__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Contact-Contact Layout</members>
-        <members>Contact-Familia%2FAllegado</members>
-        <members>Contact-Potencial%2FResidente</members>
-        <members>Contact-Prescriptor</members>
-        <members>Lead-Lead Layout</members>
-        <members>Opportunity-Opportunity Layout</members>
-        <members>Opportunity-Opportunity Layout Boton Propietario</members>
-        <name>Layout</name>
-    </types>
-    <version>60.0</version>
+	<types>
+		<members>Account.Zona__c</members>
+		<members>Lead.Zona__c</members>
+		<members>Opportunity.Zona__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Zona</members>
+		<name>GlobalValueSet</name>
+	</types>
+	<version>60.0</version>
 </Package>
