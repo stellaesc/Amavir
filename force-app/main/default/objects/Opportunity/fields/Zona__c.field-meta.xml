@@ -19,7 +19,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
-            <valueName>Madrid Centro</valueName>
+            <valueName>Madrid Capital</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
@@ -36,6 +36,10 @@
         <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
             <valueName>Madrid Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Madrid</controllingFieldValue>
+            <valueName>Todas Madrid</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Canarias</controllingFieldValue>
