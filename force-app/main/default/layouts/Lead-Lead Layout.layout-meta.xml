@@ -2,7 +2,7 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>ActividadComercial</customButtons>
     <excludeButtons>Clone</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -302,8 +302,8 @@
                 <field>LeadSource</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>DetallePrescriptor__c</field>
+                <behavior>Required</behavior>
+                <field>OrigenConocimiento__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -316,8 +316,8 @@
                 <field>DetalleOrigen__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>OrigenConocimiento__c</field>
+                <behavior>Edit</behavior>
+                <field>DetallePrescriptor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -412,14 +412,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Tutor__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HaPasadoCovid__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>VacunadoCovid__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
