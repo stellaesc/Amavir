@@ -707,11 +707,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>DiaCreacion__c</field>
-            <table>Lead</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>PerfilPotencialResidente__c</field>
             <table>Lead</table>
         </columns>
