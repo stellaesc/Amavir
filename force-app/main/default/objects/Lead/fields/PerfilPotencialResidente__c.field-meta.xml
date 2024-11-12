@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PerfilPotencialResidente__c</fullName>
+    <description>Perfil del potencial residente</description>
+    <externalId>false</externalId>
+    <label>Perfil del potencial residente</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Autónomo</fullName>
+                <default>false</default>
+                <label>Autónomo</label>
+            </value>
+            <value>
+                <fullName>Asistido</fullName>
+                <default>false</default>
+                <label>Asistido</label>
+            </value>
+            <value>
+                <fullName>Semi-asistido</fullName>
+                <default>false</default>
+                <label>Semi-asistido</label>
+            </value>
+            <value>
+                <fullName>Alteraciones de conducta</fullName>
+                <default>false</default>
+                <label>Alteraciones de conducta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
