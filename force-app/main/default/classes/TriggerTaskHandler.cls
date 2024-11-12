@@ -3,6 +3,7 @@
 Handler de la clase TaskTrigger
 
 DATE 		AUTHOR 		DESCRIPTION
+08/11/2024  LCS - MSA   Las tareas de Llamada Saliente no son llamadas, son tareas.
 12/09/2024  LCS - MSA   Añadir cambio de imágenes en las tareas.
 20/06/2024  LCS - MSA   Las oportunidades de plaza publica y de traslado no sufren el cambio de etapa
 10/06/2024  LCS - MSA   Añadir el cambio de etapa en las oportunidades
@@ -122,7 +123,10 @@ public class TriggerTaskHandler {
 
     public void changeTaskSubtype(List<task> listTask){
         for(Task singleTask : listTask){
-            if(((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))){
+            if(
+                ((singleTask.Subject.contains('Llamada')) || (singleTask.Type.contains('Llamada')))&&
+                !((singleTask.Subject.contains('seguimiento')) || (singleTask.Type.contains('seguimiento')))
+                ){
                 singleTask.TaskSubtype = 'Call';
             }
         }
