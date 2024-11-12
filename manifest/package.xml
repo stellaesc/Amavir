@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Lead.PerfilPotencialResidente__c</members>
-		<name>CustomField</name>
-	</types>
-	<types>
-		<members>Opportunity</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Lead-Lead Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>InformesAmavir</members>
-		<name>ReportFolder</name>
-	</types>
-	<types>
-		<members>InformesAmavir/TareasPerfilPotencialResidente</members>
-		<name>Report</name>
-	</types>
-	<types>
-		<members>CandidatosYActividades</members>
-		<name>ReportType</name>
-	</types>
-	<types>
-		<members>Opportunity.InformeTareasPerfilPotencialResidente</members>
-		<name>WebLink</name>
+		<members>WSMovimientoPaciente</members>
+		<name>ApexClass</name>
 	</types>
 	<version>60.0</version>
 </Package>
