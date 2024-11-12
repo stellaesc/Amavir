@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InformeTareasPerfilPotencialResidente</fullName>
+    <availability>online</availability>
+    <description>Botón de vista de lista para acceder al informe Tareas por Perfil Potencial Residente</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Informe - Tareas por Perfil Potencial Residente</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>https://amavir--amavirdev.sandbox.lightning.force.com/lightning/r/Report/00OUD000002RuEf2AK/view?queryScope=userFolders</url>
+</WebLink>
