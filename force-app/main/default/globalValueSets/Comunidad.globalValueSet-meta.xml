@@ -41,6 +41,11 @@
         <label>Andalucía</label>
     </customValue>
     <customValue>
+        <fullName>Todas</fullName>
+        <default>false</default>
+        <label>Todas</label>
+    </customValue>
+    <customValue>
         <fullName>Navarra;Navarra</fullName>
         <default>false</default>
         <isActive>false</isActive>

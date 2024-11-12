@@ -14,243 +14,296 @@
         <restricted>true</restricted>
         <valueSetName>Residencias</valueSetName>
         <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Valladolid</controllingFieldValue>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Argaray</valueName>
+            <controllingFieldValue>Todas Castilla y León</controllingFieldValue>
+            <valueName>El Encinar del Rey</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Valladolid</controllingFieldValue>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Betelu</valueName>
+            <controllingFieldValue>Todas Castilla y León</controllingFieldValue>
+            <valueName>El Encinar del Rey Apartamentos</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Ibañeta</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Mutilva</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Oblatas</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas Navarra</controllingFieldValue>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <valueName>Valle de Egües</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
-            <valueName>Alcalá de Henares</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Sur</controllingFieldValue>
-            <valueName>Alcorcón</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Arganzuela</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Murcia</controllingFieldValue>
-            <valueName>Cartagena</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
-            <valueName>Cenicientos</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Ciudad lineal</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
-            <valueName>Ciudad Real</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Norte</controllingFieldValue>
-            <valueName>Ciudalcampo</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Norte</controllingFieldValue>
-            <valueName>Colmenar</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
-            <valueName>Coslada</valueName>
-        </valueSettings>
-        <valueSettings>
+            <controllingFieldValue>Barcelona</controllingFieldValue>
             <controllingFieldValue>Todas</controllingFieldValue>
             <controllingFieldValue>Todas Cataluña</controllingFieldValue>
             <valueName>Diagonal</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Barcelona</controllingFieldValue>
             <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
+            <valueName>Horta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barcelona</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
+            <valueName>Sant Cugat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barcelona</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
+            <valueName>Teià</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barcelona</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
+            <valueName>Vilanova</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tarragona</controllingFieldValue>
+            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
+            <valueName>Reus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cartagena</controllingFieldValue>
+            <controllingFieldValue>Todas Murcia</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Cartagena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Argaray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Betelu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Ibañeta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Mutilva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Oblatas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pamplona</controllingFieldValue>
+            <controllingFieldValue>Todas Navarra</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Valle de Egües</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jaén</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Todas Andalucía</controllingFieldValue>
+            <valueName>Jaén</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
+            <valueName>Alcalá de Henares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Sur</controllingFieldValue>
+            <valueName>Alcorcón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Arganzuela</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
+            <valueName>Cenicientos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Ciudad lineal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Norte</controllingFieldValue>
+            <valueName>Colmenar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
+            <valueName>Coslada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Sur</controllingFieldValue>
+            <valueName>Getafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Sur</controllingFieldValue>
+            <valueName>Humanes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>La Gavia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Norte</controllingFieldValue>
+            <valueName>La Marina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
+            <valueName>Nuestra Casa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Norte</controllingFieldValue>
+            <valueName>Patones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
+            <valueName>Pozuelo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Puente de Vallecas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Norte</controllingFieldValue>
+            <valueName>San Agustín de Guadalix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
+            <valueName>Torrejón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Usera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Valdebernardo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
+            <valueName>Villanueva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Villaverde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Madrid Norte</controllingFieldValue>
+            <valueName>Ciudalcampo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas Madrid</controllingFieldValue>
+            <controllingFieldValue>Madrid Capital</controllingFieldValue>
+            <valueName>Vicálvaro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Tomelloso</controllingFieldValue>
             <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
             <valueName>Don Quijote (Tomelloso)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
             <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
+            <controllingFieldValue>Guadalajara</controllingFieldValue>
             <valueName>El Balconcillo (Guadalajara)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Castilla y León</controllingFieldValue>
-            <valueName>El Encinar del Rey</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Castilla y León</controllingFieldValue>
-            <valueName>El Encinar del Rey Apartamentos</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Cuenca</controllingFieldValue>
             <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
             <valueName>El Pinar</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Sur</controllingFieldValue>
-            <valueName>Getafe</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Las Palmas de Gran Canaria</controllingFieldValue>
             <controllingFieldValue>Todas Canarias</controllingFieldValue>
             <valueName>Haría</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
-            <valueName>Horta</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Sur</controllingFieldValue>
-            <valueName>Humanes</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Andalucía</controllingFieldValue>
-            <valueName>Jaén</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
             <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
+            <controllingFieldValue>Azuqueca</controllingFieldValue>
             <valueName>La Alameda (Azuqueca)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>La Gavia</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Norte</controllingFieldValue>
-            <valueName>La Marina</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Hellín</controllingFieldValue>
             <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
             <valueName>Las Hazas (Hellín)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
-            <valueName>Nuestra Casa</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Norte</controllingFieldValue>
-            <valueName>Patones</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
-            <valueName>Pozuelo</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Puente de Vallecas</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Norte</controllingFieldValue>
-            <valueName>San Agustín de Guadalix</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Canarias</controllingFieldValue>
-            <valueName>Santa Cruz de Tenerife</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
-            <valueName>Sant Cugat</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
-            <valueName>Teià</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Sta. Cruz de Tenerife</controllingFieldValue>
             <controllingFieldValue>Todas Canarias</controllingFieldValue>
             <valueName>Tejina</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
+            <controllingFieldValue>Las Palmas de Gran Canaria</controllingFieldValue>
             <controllingFieldValue>Todas Canarias</controllingFieldValue>
             <valueName>Tías</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
-            <valueName>Torrejón</valueName>
+            <controllingFieldValue>Ciudad Real</controllingFieldValue>
+            <controllingFieldValue>Todas Castilla La Mancha</controllingFieldValue>
+            <valueName>Ciudad Real</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Usera</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Valdebernardo</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Todas Cataluña</controllingFieldValue>
-            <valueName>Vilanova</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Noroeste</controllingFieldValue>
-            <valueName>Villanueva</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Todas</controllingFieldValue>
-            <controllingFieldValue>Madrid Centro</controllingFieldValue>
-            <valueName>Villaverde</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Madrid Corredor del Henares</controllingFieldValue>
-            <valueName>Vicálvaro</valueName>
+            <controllingFieldValue>Sta. Cruz de Tenerife</controllingFieldValue>
+            <controllingFieldValue>Todas Canarias</controllingFieldValue>
+            <valueName>Santa Cruz de Tenerife</valueName>
         </valueSettings>
     </valueSet>
     <visibleLines>4</visibleLines>

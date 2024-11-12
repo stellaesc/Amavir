@@ -14,8 +14,12 @@
         <restricted>true</restricted>
         <valueSetName>Zona</valueSetName>
         <valueSettings>
+            <controllingFieldValue>Todas</controllingFieldValue>
+            <valueName>Todas</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
-            <valueName>Madrid Centro</valueName>
+            <valueName>Madrid Capital</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
@@ -35,42 +39,91 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Madrid</controllingFieldValue>
-            <controllingFieldValue>Canarias</controllingFieldValue>
-            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
-            <controllingFieldValue>Castilla y León</controllingFieldValue>
-            <controllingFieldValue>Cataluña</controllingFieldValue>
-            <controllingFieldValue>Murcia</controllingFieldValue>
-            <controllingFieldValue>Navarra</controllingFieldValue>
-            <controllingFieldValue>Andalucía</controllingFieldValue>
-            <valueName>Todas</valueName>
+            <valueName>Todas Madrid</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Canarias</controllingFieldValue>
             <valueName>Todas Canarias</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Canarias</controllingFieldValue>
+            <valueName>Las Palmas de Gran Canaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canarias</controllingFieldValue>
+            <valueName>Sta. Cruz de Tenerife</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
             <valueName>Todas Castilla La Mancha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Hellín</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Tomelloso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Ciudad Real</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Cuenca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Guadalajara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Castilla la Mancha</controllingFieldValue>
+            <valueName>Azuqueca</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Castilla y León</controllingFieldValue>
             <valueName>Todas Castilla y León</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Castilla y León</controllingFieldValue>
+            <valueName>Valladolid</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Cataluña</controllingFieldValue>
             <valueName>Todas Cataluña</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cataluña</controllingFieldValue>
+            <valueName>Barcelona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cataluña</controllingFieldValue>
+            <valueName>Tarragona</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Murcia</controllingFieldValue>
             <valueName>Todas Murcia</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Murcia</controllingFieldValue>
+            <valueName>Cartagena</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Navarra</controllingFieldValue>
             <valueName>Todas Navarra</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Navarra</controllingFieldValue>
+            <valueName>Pamplona</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Andalucía</controllingFieldValue>
             <valueName>Todas Andalucía</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Andalucía</controllingFieldValue>
+            <valueName>Jaén</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

@@ -241,6 +241,11 @@
         <label>Jaén</label>
     </customValue>
     <customValue>
+        <fullName>Reus</fullName>
+        <default>false</default>
+        <label>Reus</label>
+    </customValue>
+    <customValue>
         <fullName>El Encinar Leganés</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -248,5 +253,5 @@
     </customValue>
     <description>Listado de residencias Amavir</description>
     <masterLabel>Residencias</masterLabel>
-    <sorted>true</sorted>
+    <sorted>false</sorted>
 </GlobalValueSet>
