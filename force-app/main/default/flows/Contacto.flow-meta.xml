@@ -12,14 +12,7 @@
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
             <name>EsContactoCovertido</name>
-            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Convertido__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.NombrePersonaContacto__c</leftValueReference>
                 <operator>IsNull</operator>
@@ -101,7 +94,9 @@ Añadido campo email del familiar allegado, V5
 --
 V6: Corrección condiciones creación familiar/allegado
 --
-V7: Inclusión móvil familiar/allegado</description>
+V7: Inclusión móvil familiar/allegado
+--
+V8: Modificación decisión inicial (quitamos campo Conversion__c)</description>
     <environments>Default</environments>
     <interviewLabel>Contacto {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CONTACTO_Creación Contacto Familiar</label>
