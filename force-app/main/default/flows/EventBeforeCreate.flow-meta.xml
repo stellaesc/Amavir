@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <assignments>
+        <description>Save the Opportunity Id to retrieve then the Events</description>
+        <name>SaveOpportunityId</name>
+        <label>Save Opportunity Id</label>
+        <locationX>264</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>ListId</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>LoopOpportunity.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopOpportunity</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <description>Throws an error because the date is the same</description>
+        <name>SamDateError</name>
+        <label>Same date Error</label>
+        <locationX>264</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>LoopEvents</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>No se puede crear una visita con esta fecha porque existe en otra oportunidad para este mismo residente</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <description>Check if the event got the same date</description>
+        <name>CheckEventSameDate</name>
+        <label>Check if the event got the same date</label>
+        <locationX>396</locationX>
+        <locationY>1019</locationY>
+        <defaultConnector>
+            <targetReference>LoopEvents</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other date</defaultConnectorLabel>
+        <rules>
+            <name>SameDate_CheckEventSameDate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>DateTriggerEvent</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>DateLoopEvent</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SamDateError</targetReference>
+            </connector>
+            <label>Same Date</label>
+        </rules>
+    </decisions>
+    <description>Flow that checks the date of the events based on opportunities on same account</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Get the date of the Loop Event</description>
+        <name>DateLoopEvent</name>
+        <dataType>Date</dataType>
+        <expression>{!LoopEvents.StartDateTime}</expression>
+    </formulas>
+    <formulas>
+        <description>Get the date of the trigger Event</description>
+        <name>DateTriggerEvent</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.StartDateTime}</expression>
+    </formulas>
+    <interviewLabel>Event - Before Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event - Before Create</label>
+    <loops>
+        <description>Loop the events</description>
+        <name>LoopEvents</name>
+        <label>Loop Events</label>
+        <locationX>176</locationX>
+        <locationY>911</locationY>
+        <collectionReference>GetEvents</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckEventSameDate</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <description>Loop opportunitys to save the OpportunityId</description>
+        <name>LoopOpportunity</name>
+        <label>Loop Opportunity</label>
+        <locationX>176</locationX>
+        <locationY>503</locationY>
+        <collectionReference>GetOpportunitys</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SaveOpportunityId</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>GetEvents</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the events related to the opportunity</description>
+        <name>GetEvents</name>
+        <label>Get Events</label>
+        <locationX>176</locationX>
+        <locationY>803</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LoopEvents</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>ListId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Opportunity based on WhatId</description>
+        <name>GetOpportunity</name>
+        <label>Get Opportunity</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetOpportunitys</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Opportunity based on Accounts</description>
+        <name>GetOpportunitys</name>
+        <label>Get Opportunitys</label>
+        <locationX>176</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LoopOpportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetOpportunity.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetOpportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>006</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Visita</stringValue>
+            </value>
+        </filters>
+        <object>Event</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ListId</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
