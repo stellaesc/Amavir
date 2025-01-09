@@ -6,8 +6,9 @@
     <errorConditionFormula>AND (
 ISCHANGED(Status),
 ISPICKVAL( Status , &apos;Convertido&apos;),
+ISPICKVAL( OrigenConocimiento__c, &apos;TS/ prescriptor&apos;),
 ISBLANK( TEXT(Zona__c) )
 )</errorConditionFormula>
     <errorDisplayField>Zona__c</errorDisplayField>
-    <errorMessage>Es necesario tener rellena la zona a la hora de realizar la conversión</errorMessage>
+    <errorMessage>Es necesario tener rellena la zona a la hora de realizar la conversión cuando el origen de conocimiento es TS/ prescriptor</errorMessage>
 </ValidationRule>
