@@ -351,7 +351,7 @@
                 <field>Comunidad__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Zona__c</field>
             </layoutItems>
             <layoutItems>
